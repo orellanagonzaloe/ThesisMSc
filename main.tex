@@ -1,0 +1,99 @@
+\documentclass[a4paper,12pt,twoside,dfinal,spanish]{book} 
+
+\input{comment.sty}
+\begin{comment}
+%start the 81% scaling trick (comment out for full A4)
+\addtolength{\oddsidemargin}{-0.2345679in} % magic number = 1 - 1/0.81
+\addtolength{\evensidemargin}{-0.2345679in}% see documentation scale package
+\addtolength{\topmargin}{-0.2345679in} % for explanation
+\mag=810 % basic TeX command for 81% scaling
+\usepackage[a4, center, nodriver]{crop}
+%\usepackage[a4, center, frame]{crop}
+%end of 81% scaling trick
+\end{comment} 
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{herab}
+\usepackage{time}
+\usepackage{rotating}
+\usepackage{epsfig}
+\usepackage{pifont}
+\usepackage{verbatim}
+\usepackage{pstricks}
+\usepackage{units}        
+% \usepackage{axodraw}
+\usepackage{fancyhdr} 
+\usepackage[bf]{caption2}% Bold face for captions 
+\input{/home/gonza/latextest/mystyle.tex} 
+
+% \hyphenation{levens-duur}
+% \hyphenation{hier-bij}
+% \hyphenation{beslis-sing}
+% \hyphenation{ex-pe-rim-ments}                         
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\input{/home/gonza/latextest/hvf_def.tex}     
+\input{/home/gonza/latextest/macros.tex}
+
+% \input{/user/wahlberg/Thesis/title.tex} 
+
+\pagenumbering{roman}    
+
+\tableofcontents  
+   
+\cleardoublepage 
+
+\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\pagestyle{fancy}
+
+
+\input{/home/gonza/Tesis/latex/strategy.tex}
+
+\input{/home/gonza/Tesis/latex/background.tex}
+
+
+% \vfill
+
+%%
+%%   Bibliography
+%%   ============
+
+% \bibliographystyle{unsrt_jvt}  
+% \bibliography{reference}
+% \addcontentsline{toc}{chapter}{Bibliography}  
+
+%%
+%%   Appendix
+%%   ============
+
+% \begin{appendix}
+% \input{/user/wahlberg/Thesis/conventions}
+% \end{appendix}
+
+% \input{/user/wahlberg/Thesis/summary.tex}
+% \input{/user/wahlberg/Thesis/samenvatting.tex}
+% \input{/user/wahlberg/Thesis/ack.tex}
+
+%\thispagestyle{empty}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

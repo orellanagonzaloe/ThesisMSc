@@ -1,0 +1,100 @@
+%  herab.sty
+%
+%  Description:
+%       LaTeX style file to produce output that conforms to the standards
+%       required for the Proceedings of the Joint International Lepton-
+%       Photon symposium & Europhysics Conference on High Energy
+%       Physics, 25 July - 1 August 1991
+%
+%  Columns
+%       The title, author and abstract will be printed full width
+%       of the page on 1 column; the body of the text is on 2 columns.
+%
+%  Environment:
+%       Should be invoked as an option to the article style, as:
+%       \documentclass[herab]{article}
+%
+%  Location:
+%       This file (herab.sty) should be placed either in the directory
+%       containing your input .TEX file or in the directory TEX$INPUTS.
+%
+%  Known Bugs:
+%       Produces an additional (mostly blank) page of output when \thanks
+%       is used.
+%
+%  User actions required:
+%       This file is set up for articles with one (or few) authors.
+%       To enable a long list of authors to be printed, the size of
+%       the relevant vbox (now set at 1in) needs to be increased
+%       (see line 58).
+%
+%  Support:
+%       This style file is completely unsupported, may be used,
+%       copied or modified by anybody.
+\typeout{Document Class Option 'herab' }
+
+%  Set the margins
+% largeur des marges modif le 6 juillet fichier inchange est hep93_save.sty
+\oddsidemargin -0.03in \evensidemargin -0.27in
+\topmargin -1.3cm \headheight 10pt \headsep 35pt
+% UH: problematic and obsolete
+%\footheight 12pt 
+\footskip 15mm
+\textheight 9.4in \textwidth 6.58in
+\parindent 1em \leftmargini 1em \leftmargin\leftmargini 
+\leftmarginv .5em \leftmarginvi .5em
+
+\newdimen\Parindent\newdimen\Parskip
+\columnsep0.18in \columnseprule0pt
+\Parindent=\parindent\Parskip=\parskip%save old values
+\parindent5mm\parskip3mm
+
+
+\newdimen\Parindent\newdimen\Parskip
+\newenvironment{Abstracts}%
+{\Parindent=\parindent\Parskip=\parskip%save old values
+\parindent0pt\parskip3mm\columnsep11mm}%set new values
+{\parindent\Parindent\parskip\Parskip}%end{Abstracts}
+\newenvironment{Questions}%
+{\Parindent=\parindent\Parskip=\parskip%save old values
+\parindent0pt\parskip3mm\columnsep11mm}%set new values
+{\parindent\Parindent\parskip\Parskip}%end{Questions}
+
+
+%  Define the Title style
+\def\maketitle{\par
+ \begingroup
+ \def\thefootnote{\fnsymbol{footnote}}
+ \def\@makefnmark{\hbox
+ to 0pt{$^{\@thefnmark}$\hss}}
+ \twocolumn[\@maketitle]
+ \@thanks
+ \endgroup
+ \setcounter{footnote}{0}
+ \let\maketitle\relax
+ \let\@maketitle\relax
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+%-------- change if box height too small -----------------
+\def\@maketitle{\vbox to 1.2in{\hsize\textwidth
+ \linewidth\hsize \vfil \centering
+ { \large\bf \@title \par} \vskip 1.0em {\begin{tabular}[t]{c}\@author
+\end{tabular}\par}
+ \vfil}
+\hsize\textwidth \linewidth\hsize
+\begin{center} ABSTRACT \end{center} \par \small\rm \@abstract \vskip 2em }
+
+\def\copyrightspace{\footnotetext[0]{\mbox{}\vrule height 97pt width 0pt}}
+
+\def\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus
+ -.2ex}{2.3ex plus .2ex}{\LARGE\bf}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-3.25ex plus -1ex minus
+ -.2ex}{1.5ex plus .2ex}{\Large\bf}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-3.25ex plus
+-1ex minus -.2ex}{1.5ex plus .2ex}{\large\bf}}
+\def\paragraph{\@startsection
+ {paragraph}{4}{\z@}{3.25ex plus 1ex minus .2ex}{-1em}{\normalsize\bf}}
+\def\subparagraph{\@startsection
+ {subparagraph}{4}{\parindent}{3.25ex plus 1ex minus
+ .2ex}{-1em}{\normalsize\bf}}
+
+%%\twocolumn
