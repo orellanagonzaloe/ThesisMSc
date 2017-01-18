@@ -1,0 +1,108 @@
+\chapter{El LHC y el detector ATLAS}
+% \addcontentsline{toc}{chapter}{El LHC y el detector ATLAS}
+\chaptermark{El LHC y el detector ATLAS}
+
+
+El Gran Colisionador de Hadrones (\textit{\textbf{L}arge \textbf{H}adron \textbf{C}oliider} (LHC)) es el acelerador de hadrones del Centro Europeo para la Investigación Nuclear (CERN), ubicado en la frontera entre Francia y Suiza. Posee una longitud de 27 km y fue construido en el mismo túnel en el que funcionaba el acelerador $e^{+}e^{-}$ LEP (etre 1989 y 2000), a una profundidad variable entre $50$ y $174$ m de la superficie.
+
+El LHC está diseñado para colisionar protones (e iones pesados) a una energía de centro de masa de $\sqrt{s}=14$ TeV. Para ello el CERN posee un complejo de aceleradores que, en sucesivas etapas, incrementan la energía de los protones. El último de los aceleradoes es el LHC, donde los protones circulan en direcciones opuestas por cavidades de ultra alto vacío a una presion de $10^{-10}$ torr. El mismo cuenta con $1232$ dipolos magnéticos superconductores que generan un campo magnético de $8.4$ T enfriados a $1.9$ K, lo que permite acelerar a los protones y mantenerlos en su órbita circular. El sistema de focalización de los haces consiste de $392$ cuadrupolos magnéticos que generan campos magnéticos de $6.8$ T.
+
+El diseño del LHC contempla trenes de $2808$ paquetes de $\sim 10^{11}$ protones cada uno, espaciados temporalmente en $25$ ns. Para caracterizar el funcionamiento del acelerador, se utiliza una varaible denominada luminosidad instantánea. Se define como el número de partículas por unidad de tiempo y unidad de área:
+
+\begin{equation}
+\mathcal{L}=f_{rev}n_{b}\frac{N_{1}N_{2}}{A}
+\end{equation}
+
+donde $f_{rev}$ es la frecuencia de revolución ($\sim$ 11 kHz), $n_{b}$ es el número de \textit{bunches} (paquetes de protones) por haz, $N_{i}$ es el número de partículas en cada \textit{bunch} y \textit{A} es la sección efectiva del haz, que puede expresarse en término de los parámetros del acelerador como:
+
+\begin{equation}
+A=\frac{4 \pi \epsilon_{n}\beta^{*}}{\gamma F}
+\end{equation}
+
+donde $\epsilon_{n}$ es la emitancia transversal normalizada (la dispersión transversal media de las partículas del  haz en el espacio de coordenadas e impulsos), $\beta^{*}$ es la función de amplitud en el punto de interacción, relacionada al poder de focalización de los cuadrupolos), $\gamma$ es el factor relativista de Lorentz y \textit{F} es un factor de reducción geométrico, debido al ángulo de cruce de los haces en el punto de interacción.
+
+... Datos actuales
+
+\section{El detector ATLAS}
+
+ATLAS (\textit{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}paratu\textbf{S}}) es uno de los experimentoas multipropósito del LHC, diseñado para estudiar las colisiones protón-protón a altas energías provistas por el LHC.
+
+El detector tiene una smietría aproximadamente cilíndrica, y está compuesto de distintos subdetectores que cumplen diversas funciones. En la zona más próxima al haz se encuentra el detector interno de trazas (ID), compuesto de un detector de píxeles, un detector de bandas de silicio (SCT) y un detector de radiación de transición (TRT). Envolviendo el ID se encuentra un solenoide superconductor que genera un campo magnético de $2$ T, que curva la trayectoria de las partículas cargadas para así medir su impulso.
+
+A continuación se ubica el sistema de calorímetros: el calorímetro electromagnético (ECAL) que mide la energía depositada por fotones y electrones, y el calorímetro hadrónico (HCAL) para medir la energía de los jets.
+
+Finalmente, se encuetra el espectrómetro de muones (MS) intercalado con un sistema de imanes toroidales, que generan un campo magnetico necesario apra curvar la trayectoria de los muones hacia el detector.
+
+El detector ATLAS se divide geométricamente en dos regiónes, la parte central denominada \textit{barrel} y la región extrema \textit{endcap}. En la región \textit{barrel} los detectores se ubican en forma de cilindros concentricos alrededor del eje del haz, mientras en en la región \textit{endcap} se disponen como discos perpendiculares a la direccion del haz. 
+
+\section{Sistema de coordenadas}
+
+El sistema de coordenadas de ATLAS corresponde a un sistema cartesiano, cuyo origen coincide con el punto de interacción nominal. El eje \textit{z} corresponde al eje del haz, el eje \textit{x} se define desde el punto de interacción hacia el centro del LHC, y el eje \textit{y} se define apuntando hacia arriba.
+
+Es conveniente además definir un sistema de coordenadas cilíndricas. Donde el radio \textit{R} representa la distancia perpendicular al haz. EL angulo azimutal $\phi$ es medido alrededor del eje del haz, y el ángulo $\theta$ se mide con respecto al eje del haz. 
+
+Una cantidad muy importante utilizada en física de altas energías es la llamada rapidez:
+
+\begin{equation}
+y=\frac{1}{2}\ln\left( \frac{E+p_{z}}{E-p_{z}}\right)
+\end{equation}
+
+donde \textit{E} es la energía total de la partícula y $p_{z}$ es la componente longitudinal de su impulso. En el límite de altas energías esta cantidad se aproxima (en forma exacta para objetos no masivos) por la llamada pseudorapidez, $\eta$, relacionada con el ángulo polar $\theta$ como:
+
+\begin{equation}
+\eta =-\ln \tan\left( \frac{\theta}{2} \right)
+\end{equation}
+
+La razón detrás de esta transformación de coordenadas es el hecho que la multiplicidad de partículas producidas es aproximadamente constante como función de $\eta$, y que la diferencia de pseudorapidez entre dos partículas es invariante frente a transformaciones de Lorentz a lo largo de la dirección del haz. En el caso de colisiones hadrónicas, la fracción del impulso del protón adquirida por cada uno de las partones interactuantes es desconocida. Parte de este impulso es transferido en la interacción dura, mientras cierta fracción remanente escapa el detector a lo largo del haz. Así, no es posible reconstruir el movimiento longitudinal del centro de masa en la interacción, y aplicar leyes de conservación sobre la cinemática de cada evento. Sin embargo, dado que los protones inciden a lo largo de la dirección del haz, el impulso total transverso es conservado durante la colisión. Por esta razón, solo las componentes transversales son utilizadas en la descripción de la cinemática del evento, por ejemplo $p_{T}$ ($=p\sin\theta$). En términos de la pseudorapidez, se define la energía transversa ($E_{T}=E\sin\theta$) de una partícula como:
+
+\begin{equation}
+E_{T}=\frac{E}{\cosh \eta}
+\end{equation}
+
+donde \textit{E} es su energía total.
+
+\section{Los subdetectores de ATLAS}
+
+\subsection{El detector interno}
+
+El detector interno es el más próximo al haz y esta contenido dentro de un solenoide que provee un campo magnetico de $2$ T. El mismo está compuesto por distintos detectores:
+
+\vspace{0.5cm}
+
+{\bf Detector de píxeles }
+
+Es el más interno de los detectores, construído para medir la posición de las trazas de partículas cargadas con la más alta precisión posbile y es de vital importancia para la reconstrucción de los vértices primarios y secundarios. En la región \textit{barrel} consiste en tres cilindros, mientras que la \textit{endcap} tres discos. El principio de detección para partículas cargadas es la medida de la deposición de la carga inducida en una capa de silicio por ionización. El sistema contiene un total de $80.4$ millones de sensores, cada uno con una resolucion intrínseca de entre $12$ $\mu$m y $110$ $\mu$m.
+
+\vspace{0.5cm}
+
+{\bf Detector Semiconductor de Trazas (SCT) }
+
+Se encuentra por fuera del detector de píxeles y está deseñado para medir las trazas con alta precisión en la zona intermedia del detector. A diferencia del detector de píxeles los sensores de silicio estan segmentados en micro bandas, dada la mas baja multiplicidad de partículas. La resolución varía entre $16$ $\mu$m y $580$ $\mu$m. En la región \textit{barrel} los módulos de SCT estan dispuestos en 4 capas concéntricas, mientras que en la región \textit{endcap} consiste en 9 discos transversales al eje del haz.
+
+\vspace{0.5cm}
+
+{\bf Detector de Radiación de Transición (TRT) }
+
+Es el detector más externo del ID y está diseñado, no solo para detectar partículas cargadas, sino también para detectar la radiación de transición que permite distinguir entre partículas cargadas pesadas y livianas (diferenciar entre $\pi^{\pm}$ y $e^{\pm}$ por ejemplo). El TRT se basa en el uso de tubos detectores que pueden operar a alta frecuencia de eventos gracias a su pequeño diámetro ($4$ mm) y el aislamiento de sus hilos centrales en volúmenes de gas individuales. La región barrel contiene $50000$ tubos paralelos al eje del haz y la región endacap $420000$ tubos orientados radialmente. Su resolucion es de $0.17$ mm.
+
+\subsection{Calorímetros}
+
+El sistema de calorímetros de ATLAS está sdiseñado para medir la energía y la posición de las partículas, mediante la absorción de la energía depositada por las cascadas de partículas secundarias que esas generan en el material del mismo. Además, permite discriminar electrones y fotones de jets, medir el desbalance de energía transversa y la selección online de eventos potencialmenteinteresantes (\textit{trigger}). Este sistema incluye un calorímetro electromagnético (ECAL) y otro hadrónico (HCAL).
+
+{\bf Calorímetro electromagnético }
+
+Figura ... Las partículas incidentes iteractúan con el material absorbente (Pb), creando una lluvia de partículas cargadas y neutras. Las partículas cargadas ionizan el medio activo (LAr) colocado entra las placas de plomo, donde los electrones liberados son colectados en un electrodo central de kaptón/Cu hacia donde derivan por acción del campo eléctrico aplicado. La señal total en el medio activo es así poroporcional a la energía total real de la partícula incidente.
+
+El ECAL se divide en una parte central y los \textit{endcaps}. En la región de transición entre el \textit{barrel} y el \textit{endcap} se encuetra una zona no isntrumentada, por donde se conecta el detector. Esta región denominada \textit{crack}, está comprendida entre $1.37 < |\eta| < 1.52$. Es por este motivo que la mayoría de los análisis se requiere que los candidaos a fotones/electrones estén fuera de la región \textit{crack}.
+
+{\bf Calorímetro hadrónico }
+
+El calorímetro hadrónico de ATLAS cubre el rango $|\eta|< 4.9$ usando diferentes materiales. La parte del \textit{barrel} de este sistema consiste en un calorímetro de muestreo que utiliza acero como absorbente y tejas centelladoras como material activo. Las tejas están ubicadas radialmente y apiladas en profundidad. En la región de \textit{endcaps}, el calorímetro hadrónico se compone de dos ruedas perpendiculares al tubo del haz, hechas con placas de cobre y tungsteno como material absorbente y argón líquido como material activo. Estos detectores extienden la aceptancia del calorímetro de ATLAS hasta prácticamente cubrir el ángulo sólido del punto de colisión.
+
+\subsection{Espectrómetro de muones}
+
+Los muones de alto $p_{T}$ generados en el punto de interacción tienen un altísimo poder de penetración y son poco interactuantes. Por ello el espectrómetro de muones se encuentra situado en la parte más exterior del detector ATLAS, alrededor del sistema de imanes de toroides, y está diseñado para obtener mediciones de alta precisión de posición e impulso de muones de alto $p_{T}$ . Este es el subdetector más grande y el que le da a ATLAS su tamaño. 
+
+Los muones al ser altamente penetrantes, son las únicas partículas (excepto las invisibles que no interactúan) que llegan al sistema de muones. Estos pierden parte de su energía mientras penetran las capas internas de ATLAS antes de llegar al espectrómetro de muones. La pérdida de energía tiene que ser tenida en cuenta utilizando los depósitos de energía en los calorímetros.
+
+\section{Sistema de \textit{trigger}}

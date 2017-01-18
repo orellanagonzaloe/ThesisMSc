@@ -1,0 +1,67 @@
+\chapter{Modelo Estándar y Supersimetría}
+% \addcontentsline{toc}{chapter}{Modelo Estándar y Supersimetría}
+\chaptermark{Modelo Estándar y Supersimetría}
+
+
+\section{Modelo Estándar}
+
+El Modelo Estándar (SM) es la teoría que describe a las partículas elementales y a sus interacciones. Según el SM las partículas se clasifican en dos grandes grupos: fermiones y bosones. Los primeros se caracterizan por obedecer la estadística de Fermi-Dirac y tener spin semientero. A su vez, se clasifican en leptones y quarks, según si experimentan o no la interacción fuerte, siendo los últimos los que poseen carga de color.  Existen 6 tipos de leptones y de quarks, y se clasifican en tres generaciones según su masa, las dos últimas son inestables por lo que decaen a las de la primera generación. Por ende la materia ordinaria está compuesta por fermiones de primera generación. 
+
+Asi como los fermiones están asociados a la materia, los bosones están asociados a los portadores de las interacciones. Los mismos se carcterizan por obedecer la estadística Bose-Einstein y por tener spin entero. Existen 4 tipos de interacciones fundamentales. La electromagnética, que afecta a las partículas con carga eléctrica, cuyo bosón asociado es el foton. La débil, que actúa tanto en los quarks como en los leptones, asociada a los bosones $W^{\pm}$ y $Z^{0}$. La interacción fuerte, que actúa en las partículas con carga de color, cuyo portador son los gluones. Finalmente, la cuarta interacción es la gravitatoria. La misma no está descripta por el SM, pero supone que debería actuar sobre partículas masivas (o todas ???) y su bosón asociado es el gravitón. Todas las partículas tienen asociadas una antipartícula, con la misma masa pero con sus números cuánticos opuestos. 
+
+El SM se construye formalmente como una teoría de gauge no abeliana, imponiendo invarianza de gauge local sobre campos cuantificados que describen las partículas fundamentales, dando lugar a los campos de gauge que descibren las interacciones. Su grupo de simetria es:
+
+\begin{equation}
+\mathcal{G}_{SM}=SU(3)_{C}\times SU(2)_{L}\times U(1)_{Y}
+\end{equation}
+
+
+donde Y (la hipercarga), L (la helicidad izquierda) y C (la carga de color) representan las cantidades conservadas del grupo de simetría. El subgrupo $SU(2)_{L}\times U(1)_{Y}$ representa el sector electrodébil (QED + interacción débil) y el subrgtupo $SU(3)_{C}$ incluye la cromodinámica cuántica (QCD).
+
+
+En el SM las partículas adquieren su masa mediante el mecanismo de Higgs, a partir de la ruptura espontanea de la simetria electrodébil:
+
+\begin{equation}
+\mathcal{G}_{SM}\rightarrow SU(3)_{C}\times U(1)_{Q}
+\end{equation}
+
+produciendo los bosones masivos $W^{\pm}$ y $Z^{0}$. Como consecuencia, es necesario incluir en el lagrangiano un nuevo campo escalar, dando lugar a un nuevo bosón masivo de spin 0, llamado bosón de Higgs. La interacción de los fermiones con este campo, también da lugar a la masa de los mismos.
+
+El SM tiene 19 parámetros libres: las 9 masas de los fermiones (considerando que los neutrinos tienen masa nula), las 3 constantes de acoplamiento de las nteracciones, los 3 ángulos de mezcla de la matriz CKM junto con la fase de de la violación CP, el ángulo de vacío de QCD y finalmente la masa del Higgs y su valor de expectación del vacio.
+
+
+\subsection{Colisión \textit{pp}}
+
+El LHC es un colisionador de protones, por lo tanto para comprender los procesos que ocurren en el mismo, es necesario entender la estructura del protón. Su composición se puede describir mediante la cromodinámica cuántica (QCD), que explica las interacciones entre partículas que poseen carga de color: quarks y gluones. Los mediadores de la interacción, los gluones, pueden interactuar consigmo mismo, lo que produce que la fuerza dependa de la distancia entre las cargas. De esta forma, la constante de acoplamiento de la fuerza, aumenta a grandes distancias (o bajas energías) y disminuye para distancias menores (altas energías). Es por este motivo que los cálculos perturvativos solo se pueden efectuar a altas energías. Otra característica de la interacción es el confinamiento, es decir, que las partículas con color no puedan existir libremente. Solo estados de color neutro de múltiples partículas de color pueden ser observados en la naturaleza viajando distancias macroscópicas.
+
+El proton es un barión, constituído por dos quarks \textit{u} y un quark \textit{d}, cada uno con una carga de color tal que deje al protón en un estado neutro. Estos tres quarks son llamados quarks de valencia del protón, y están rodeados por un mar de gluones y pares de quark-antiquark que surgen de fluctuaciones cuánticas. A altas energías la colision entre protones se puede considerar como una colisión entre dos de sus constituyentes, aplicando el <<modelo de partones>>. Los quarks de valencia y los quarks y antiquarks del mar junto con los gluones son llamados <<partones>> del protón. Cada partón lleva solo una fracción del momento y la energía del protón. Para la medición de una sección eficaz de dispersión fuerte que involucre quarks y gluones en el estado inicial, es necesario conocer el momento de las partículas incidentes. Como los partones solo llevan una fracción del momento del protón, y están en interacción permanente entre ellos, el momento es desconocido, por lo que la escala de energía de las colisiones varía. Además, como se mencionó, los quarks (\textit{q}) y gluones (\textit{g}) salientes no pueden observarse directamente debido al confinamiento, pero son observados en el detector como jets. Entonces no es posible medir una sección eficaz partónica como $\sigma(qg \rightarrow qg)$, pero se puede hacer una medida inclusiva, como la sección eficaz hadrónica $\sigma(pp \rightarrow jj)$ con dos jets en el estado final. En teoría de perturbaciones, para pasar desde la sección eficaz partónica a la sección eficaz hadrónica es necesario conocer la probabilidad de que un partón de tipo \textit{n} sea encontrado con una fracción de momento \textit{x}, es decir, las funciones de distribución partónica (PDF). Estas funciones son determinadas a partir de datos obtenidos de los propios experimentos de altas energías, ya que no pueden determinarse a partir de la teoría. 
+
+Esta conexión entre los hadrones observables y el nivel partónico es posible gracias al concepto de <<factorización>>, que permite una separación sistemática entre las interacciones de corta distancia (de los partones) y las interacciones de larga distancia (responsables del confinamiento de color y la formación de hadrones). El teorema de factorización establece que la sección eficaz de producción de cualquier proceso de QCD del tipo $A + B \rightarrow X$, siendo $a_{i}$ ($b_{j}$) los constituyentes del hadrón inicial $A$($B$), puede ser expresada como: 
+
+\begin{equation}
+\sigma_{AB\rightarrow X}=\sum_{ij}\int dx_{a_{i}}dx_{b_{j}}f_{A/a_{i}}(x_{a_{i}},\mu_{F}^{2})f_{B/b_{j}}(x_{b_{j}},\mu_{F}^{2})\sigma_{a_{i}b_{j}}(\mu_{F}^{2},\mu_{R}^{2})
+\end{equation}
+
+donde $x_{i}$ ($x_{j}$) es la fracción del momento del hadrón $A$($B$) que lleva el partón $a_{i}$ ($b_{j}$) y $\sigma_{a_{i}b_{j}\rightarrow X}$ es la sección eficaz de la interacción a nivel partónico, calculada a un dado orden de perturbaciones y una escala de renormalización $\mu_R$ . La escala de renormalización es introducida para absorber las divergencias ultravioletas que aparecen en los cálculos perturbativos más allá del primer orden. Las funciones $f_{A/a_{i}}(x_{a_{i}},\mu_{F}^{2})$ son las PDF, que representan la probabilidad de encontrar un partón de tipo \textit{n} en el hadrón \textit{h} con una fracción de momento $x_{n}$ , dada una escala de factorización $\mu_{F}$. Esta escala es un parámetro arbitrario introducido para tratar singularidades que aparecen en el régimen no perturbativo. Estas divergencias son absorbidas, en forma similar a la renormalización, dentro de las funciones de distribución partónicas a la escala $\mu_{F}$. Si bien las PDF no pueden ser determinadas perturbativamente, se puede predecir su dependencia con el impulso transferido $Q^{2}$ por medio de las ecuaciones de evolución DGLAP. De esta forma, la medida experimental de su forma funcional a un dado $Q^{2}_{0}$ fijo permite obtener predicciones de las PDF para un amplio espectro de $Q^{2}$. 
+
+
+
+
+\subsection{Física mas allá del SM}
+
+El SM provee una descripción notablemente exitosa de todos los fenómenos accesibles con los experimentos de altas energías disponibles actualmente. Sin embargo, también se sabe que el SM deja cuestiones sin resolver, tanto desde el punto de vista teórico, como experimental.
+
+El triunfo de la teoría electrodébil, parece indicar que todas las interacciones corresponden a distintas manifestaciones de un único campo unificado y que el SM es una teoría efectiva a bajas energías (del orden de los 100 GeV).  Incluso ante la ausencia de la gran unificación de las fuerzas electrodébil y fuerte a una escala muy alta de energía, el SM debería ser modificado para incorporar los efectos de la gravedad a la escala de Planck.
+
+Otro síntoma de incompletitud es la gran cantidad de parámetros libres (19) que deben ajustarse a los datos observados, ya que no resultan de principios teóricos más fundamentales. Más aun, el SM no explica por qué la escala de la interacción electrodébil y la escala de Planck es tan chica (<<problema de jerarquía>>), ni por qué la masa del Higgs es más liviana que la masa de Planck (<<problema de naturalidad>>).
+
+Desde el punto de vista experimental, también existen algunos resultados que no pueden acomodarse dentro del SM. Distintos experimentros demostraron que si bien los neutrinos tienen una masa muy pequeña, la misma no es nula. En contraposición con el SM que considera a los mismos no masivos. De todas formas, es posible escribir un término de masa para los neutrinos en el lagrangiano, pero el mismo requiere de la existencia de neutrinos con quiralidad izquierda, que aún no fueron observados.
+
+El SM tampoco provee un candidato para la materia oscura. A partir de la observación del movimiento de las galaxias, se sabe que el mismo no se corresponde con la cantidad de materia observada, y es por eso que se propone la existencia de materia indetectable para los instrumentos astronómicos de medición actuales. La materia oscura debería corresponder a partículas masivas, que interactúen solamente mediante las fuezas débil y gravitacional.
+
+Es por esto que existen diferentes teorías que proponen soluciones a estos problemas del SM. Una de ellas, y la que concierne a esta tesis, es la Supersimetría.
+
+\section{Supersimetría}
+
+
+

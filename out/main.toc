@@ -1,5 +1,20 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Estrategia general del an\IeC {\'a}lisis}{1}
-\contentsline {section}{\numberline {1.1}Regiones de se\IeC {\~n}al, control y validaci\IeC {\'o}n}{2}
-\contentsline {chapter}{\numberline {2}Electrones identificados como fotones}{3}
-\contentsline {section}{\numberline {2.1}Medici\IeC {\'o}n del factor}{3}
+\contentsline {chapter}{\numberline {1}Modelo Est\IeC {\'a}ndar y Supersimetr\IeC {\'\i }a}{1}
+\contentsline {section}{\numberline {1.1}Modelo Est\IeC {\'a}ndar}{1}
+\contentsline {subsection}{\numberline {1.1.1}Colisi\IeC {\'o}n \textit {pp}}{2}
+\contentsline {subsection}{\numberline {1.1.2}F\IeC {\'\i }sica mas all\IeC {\'a} del SM}{3}
+\contentsline {section}{\numberline {1.2}Supersimetr\IeC {\'\i }a}{4}
+\contentsline {chapter}{\numberline {2}El LHC y el detector ATLAS}{5}
+\contentsline {section}{\numberline {2.1}El detector ATLAS}{6}
+\contentsline {section}{\numberline {2.2}Sistema de coordenadas}{6}
+\contentsline {section}{\numberline {2.3}Los subdetectores de ATLAS}{8}
+\contentsline {subsection}{\numberline {2.3.1}El detector interno}{8}
+\contentsline {subsection}{\numberline {2.3.2}Calor\IeC {\'\i }metros}{8}
+\contentsline {subsection}{\numberline {2.3.3}Espectr\IeC {\'o}metro de muones}{9}
+\contentsline {section}{\numberline {2.4}Sistema de \textit {trigger}}{10}
+\contentsline {chapter}{\numberline {3}Reconstrucci\IeC {\'o}n e identificaci\IeC {\'o}n de objetos f\IeC {\'\i }sicos}{11}
+\contentsline {chapter}{\numberline {4}Estrategia general del an\IeC {\'a}lisis}{13}
+\contentsline {section}{\numberline {4.1}Regiones de se\IeC {\~n}al, control y validaci\IeC {\'o}n}{14}
+\contentsline {chapter}{\numberline {5}Electrones identificados como fotones}{15}
+\contentsline {section}{\numberline {5.1}Medici\IeC {\'o}n del factor}{15}
+\contentsline {chapter}{\numberline {6}Conclusi\IeC {\'o}n}{19}
