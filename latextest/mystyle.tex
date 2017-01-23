@@ -1,0 +1,56 @@
+\pagestyle{fancy}
+%----------------
+\textheight22.6cm \textwidth16.0cm
+%\textheight23.0cm \textwidth16.0cm
+\newlength{\dinwidth}
+\newlength{\dinmargin}
+\newlength{\medwwidth}
+\setlength{\dinwidth}{21.0cm}
+\setlength{\headwidth}{\textwidth}
+\setlength{\headheight}{18.0pt}
+\columnsep1cm
+
+
+\setlength{\dinmargin}{\dinwidth}
+\addtolength{\dinmargin}{-\textwidth}
+\setlength{\dinmargin}{0.5\dinmargin}
+\oddsidemargin -1.0in
+\setlength{\medwwidth}{-0.4cm}
+\addtolength{\oddsidemargin}{\dinmargin}
+\addtolength{\medwwidth}{\textwidth}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\marginparwidth}{0.9\dinmargin}
+\marginparsep 8pt \marginparpush 5pt
+\topmargin0.0cm
+
+%----------------------------------
+\fancyhead{}
+%\fancyhead[LE,RO]{\thepage}
+%\fancyhead[LE]{\slshape {\bf \thepage}~~~~ \leftmark}
+%\fancyhead[RO]{\slshape \rightmark ~~~~{\bf \thepage}}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\slshape \leftmark }
+\fancyhead[LO]{\slshape \rightmark}
+\cfoot{}
+%----------------------------------
+
+
+%===================================
+\renewcommand{\chaptermark}[1]{%
+  \markboth{%   
+    \thechapter~%
+      \ #1}
+  {}}
+\renewcommand{\sectionmark}[1]{%
+  \markright{%
+    \thesection~%
+      \ #1}
+  {}}   
+\renewcommand{\headrulewidth}{0.6pt}
+%===================================
+
+
+
+
+
+
