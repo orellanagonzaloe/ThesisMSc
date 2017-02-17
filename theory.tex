@@ -4,10 +4,56 @@
 
 
 \section{Modelo Estándar}
+ 
+El Modelo Estándar (SM) es la teoría que describe a las partículas elementales y a sus interacciones \cite{Glashow:1961tr,PhysRevLett.19.1264}. Según el SM las partículas se clasifican en dos grandes grupos: fermiones y bosones. Los primeros se caracterizan por obedecer la estadística de Fermi-Dirac y tener spin semientero. A su vez, se clasifican en leptones y quarks, según si experimentan o no la interacción fuerte, siendo los últimos los que poseen carga de color.  Existen 6 tipos de leptones y de quarks, y se clasifican en tres generaciones según su masa, las dos últimas son inestables por lo que decaen a las de la primera generación. Por ende la materia ordinaria está compuesta por fermiones de primera generación. 
 
-El Modelo Estándar (SM) es la teoría que describe a las partículas elementales y a sus interacciones. Según el SM las partículas se clasifican en dos grandes grupos: fermiones y bosones. Los primeros se caracterizan por obedecer la estadística de Fermi-Dirac y tener spin semientero. A su vez, se clasifican en leptones y quarks, según si experimentan o no la interacción fuerte, siendo los últimos los que poseen carga de color.  Existen 6 tipos de leptones y de quarks, y se clasifican en tres generaciones según su masa, las dos últimas son inestables por lo que decaen a las de la primera generación. Por ende la materia ordinaria está compuesta por fermiones de primera generación. 
+Asi como los fermiones están asociados a la materia, los bosones están asociados a los portadores de las interacciones. Los mismos se carcterizan por obedecer la estadística Bose-Einstein y por tener spin entero. Existen 4 tipos de interacciones fundamentales. La electromagnética, que afecta a las partículas con carga eléctrica, cuyo bosón asociado es el fotón. La débil, que actúa tanto en los quarks como en los leptones, asociada a los bosones $W^{\pm}$ y $Z^{0}$. La interacción fuerte, que actúa en las partículas con carga de color, cuyo portador son los gluones. Finalmente, la cuarta interacción es la gravitatoria. La misma no está descripta por el SM, pero supone que debería actuar sobre partículas masivas (o todas ???) y su bosón asociado es el gravitón. Todas las partículas tienen asociadas una antipartícula, con la misma masa pero con sus números cuánticos opuestos. La Tabla \ref{smparticles} resume las propiedades de las particualas mencionadas.
 
-Asi como los fermiones están asociados a la materia, los bosones están asociados a los portadores de las interacciones. Los mismos se carcterizan por obedecer la estadística Bose-Einstein y por tener spin entero. Existen 4 tipos de interacciones fundamentales. La electromagnética, que afecta a las partículas con carga eléctrica, cuyo bosón asociado es el foton. La débil, que actúa tanto en los quarks como en los leptones, asociada a los bosones $W^{\pm}$ y $Z^{0}$. La interacción fuerte, que actúa en las partículas con carga de color, cuyo portador son los gluones. Finalmente, la cuarta interacción es la gravitatoria. La misma no está descripta por el SM, pero supone que debería actuar sobre partículas masivas (o todas ???) y su bosón asociado es el gravitón. Todas las partículas tienen asociadas una antipartícula, con la misma masa pero con sus números cuánticos opuestos. 
+\begin{table}	
+\centering
+\begin{threeparttable}
+\caption{Partículas elementales del SM.}
+\begin{tabular}{ l | c  c  c | c c }
+
+	\hline
+
+		& \multicolumn{3}{c}{Partículas} & Spin & Carga eléctrica \\
+
+	\hline
+
+	\multirow{3}{*}{Quarks} & $(u,d)_{L}$ & $(c,s)_{L}$ & $(t,b)_{L}$ & $(\frac{1}{2},\frac{1}{2})$ & $(\frac{2}{3},-\frac{1}{3})$ \\
+
+							& $u_{R}$ & $c_{R}$ & $t_{R}$ & $\frac{1}{2}$ & $\frac{2}{3}$ \\
+
+							& $d_{R}$ & $s_{R}$ & $b_{R}$ & $\frac{1}{2}$ & $-\frac{1}{3}$ \\
+
+	\hline
+
+	\multirow{2}{*}{Leptones} 	& $(\nu_{e},e^{-})_{L}$ & $(\nu_{\mu},\mu^{-})_{L}$ & $(\nu_{\tau},\tau^{-})_{L}$ & $(\frac{1}{2},\frac{1}{2})$ & $(0,-1)$ \\
+
+								& $e_{R}^{-}$ & $\mu_{R}^{-}$ & $\tau_{R}^{-}$ & $\frac{1}{2}$ & $-1$ \\
+
+	\hline
+
+	\multirow{3}{*}{Bosones de Gauge} 	& \multicolumn{3}{c |}{g} & $1$ & $0$ \\
+
+										& \multicolumn{3}{c |}{$W^{\pm}$, Z} & $1$ & $\pm1, 0$ \\
+
+										& \multicolumn{3}{c |}{G\tnote{*}} & $2$ & $0$ \\
+
+	\hline
+
+	Bosones escalares & \multicolumn{3}{c |}{H} & 0 & 0 \\
+
+	\hline
+
+\end{tabular}
+\begin{tablenotes}
+\item [*] \footnotesize No observada experimentalmente
+\end{tablenotes}
+\end{threeparttable}
+\label{smparticles}
+\end{table}
 
 El SM se construye formalmente como una teoría de gauge no abeliana, imponiendo invarianza de gauge local sobre campos cuantificados que describen las partículas fundamentales, dando lugar a los campos de gauge que descibren las interacciones. Su grupo de simetria es:
 
@@ -19,7 +65,7 @@ El SM se construye formalmente como una teoría de gauge no abeliana, imponiendo
 donde Y (la hipercarga), L (la helicidad izquierda) y C (la carga de color) representan las cantidades conservadas del grupo de simetría. El subgrupo $SU(2)_{L}\times U(1)_{Y}$ representa el sector electrodébil (QED + interacción débil) y el subrgtupo $SU(3)_{C}$ incluye la cromodinámica cuántica (QCD).
 
 
-En el SM las partículas adquieren su masa mediante el mecanismo de Higgs, a partir de la ruptura espontanea de la simetria electrodébil:
+En el SM las partículas adquieren su masa mediante el mecanismo de Higgs \cite{PhysRevLett.13.508}, a partir de la ruptura espontanea de la simetria electrodébil:
 
 \begin{equation}
 \mathcal{G}_{SM}\rightarrow SU(3)_{C}\times U(1)_{Q}
@@ -62,6 +108,12 @@ El SM tampoco provee un candidato para la materia oscura. A partir de la observa
 Es por esto que existen diferentes teorías que proponen soluciones a estos problemas del SM. Una de ellas, y la que concierne a esta tesis, es la Supersimetría.
 
 \section{Supersimetría}
+
+...
+
+La parte eléctricamente neutra del campo de Higs del SM es un escalar complejo $H$ con un potencial clásico $V=m_{H}^{2}|H|^{2}+\lambda|H|^{4}$. El SM necesita un valor de exprectación de vacío (VEV) para H no nulo, en el mínimo del potencial. Esto curre si $\lambda >0$ y $m_{H}^{2}<0$, resultando en $\left\langle H \right\langle = \sqrt{-m_{H}^{2}/2\lambda}$. Experimentalmente, de las edidas de las propiedades de las interacciones débiles, se sabe que el valor de $\left\langle H \right\langle$ es de aproximadamente 174 GeV. El descubirmiento del bosón de Higgs en el 2012 con una masa cercana a 125 GeV implica que, suponiendo que el SM es correcto como una teoría efectiva, $\lambda = 0.126$ y $m_{H}^{2}=-(92.9 GeV)^{2}$.
+
+Por cada partícula a la que se acopla el campo de Higgs, $m_{H}^{2}$ recibe una gran corrección cuántica de los efectos virtuales. Por ejemplo, si el campo de Higgs se acopla a un fermión $f$
 
 
 

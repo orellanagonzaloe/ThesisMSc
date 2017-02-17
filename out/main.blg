@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: ../bibtex/bst/atlasBibStyleWoTitle.bst
+Database file #1: ../reference.bib.bib
+Database file #2: ../bibtex/bib/ATLAS.bib.bib
+Database file #3: ../bibtex/bib/ConfNotes.bib.bib
+Database file #4: ../bibtex/bib/PubNotes.bib.bib
+Database file #5: ../bibtex/bib/Extra.bib.bib
+Warning--empty title in Glashow:1961tr
+Warning--empty title in PhysRevLett.19.1264
+Warning--empty title in PhysRevLett.13.508
+Warning--empty title in PERF-2007-01
+You've used 4 entries,
+            2330 wiz_defined-function locations,
+            616 strings with 4854 characters,
+and the built_in function-call counts, 1284 in all, are:
+= -- 126
+> -- 16
+< -- 0
++ -- 8
+- -- 4
+* -- 97
+:= -- 136
+add.period$ -- 5
+call.type$ -- 4
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 75
+empty$ -- 131
+format.name$ -- 4
+if$ -- 332
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 20
+newline$ -- 17
+num.names$ -- 4
+pop$ -- 25
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 64
+stack$ -- 0
+substring$ -- 112
+swap$ -- 42
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 13
+width$ -- 5
+write$ -- 27
+(There were 4 warnings)

@@ -12,7 +12,7 @@
 %end of 81% scaling trick
 \end{comment} 
 
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-tabla]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -23,10 +23,14 @@
 \usepackage{pifont}
 \usepackage{verbatim}
 \usepackage{pstricks}
+\usepackage{multirow}
 \usepackage{units}    
+\usepackage{threeparttable}
 \usepackage{mathrsfs}    
+\usepackage[colorlinks,allcolors=blue]{hyperref}
 % \usepackage{axodraw}
-\usepackage{fancyhdr} 
+\usepackage{fancyhdr}
+\usepackage{cite}
 \usepackage[bf]{caption2}% Bold face for captions 
 \input{../latextest/mystyle.tex} 
 
@@ -75,9 +79,9 @@
 %%   Bibliography
 %%   ============
 
-%\bibliographystyle{unsrt_jvt}
+% \bibliographystyle{unsrt}
 \bibliographystyle{../bibtex/bst/atlasBibStyleWoTitle}
-\bibliography{../reference.bib,../bibtex/bib/ATLAS.bib,../bibtex/bib/ConfNotes.bib,../bibtex/bib/PubNotes.bib}
+\bibliography{../reference.bib,../bibtex/bib/ATLAS.bib,../bibtex/bib/ConfNotes.bib,../bibtex/bib/PubNotes.bib,../bibtex/bib/Extra.bib}
 %\addbibresource{../reference.bib}
 %\addbibresource{../bibtex/bib/ATLAS.bib}
 %\addbibresource{../bibtex/bib/ConfNotes.bib}

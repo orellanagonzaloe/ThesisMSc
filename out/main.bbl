@@ -1,0 +1,22 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{Glashow:1961tr}
+S.~L. Glashow,
+\href{http://dx.doi.org/10.1016/0029-5582(61)90469-2}{Nucl. Phys. {\bfseries
+  22} (1961) 579--588}.
+%%CITATION = NUPHA,22,579;%%.
+
+\bibitem{PhysRevLett.19.1264}
+S.~Weinberg, \href{http://dx.doi.org/10.1103/PhysRevLett.19.1264}{Phys. Rev.
+  Lett. {\bfseries 19} (1967) 1264--1266}.
+
+\bibitem{PhysRevLett.13.508}
+P.~W. Higgs, \href{http://dx.doi.org/10.1103/PhysRevLett.13.508}{Phys. Rev.
+  Lett. {\bfseries 13} (1964) 508--509}.
+
+\bibitem{PERF-2007-01}
+{ATLAS Collaboration},
+  \href{http://dx.doi.org/10.1088/1748-0221/3/08/S08003}{JINST {\bfseries 3}
+  (2008) S08003}.
+
+\end{thebibliography}\endgroup

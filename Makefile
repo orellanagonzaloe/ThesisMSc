@@ -1,6 +1,6 @@
 file=main
 
-src= $(file).tex hvf_def.tex macros.tex herab.sty title.tex intro.tex axodraw.sty background.tex strategy.tex theory.tex lhc.tex reconstruction.tex conclusion.tex
+src= $(file).tex hvf_def.tex macros.tex herab.sty title.tex axodraw.sty background.tex strategy.tex theory.tex lhc.tex reconstruction.tex conclusion.tex
 figs=
 
 
