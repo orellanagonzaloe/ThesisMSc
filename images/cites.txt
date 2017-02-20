@@ -1,0 +1,103 @@
+https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CombinedSummaryPlots/SM/index.html#ATLAS_o_SMSummary_SqrtS_ZoomOverlay
+
+@article{Marcastel:1621583,
+      author        = "Marcastel, Fabienne",
+      title         = "{CERN's Accelerator Complex. La chaîne des
+                       accélérateurs du CERN}",
+      month         = "Oct",
+      year          = "2013",
+      reportNumber  = "OPEN-PHO-CHART-2013-001",
+      url           = "https://cds.cern.ch/record/1621583",
+      note          = "General Photo",
+}
+
+@unpublished{Pequenao:1095924,
+      author        = "Joao Pequenao",
+      title         = "{Computer generated image of the whole ATLAS detector}",
+      month         = "Mar",
+      year          = "2008",
+      reportNumber  = "CERN-GE-0803012",
+      url           = "https://cds.cern.ch/record/1095924",
+}
+
+@unpublished{Pequenao:1095926,
+      author        = "Joao Pequenao",
+      title         = "{Computer generated image of the ATLAS inner detector}",
+      month         = "Mar",
+      year          = "2008",
+      reportNumber  = "CERN-GE-0803014",
+      url           = "https://cds.cern.ch/record/1095926",
+}
+
+@unpublished{Pequenao:1095927,
+      author        = "Joao Pequenao",
+      title         = "{Computer Generated image of the ATLAS calorimeter}",
+      month         = "Mar",
+      year          = "2008",
+      reportNumber  = "CERN-GE-0803015",
+      url           = "https://cds.cern.ch/record/1095927",
+}
+
+@unpublished{Pequenao:1505342,
+      author        = "Joao Pequenao and Paul Schaffner",
+      title         = "{An computer generated image representing how ATLAS
+                       detects particles}",
+      month         = "Jan",
+      year          = "2013",
+      reportNumber  = "CERN-EX-1301009",
+      url           = "https://cds.cern.ch/record/1505342",
+}
+
+@unpublished{Pequenao:1095929,
+      author        = "Joao Pequenao",
+      title         = "{Computer generated image of the ATLAS Muons subsystem}",
+      month         = "Mar",
+      year          = "2008",
+      reportNumber  = "CERN-GE-0803017",
+      url           = "https://cds.cern.ch/record/1095929",
+}
+
+@unpublished{Pequenao:1095928,
+      author        = "Joao Pequenao",
+      title         = "{Computer generated image of the ATLAS Liquid Argon}",
+      month         = "Mar",
+      year          = "2008",
+      reportNumber  = "CERN-GE-0803016",
+      url           = "https://cds.cern.ch/record/1095928",
+}
+
+@unpublished{Team:40524,
+      author        = "AC Team",
+      title         = "{Diagram of an LHC dipole magnet. Schéma d'un aimant
+                       dipôle du LHC}",
+      month         = "Jun",
+      year          = "1999",
+      reportNumber  = "CERN-DI-9906025",
+      url           = "https://cds.cern.ch/record/40524",
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

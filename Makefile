@@ -11,7 +11,7 @@ ps/$(file).ps: out/$(file).dvi
 #	dvips -O0.6,1.7cm out/$(file).dvi -ops/$(file).ps
 	dvips -ta4 -D1270 out/$(file).dvi -ops/$(file).ps
 #	dvips out/$(file).dvi -ops/$(file).ps
-	psnup -2 ps/$(file).ps > ps/$(file)2.ps
+	psnup -2 ps/$(file).ps > ps/$(file)2.psmak
 
 
 out/$(file).dvi: $(src)  $(figs)

@@ -1,4 +1,4 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
 
 \bibitem{Glashow:1961tr}
 S.~L. Glashow,
@@ -13,6 +13,63 @@ S.~Weinberg, \href{http://dx.doi.org/10.1103/PhysRevLett.19.1264}{Phys. Rev.
 \bibitem{PhysRevLett.13.508}
 P.~W. Higgs, \href{http://dx.doi.org/10.1103/PhysRevLett.13.508}{Phys. Rev.
   Lett. {\bfseries 13} (1964) 508--509}.
+
+\bibitem{Aad:2012tfa}
+{ATLAS} Collaboration, G.~Aad {et~al.},
+  \href{http://dx.doi.org/10.1016/j.physletb.2012.08.020}{Phys. Lett.
+  {\bfseries B716} (2012) 1--29},
+\href{http://arxiv.org/abs/1207.7214}{{\ttfamily arXiv:1207.7214 [hep-ex]}}.
+%%CITATION = ARXIV:1207.7214;%%.
+
+\bibitem{Chatrchyan:2012xdj}
+{CMS} Collaboration, S.~Chatrchyan {et~al.},
+  \href{http://dx.doi.org/10.1016/j.physletb.2012.08.021}{Phys. Lett.
+  {\bfseries B716} (2012) 30--61},
+\href{http://arxiv.org/abs/1207.7235}{{\ttfamily arXiv:1207.7235 [hep-ex]}}.
+%%CITATION = ARXIV:1207.7235;%%.
+
+\bibitem{Martin:1997ns}
+S.~P. Martin, \href{http://arxiv.org/abs/hep-ph/9709356}{{\ttfamily
+  arXiv:hep-ph/9709356 [hep-ph]}},
+[Adv. Ser. Direct. High Energy Phys.18,1(1998)].
+%%CITATION = HEP-PH/9709356;%%.
+
+\bibitem{Dimopoulos:1995ju}
+S.~Dimopoulos and D.~W. Sutter,
+  \href{http://dx.doi.org/10.1016/0550-3213(95)00421-N}{Nucl. Phys. {\bfseries
+  B452} (1995) 496--512},
+\href{http://arxiv.org/abs/hep-ph/9504415}{{\ttfamily arXiv:hep-ph/9504415
+  [hep-ph]}}.
+%%CITATION = HEP-PH/9504415;%%.
+
+\bibitem{ellis1996}
+R.~K. Ellis, W.~J. Stirling,  and B.~R. Webber,
+  \href{http://dx.doi.org/10.1017/CBO9780511628788}{{\em QCD and Collider
+  Physics:}}.
+\newblock Cambridge University Press, Cambridge, 10, 1996.
+\newblock
+  \url{https://www.cambridge.org/core/books/qcd-and-collider-physics/D0095E6D278BBBC74E9C3636AB4CB80C}.
+
+\bibitem{PhysRevLett.23.1415}
+R.~P. Feynman, \href{http://dx.doi.org/10.1103/PhysRevLett.23.1415}{Phys. Rev.
+  Lett. {\bfseries 23} (1969) 1415--1417},
+  \url{http://link.aps.org/doi/10.1103/PhysRevLett.23.1415}.
+
+\bibitem{PhysRev.185.1975}
+J.~D. Bjorken and E.~A. Paschos,
+  \href{http://dx.doi.org/10.1103/PhysRev.185.1975}{Phys. Rev. {\bfseries 185}
+  (1969) 1975--1982}, \url{http://link.aps.org/doi/10.1103/PhysRev.185.1975}.
+
+\bibitem{ELLIS1978281}
+R.~Ellis, H.~Georgi, M.~Machacek, H.~Politzer,  and G.~G. Ross,
+  \href{http://dx.doi.org/http://dx.doi.org/10.1016/0370-2693(78)90023-0}{Physics
+  Letters B {\bfseries 78} (1978) 281 -- 284},
+  \url{http://www.sciencedirect.com/science/article/pii/0370269378900230}.
+
+\bibitem{Evans:1129806}
+L.~R. Evans and P.~Bryant, J. Instrum. {\bfseries 3} (2008) S08001. 164 p,
+  \url{https://cds.cern.ch/record/1129806}, This report is an abridged version
+  of the LHC Design Report (CERN-2004-003).
 
 \bibitem{PERF-2007-01}
 {ATLAS Collaboration},

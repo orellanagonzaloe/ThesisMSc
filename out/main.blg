@@ -10,46 +10,54 @@ Database file #5: ../bibtex/bib/Extra.bib.bib
 Warning--empty title in Glashow:1961tr
 Warning--empty title in PhysRevLett.19.1264
 Warning--empty title in PhysRevLett.13.508
+Warning--empty title in Aad:2012tfa
+Warning--empty title in Chatrchyan:2012xdj
+Warning--empty title in Martin:1997ns
+Warning--empty title in Dimopoulos:1995ju
+Warning--empty title in PhysRevLett.23.1415
+Warning--empty title in PhysRev.185.1975
+Warning--empty title in ELLIS1978281
+Warning--empty title in Evans:1129806
 Warning--empty title in PERF-2007-01
-You've used 4 entries,
+You've used 13 entries,
             2330 wiz_defined-function locations,
-            616 strings with 4854 characters,
-and the built_in function-call counts, 1284 in all, are:
-= -- 126
-> -- 16
+            703 strings with 6942 characters,
+and the built_in function-call counts, 4247 in all, are:
+= -- 418
+> -- 92
 < -- 0
-+ -- 8
-- -- 4
-* -- 97
-:= -- 136
-add.period$ -- 5
-call.type$ -- 4
-change.case$ -- 0
++ -- 37
+- -- 24
+* -- 365
+:= -- 453
+add.period$ -- 20
+call.type$ -- 13
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 75
-empty$ -- 131
-format.name$ -- 4
-if$ -- 332
+cite$ -- 25
+duplicate$ -- 238
+empty$ -- 424
+format.name$ -- 24
+if$ -- 1098
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 20
-newline$ -- 17
-num.names$ -- 4
-pop$ -- 25
+int.to.str$ -- 13
+missing$ -- 59
+newline$ -- 54
+num.names$ -- 13
+pop$ -- 71
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 64
+skip$ -- 196
 stack$ -- 0
-substring$ -- 112
-swap$ -- 42
+substring$ -- 317
+swap$ -- 124
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 13
-width$ -- 5
-write$ -- 27
-(There were 4 warnings)
+warning$ -- 12
+while$ -- 37
+width$ -- 15
+write$ -- 102
+(There were 12 warnings)
