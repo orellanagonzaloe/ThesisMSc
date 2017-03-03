@@ -12,6 +12,7 @@ Warning--empty title in PhysRevLett.19.1264
 Warning--empty title in PhysRevLett.13.508
 Warning--empty title in Aad:2012tfa
 Warning--empty title in Chatrchyan:2012xdj
+Warning--empty title in Aad:2015zhl
 Warning--empty title in Martin:1997ns
 Warning--empty title in Dimopoulos:1995ju
 Warning--empty title in PhysRevLett.23.1415
@@ -20,45 +21,46 @@ Warning--empty title in ELLIS1978281
 Warning--empty title in Evans:1129806
 Warning--empty title in PERF-2007-01
 Warning--empty title in PERF-2011-02
-You've used 14 entries,
+Warning--empty title in STDM-2010-08
+You've used 19 entries,
             2330 wiz_defined-function locations,
-            711 strings with 7075 characters,
-and the built_in function-call counts, 4501 in all, are:
-= -- 439
-> -- 96
-< -- 0
-+ -- 39
-- -- 25
-* -- 393
-:= -- 477
-add.period$ -- 21
-call.type$ -- 14
-change.case$ -- 2
+            751 strings with 8801 characters,
+and the built_in function-call counts, 6034 in all, are:
+= -- 554
+> -- 209
+< -- 2
++ -- 79
+- -- 60
+* -- 551
+:= -- 698
+add.period$ -- 29
+call.type$ -- 19
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 255
-empty$ -- 452
-format.name$ -- 25
-if$ -- 1165
+cite$ -- 34
+duplicate$ -- 331
+empty$ -- 579
+format.name$ -- 60
+if$ -- 1523
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 64
-newline$ -- 57
-num.names$ -- 14
-pop$ -- 77
+int.to.str$ -- 19
+missing$ -- 74
+newline$ -- 76
+num.names$ -- 19
+pop$ -- 101
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 209
+skip$ -- 252
 stack$ -- 0
-substring$ -- 325
-swap$ -- 133
-text.length$ -- 0
+substring$ -- 349
+swap$ -- 163
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 13
-while$ -- 39
-width$ -- 16
-write$ -- 109
-(There were 13 warnings)
+warning$ -- 15
+while$ -- 46
+width$ -- 21
+write$ -- 158
+(There were 15 warnings)

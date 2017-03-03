@@ -1,6 +1,6 @@
 \BOOKMARK [0][-]{chapter.1}{Modelo Est\341ndar y Supersimetr\355a}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Modelo Est\341ndar}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{F\355sica mas all\341 del SM}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.1}{F\355sica mas all\341 del Modelo Est\341ndar}{section.1.1}% 3
 \BOOKMARK [1][-]{section.1.2}{Supersimetr\355a}{chapter.1}% 4
 \BOOKMARK [2][-]{subsection.1.2.1}{Modelo Est\341ndar Supersim\351trico M\355nimo}{section.1.2}% 5
 \BOOKMARK [1][-]{section.1.3}{Colisi\363n pp}{chapter.1}% 6
@@ -13,9 +13,15 @@
 \BOOKMARK [2][-]{subsection.2.3.3}{Espectr\363metro de muones}{section.2.3}% 13
 \BOOKMARK [1][-]{section.2.4}{Sistema de trigger}{chapter.2}% 14
 \BOOKMARK [0][-]{chapter.3}{Reconstrucci\363n e identificaci\363n de objetos f\355sicos}{}% 15
-\BOOKMARK [0][-]{chapter.4}{Estrategia general del an\341lisis}{}% 16
-\BOOKMARK [1][-]{section.4.1}{Regiones de se\361al, control y validaci\363n}{chapter.4}% 17
-\BOOKMARK [0][-]{chapter.5}{Electrones identificados como fotones}{}% 18
-\BOOKMARK [1][-]{section.5.1}{Medici\363n del factor}{chapter.5}% 19
-\BOOKMARK [0][-]{chapter.6}{Conclusi\363n}{}% 20
-\BOOKMARK [0][-]{chapter*.2}{Bibliografia}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Reconstrucci\363n de electrones y fotones}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Identificaci\363n de electrons y fotones}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Criterios de aislamiento}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.4}{Energ\355a faltante}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Estrategia general del an\341lisis}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Identificaci\363n de eventos de fondo}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Regiones de se\361al, control y validaci\363n}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Selecci\363n de eventos}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Electrones identificados como fotones}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Medici\363n del factor de identificaci\363n erronea}{chapter.5}% 25
+\BOOKMARK [0][-]{chapter.6}{Conclusi\363n}{}% 26
+\BOOKMARK [0][-]{chapter*.2}{Bibliografia}{}% 27

@@ -1,0 +1,49 @@
+\chapter{Electrones identificados como fotones}
+% \addcontentsline{toc}{chapter}{Electrones identificados como fotones}
+\chaptermark{Electrones identificados como fotones}
+
+Como ya se mencionó anteriormente, existe un fondo que contribuye a procesos asociados a fotones y jets como estado final, donde un electrón del estado final es identificado como un fotón. Este puede provenir de procesos del SM, como los que producen bosones W y Z + jets, y $t \overline{t}$. El mismo es difícil de estimar a partr de simulaciones, ya que dependen mucho de la estructura del detector que es muy complejo de modelar. El objetivo es estimar este fondo calculando un factor de identificación errónea en función de las variables $\eta$ y $p_{T}$ de los objetos, a partir de los datos tomados ...
+
+\section{Medición del factor}
+
+De una muestra de $Z\rightarrow ee$, se buscan eventos con un par electrón-positrón, o con un par electrón-fotón. Los requisitos para los electrones son $p_{T} > 25$ GeV, identificados como \textit{medium} y punto de trabajo de aislamiento \textit{gradient loose}. Para los fotones los requisitos son $p_{T} > 25$ GeV, \textit{tight} y aislados. A ambos se les solicita que tengan un $\eta_{BE}<2.37$, fuera de la region entre $1.37$ y $1.52$, con un parámetro de impacto $d_{0}$ con una significancia menor a 5, y con $|\Delta z_{0}sin\theta|<5$. Además, si un electrón y un fotón son reconstruidos con $\sqrt{\Delta\phi^{2}+\Delta\eta^{2}}<0.4$, el fotón es descartado del evento. A todos los pares se les solicita que su masa invariante esté entre $75$ y $105$ GeV. Finalmente, en el caso de que existiese más de un par en el evento, se utiliza el que tiene la masa invariante más cercana a la del bosón Z. Ya que esto minimiza la contaminación de pares aleatorios, descartando solo los pocos eventos donde pueda haber más de un Z en estado final.
+
+Cuando el evento contiene un par electrón-positrón, en un histograma con bines de $\eta$ y $p_{T}$ ($N^{ee}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$ de cada uno de los electrones. En el caso de que el evento tenga un par electrón-fotón, en otro histograma ($N^{eg}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$, solamente del fotón. El correspondiente factor se obtiene entocnes como:
+
+\begin{equation}
+F_{e\rightarrow\gamma}[\eta , p_{T}]=\frac{N^{eg}[\eta , p_{T}]}{N^{ee}[\eta , p_{T}]}
+\end{equation}
+
+Para tener en cuenta la relación entre entradas correspondientes a la señal y las correspondientes al fondo, cada entrada en los histrogramas es pesada con un peso que tiene en cuenta esta relación. Este peso se obtiene clasificando a los pares según el tipo (\textit{ee}-\textit{eg}) y según la región donde se reconstruían los objetos (\textit{EE}-\textit{EB}-\textit{BB}). Para cada uno se calcula su masa invariante, y finalmente el peso resulta de la relación entre señal (S) y fondo (B): $w=\frac{S}{S+B}$. Esto se debe a que los pares tienen un probabildiad de no provenir del decaimiento del bosón Z, sino de otros procesos no resonantes de fondo. La relación entre señal y fondo tiene en cuenta esta probabiliadad.
+
+La concepción del metodo proviene de la siguiente consideración. Sea $\epsilon_{i}$ la eficienca de reconstruir un electrón, con un valor de $\eta$ y $p_{T}$ correspondientes al bin \textit{i} del histograma. Para una muestra de \textit{N} pares de electrones y positrones reales (dentro del rango de masa), decimos que $f_{ij}$ es la fracción de pares para los cuales el electrón \textit{leading} (\textit{sub-leading}) está dentro del bin \textit{i} (\textit{j}). Considerando solamente electrones-positrones provenientes del decaimiento de un bosón Z, el número de eventos en el bin \textit{i} del histograma $N^{ee}[\eta , p_{T}]$ es entonces:
+
+\begin{equation}
+N_{i}^{ee} = \sum_{i}\epsilon_{i}\epsilon_{j}f_{ij}N + \sum_{j}\epsilon_{j}\epsilon_{i}f_{ji}N = \epsilon_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
+\end{equation}
+
+De forma análoga, ahora considerando que $p_{i}$ es la proporción de fotones reconstruídos como electrones en el bin \textit{i}, la cantidad de eventos en el bin \textit{i} del histrograma $N^{eg}[\eta , p_{T}]$ es:
+
+\begin{equation}
+N_{i}^{eg} = \sum_{i}p_{i}\epsilon_{j}f_{ij}N + \sum_{j}p_{j}\epsilon_{i}f_{ji}N = p_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
+\end{equation}
+
+El factor que determina la proporción de electrones reconstruidos como fotones se define finalmente como:
+
+\begin{equation}
+F_{e\rightarrow\gamma}[\eta , p_{T}]\equiv\frac{N^{eg}}{N^{ee}}=\frac{p_{i}}{\epsilon_{i}}
+\end{equation}
+
+Por ende, no es la proporción de fotones mal reconstruidos, sino que es el cociente entre esa proporción y la eficiencia de recosntruir un electrón. De esta forma el fondo correspondiente a electrones identificados como fotones resulta:
+
+\begin{equation}
+N_{e\rightarrow\gamma}(\eta , p_{T} , ... )=F_{e\rightarrow\gamma}(\eta , p_{T})\cdot N_{e}(\eta , p_{T} , ...)
+\end{equation}
+	
+Donde $N_{e}(\eta , p_{T} , ...)$ es el número de electrones en un determinado estado final.
+
+Los datos utilizados para el análisis corresponden al Run 2 del LHC. Para los ajustes de la masas invariantes se utiliza como modelo de señal una \textit{double-sided Crystall-ball}. Para el fondo se utiliza ???. Los resultados de los ajustes obtenidos para cada clasificación de los pares se pueden observar en las figuras ...
+
+Se consideran distintas fuentes de incetezas sistemáticas. Una de ellas proveniente de la variación tanto el rango del fit, como el rango de masa de aceptación de los pares. El rango noinal del fit es ??? y se varía ???. El rango nominal de la masa es ??? y se varía ???. También se utiliza una muestra de Monte-Carlo del proceso $Z\rightarrow ee$, calculando su "verdadero" factor y considerando esta discrepancia como sistemático. Se tuvo en cuenta también, como fuente de sistemático, la variación en los valores de los factores al utilizar otra función para el ajuste del fondo, utilizándose ???.
+
+Los resultados obtenidos para el factor en bines de $\eta , p_{T}$ se muestran en la tabla...
