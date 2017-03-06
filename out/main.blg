@@ -23,45 +23,46 @@ Warning--empty author and editor in LEPbook
 Warning--empty title in PERF-2007-01
 Warning--empty title in PERF-2011-02
 Warning--empty title in STDM-2010-08
-You've used 20 entries,
+Warning--empty title in Olive:2016xmw
+You've used 21 entries,
             2330 wiz_defined-function locations,
-            757 strings with 8901 characters,
-and the built_in function-call counts, 6238 in all, are:
-= -- 581
-> -- 210
+            767 strings with 9081 characters,
+and the built_in function-call counts, 6558 in all, are:
+= -- 614
+> -- 218
 < -- 2
-+ -- 80
-- -- 60
-* -- 560
-:= -- 720
-add.period$ -- 33
-call.type$ -- 20
++ -- 83
+- -- 62
+* -- 583
+:= -- 751
+add.period$ -- 35
+call.type$ -- 21
 change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 347
-empty$ -- 608
-format.name$ -- 60
-if$ -- 1581
+cite$ -- 38
+duplicate$ -- 369
+empty$ -- 637
+format.name$ -- 62
+if$ -- 1668
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 75
-newline$ -- 82
-num.names$ -- 19
-pop$ -- 109
+int.to.str$ -- 21
+missing$ -- 80
+newline$ -- 87
+num.names$ -- 20
+pop$ -- 115
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 254
+skip$ -- 274
 stack$ -- 0
-substring$ -- 349
-swap$ -- 164
+substring$ -- 361
+swap$ -- 177
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 16
-while$ -- 46
-width$ -- 22
-write$ -- 171
-(There were 16 warnings)
+warning$ -- 17
+while$ -- 48
+width$ -- 23
+write$ -- 179
+(There were 17 warnings)

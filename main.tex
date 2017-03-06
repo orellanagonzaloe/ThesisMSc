@@ -1,16 +1,4 @@
-\documentclass[a4paper,12pt,twoside,dfinal,spanish]{book} 
-
-\input{comment.sty}
-\begin{comment}
-%start the 81% scaling trick (comment out for full A4)
-\addtolength{\oddsidemargin}{-0.2345679in} % magic number = 1 - 1/0.81
-\addtolength{\evensidemargin}{-0.2345679in}% see documentation scale package
-\addtolength{\topmargin}{-0.2345679in} % for explanation
-\mag=810 % basic TeX command for 81% scaling
-\usepackage[a4, center, nodriver]{crop}
-%\usepackage[a4, center, frame]{crop}
-%end of 81% scaling trick
-\end{comment} 
+\documentclass[a4paper,10pt,twoside,spanish]{book}
 
 \usepackage[spanish, es-tabla]{babel}
 \usepackage[utf8]{inputenc}
@@ -35,9 +23,18 @@
 \usepackage{graphicx}
 \graphicspath{ {/home/gonza/git/Tesis/images/} }
 \usepackage{graphics}
+\usepackage{gensymb}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{changepage}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\renewcommand{\baselinestretch}{1.4}
 
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\usepackage[bf]{caption2}% Bold face for captions 
+% \usepackage[bf]{caption2}% Bold face for captions 
 
 \input{../mystyle.tex} 
 
