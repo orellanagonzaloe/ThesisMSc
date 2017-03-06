@@ -78,6 +78,12 @@ L.~R. Evans and P.~Bryant, J. Instrum. {\bfseries 3} (2008) S08001. 164 p,
   \url{https://cds.cern.ch/record/1129806}, This report is an abridged version
   of the LHC Design Report (CERN-2004-003).
 
+\bibitem{LEPbook}
+{\em {LEP design report}}.
+\newblock CERN, Geneva, 1983.
+\newblock \url{https://cds.cern.ch/record/98881}.
+\newblock By the LEP Injector Study Group.
+
 \bibitem{PERF-2007-01}
 {ATLAS Collaboration},
   \href{http://dx.doi.org/10.1088/1748-0221/3/08/S08003}{JINST {\bfseries 3}
