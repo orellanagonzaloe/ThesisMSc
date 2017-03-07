@@ -3,23 +3,24 @@
 \chaptermark{Reconstrucción e identificación de objetos físicos}
 
 
+En el presente capítulo se describe la reconstrucción e identificación de electrones y fotones ya que son los objetos físicos principales utilizados en los estudios de esta Tesis.
 La reconstrucción de fotones y electrones en ATLAS se basa en las deposiciones locales de energía halladas en el ECAL, y la distinción entre unos y otros se   realiza mediante la información de las trazas reconstruidas en el ID. A su vez se aplican una serie de criterios de identificación y aislamiento, que permiten discriminarlos de falsos candidatos, o de procesos secundarios que los producen.
 
 \section{Reconstrucción de electrones y fotones}
 
-La  reconstrucción de fotones y electrones en ATLAS se basa en un algoritmo de clusterización \cite{Lampl:1099735} que busca deposiciones locales de energía en el calorímetro dentro de una ventana rectangular en el espacio ($\eta$, $\phi$) de tamaño fijo (Sliding Window clusterization (SW)). La posición de la ventana se  justa maximizando la energía transversa de todas las celdas contenidas. El tamaño óptimo de la ventana depende del tipo de partícula (más ancha para los electrones) a reconstruir y de la región del calorímetro (mas ancha en la región endcap). 
+La  reconstrucción de fotones y electrones en ATLAS se basa en un algoritmo de clusterización \cite{Lampl:1099735} que busca deposiciones locales de energía en el calorímetro dentro de una ventana rectangular en el espacio ($\eta$, $\phi$) de tamaño fijo (Sliding Window clusterization, SW). La posición de la ventana se  justa maximizando la energía transversa de todas las celdas contenidas. El tamaño óptimo de la ventana depende del tipo de partícula (más ancha para los electrones) a reconstruir y de la región del calorímetro (mas ancha en la región endcap). 
 
 Aquellos clusters electromagnéticos asociados con una traza reconstruída con $p_{T} > 0.5 \egev$, son clasificados como electrones. La definición para fotones es un poco más complicada ya que estos pueden convertir en un par $e^{+}e^{-}$ en el sector anterior al calorímetro. Los fotones convertidos están caracterizados por la presencia de al menos una traza asociada proveniente de un vértice reconstruido en el ID. La probabilidad de conversión varía entre un 40\% y un 80\% dependiendo de $\eta$, aunque solo aquellas que ocurren antes del TRT son eficientemente reconstruidas. 
 
 Si no hay ninguna traza asociada a un dado cluster, este es clasificado como un fotón no convertido. Aquellos clusters asociados con trazas, que provienen de un vértice reconstruído en el ID, es clasificado como un fotón convertido. Además, para incrementar la eficiencia de reconstrucción de estos últimos, se consideran también aquellos casos donde solo una traza fue reconstruida, siempre que esta no posea ningún impacto en el B-layer.
 
-\section{Identificación de electrons y fotones}
+\section{Identificación de electrones y fotones}
 
 La identificación de fotones y electrones se lleva a cabo mediante una serie de cortes rectangulares en un conjunto de variables que describen la forma y la estructura de las lluvias electromagnéticas según se propagan en el detector. Estas variables incluyen información de los calorímetros y, para el caso de electrones o fotones convertidos, del detector de trazas.
 
-Para los electrones se definien tres conjuntos de cortes dependiendo de la rigurosidad de los mismos: \textit{loose}, \textit{medium}, \textit{tight}. Para los fotones solo se utiliza \textit{loose} y \textit{tihgt}. Los cortes de cada conjunto han sido optimizados para asegurar una alta eficiencia de identificación de electrones/fotones aislados y de rechazo de fondo.
+Para los electrones se definen tres conjuntos de cortes dependiendo de la rigurosidad de los mismos: \textit{loose}, \textit{medium}, \textit{tight}. Para los fotones solo se utiliza \textit{loose} y \textit{tihgt}. Los cortes de cada conjunto han sido optimizados para asegurar una alta eficiencia de identificación de electrones/fotones aislados y de rechazo de fondo.
 
-La definición de las variables que defninen a los cortes se detallan a continuación. La defeinición de los cortes se muestra en la Tabla \ref{lmttable}.
+La definición de las variables que definen a los cortes se detallan a continuación. La definición de los cortes se muestra en la Tabla \ref{lmttable}.
 
 
 \begin{itemize}
@@ -102,7 +103,7 @@ La definición de las variables que defninen a los cortes se detallan a continua
 \begin{table}	
 \centering
 \begin{threeparttable}
-\caption{Definición de las diferentes variables usadas para la selección \textit{loose} (L), \textit{medium} (M) y \textit{tight} (T) de fotones y electrones.}
+\caption{Detalle de las diferentes variables usadas para la selección \textit{loose} (L), \textit{medium} (M) y \textit{tight} (T) de fotones y electrones.}
 \begin{tabular}{ r p{8cm} c | c c | c c c }
 
 	\hline
@@ -176,7 +177,7 @@ p_{T}^{miss}=\left(p_{T}^{miss}\right)^{e} + \left(p_{T}^{miss}\right)^{\gamma} 
 
 (para discutir nomenclatura)
 
-donde cada término es calculado como el negativo de la suma de los objetos reconstruidos y calibrados, más el térmio soft. La contribución de los taus, se incluye en el término de jets o en el soft, debido a que los mismos decaen hadrónicamente. Finalmente la energía transversa faltante se define como:
+donde cada término es calculado como el negativo de la suma de los objetos reconstruidos y calibrados, más el término soft. La contribución de los taus, se incluye en el término de jets o en el soft, debido a que los mismos decaen hadrónicamente. Finalmente la energía transversa faltante se define como:
 
 \begin{equation}
 E_{T}^{miss}=|p_{T}^{miss}|
