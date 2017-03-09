@@ -24,5 +24,8 @@
 \contentsline {section}{\numberline {4.3}Selecci\IeC {\'o}n de eventos}{33}{section.4.3}
 \contentsline {chapter}{\numberline {5}Electrones identificados como fotones}{35}{chapter.5}
 \contentsline {section}{\numberline {5.1}Medici\IeC {\'o}n del factor de identificaci\IeC {\'o}n err\IeC {\'o}nea}{35}{section.5.1}
+\contentsline {subsubsection}{Clasificaci\IeC {\'o}n de eventos}{37}{section*.17}
+\contentsline {subsubsection}{Sistem\IeC {\'a}ticos}{38}{section*.18}
+\contentsline {subsection}{\numberline {5.1.1}Resultados y estimaci\IeC {\'o}n del fondo en regiones de control y validaci\IeC {\'o}n}{38}{subsection.5.1.1}
 \contentsline {chapter}{\numberline {6}Conclusi\IeC {\'o}n}{41}{chapter.6}
-\contentsline {chapter}{Bibliografia}{44}{chapter*.22}
+\contentsline {chapter}{Bibliografia}{44}{chapter*.24}
