@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: ../bibtex/bst/atlasBibStyleWoTitle.bst
+Database file #1: ../reference.bib.bib
+Database file #2: ../bibtex/bib/ATLAS.bib.bib
+Database file #3: ../bibtex/bib/ConfNotes.bib.bib
+Database file #4: ../bibtex/bib/PubNotes.bib.bib
+Database file #5: ../bibtex/bib/Extra.bib.bib
+Warning--empty title in Glashow:1961tr
+Warning--empty title in PhysRevLett.19.1264
+Warning--empty title in PhysRevLett.13.508
+Warning--empty title in Aad:2012tfa
+Warning--empty title in Chatrchyan:2012xdj
+Warning--empty title in Aad:2015zhl
+Warning--empty title in PhysRevD.14.1667
+Warning--empty title in Martin:1997ns
+Warning--empty title in Dimopoulos:1995ju
+Warning--empty title in PhysRevLett.23.1415
+Warning--empty title in PhysRev.185.1975
+Warning--empty title in ELLIS1978281
+Warning--empty title in Evans:1129806
+Warning--empty author and editor in LEPbook
+Warning--empty title in PERF-2007-01
+Warning--empty title in PERF-2011-02
+Warning--empty author and editor in ATLASComputing
+Warning--empty title in Calafiura:865624
+Warning--empty title in Brun:1997pa
+Warning--empty title in STDM-2010-08
+Warning--empty title in Olive:2016xmw
+You've used 27 entries,
+            2330 wiz_defined-function locations,
+            811 strings with 10345 characters,
+and the built_in function-call counts, 7975 in all, are:
+= -- 760
+> -- 256
+< -- 4
++ -- 99
+- -- 72
+* -- 701
+:= -- 928
+add.period$ -- 47
+call.type$ -- 27
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 48
+duplicate$ -- 451
+empty$ -- 790
+format.name$ -- 72
+if$ -- 2026
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 93
+newline$ -- 111
+num.names$ -- 25
+pop$ -- 142
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 309
+stack$ -- 0
+substring$ -- 421
+swap$ -- 200
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 21
+while$ -- 58
+width$ -- 29
+write$ -- 237
+(There were 21 warnings)

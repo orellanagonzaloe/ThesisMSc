@@ -4,16 +4,15 @@
 
 
 
-En el presente capítulo se describe la reconstrucción e identificación de electrones y fotones ya que son los objetos físicos principales utilizados en los estudios de esta Tesis.
-La reconstrucción de fotones y electrones en ATLAS se basa en las deposiciones locales de energía halladas en el ECAL, y la distinción entre unos y otros se   realiza mediante la información de las trazas reconstruidas en el ID. A su vez se aplican una serie de criterios de identificación y aislamiento, que permiten discriminarlos de falsos candidatos, o de procesos secundarios que los producen.
+En el presente capítulo se describe la reconstrucción e identificación de electrones y fotones ya que son los objetos físicos principales utilizados en los estudios de esta Tesis. La reconstrucción de fotones y electrones en ATLAS se basa en las deposiciones locales de energía halladas en el ECAL, y la distinción entre unos y otros se   realiza mediante la información de las trazas reconstruidas en el ID. A su vez se aplican una serie de criterios de identificación y aislamiento, que permiten discriminarlos de falsos candidatos, o de procesos secundarios que los producen.
 
 \section{Reconstrucción de electrones y fotones}
 
-La  reconstrucción de fotones y electrones en ATLAS se basa en un algoritmo de clusterización \cite{Lampl:1099735} que busca deposiciones locales de energía en el calorímetro dentro de una ventana rectangular en el espacio ($\eta$, $\phi$) de tamaño fijo (Sliding Window clusterization, SW). La posición de la ventana se  justa maximizando la energía transversa de todas las celdas contenidas. El tamaño óptimo de la ventana depende del tipo de partícula (más ancha para los electrones) a reconstruir y de la región del calorímetro (mas ancha en la región endcap). 
+La  reconstrucción de fotones y electrones en ATLAS se basa en un algoritmo de clusterización \cite{Lampl:1099735} que busca deposiciones locales de energía en el calorímetro dentro de una ventana rectangular en el espacio ($\eta$, $\phi$) de tamaño fijo (\textit{Sliding Window clusterization}, SW). La posición de la ventana se  justa maximizando la energía transversa de todas las celdas contenidas. El tamaño óptimo de la ventana depende del tipo de partícula (más ancha para los electrones) a reconstruir y de la región del calorímetro (mas ancha en la región endcap). 
 
-Aquellos clusters electromagnéticos asociados con una traza reconstruída con $p_{T} > 0.5 \egev$, son clasificados como electrones. La definición para fotones es un poco más complicada ya que estos pueden convertir en un par $e^{+}e^{-}$ en el sector anterior al calorímetro. Los fotones convertidos están caracterizados por la presencia de al menos una traza asociada proveniente de un vértice reconstruido en el ID. La probabilidad de conversión varía entre un 40\% y un 80\% dependiendo de $\eta$, aunque solo aquellas que ocurren antes del TRT son eficientemente reconstruidas. 
+Aquellos \textit{clusters} electromagnéticos asociados con una traza reconstruida con $p_{T} > 0.5 \egev$, son clasificados como electrones. La definición para fotones es un poco más complicada ya que estos pueden convertir en un par $e^{+}e^{-}$ en el sector anterior al calorímetro. Los fotones convertidos están caracterizados por la presencia de al menos una traza asociada proveniente de un vértice reconstruido en el ID. La probabilidad de conversión varía entre un 40\% y un 80\% dependiendo de $\eta$, aunque solo aquellas que ocurren antes del TRT son eficientemente reconstruidas. 
 
-Si no hay ninguna traza asociada a un dado cluster, este es clasificado como un fotón no convertido. Aquellos clusters asociados con trazas, que provienen de un vértice reconstruído en el ID, es clasificado como un fotón convertido. Además, para incrementar la eficiencia de reconstrucción de estos últimos, se consideran también aquellos casos donde solo una traza fue reconstruida, siempre que esta no posea ningún impacto en el B-layer.
+Si no hay ninguna traza asociada a un dado \textit{cluster}, este es clasificado como un fotón no convertido. Aquellos \textit{clusters} asociados con trazas, que provienen de un vértice reconstruido en el ID, es clasificado como un fotón convertido. Además, para incrementar la eficiencia de reconstrucción de estos últimos, se consideran también aquellos casos donde solo una traza fue reconstruida, siempre que esta no posea ningún impacto en el B-Layer.
 
 \section{Identificación de electrones y fotones}
 
@@ -31,10 +30,10 @@ La definición de las variables que definen a los cortes se detallan a continuac
 		Es la energía transversa depositada en el calorímetro hadrónico, normalizada a la energía transversa del cluster electromagnético.
 
 		\begin{equation}
-		R_{had_{(1)}}=\frac{E_{T}^{had}}{E_{T}}
+		R_{\text{had}_{(1)}}=\frac{E_{T}^{\text{had}}}{E_{T}}
 		\end{equation}
 
-		En la región de transición barrel-endcap del HCAL, se utiliza el depósito de energía en todo el calorímetro hadrónico para minimizar los efectos de la degradación de resolución ($R_{had}$). En el resto del detector, se mide sólo la energía hadrónica depositada en la primera capa del HCAL ($R_{had_{(1)}}$).
+		En la región de transición barrel-endcap del HCAL, se utiliza el depósito de energía en todo el calorímetro hadrónico para minimizar los efectos de la degradación de resolución ($R_{\text{had}}$). En el resto del detector, se mide sólo la energía hadrónica depositada en la primera capa del HCAL ($R_{\text{had}_{(1)}}$).
 
 	\item  Perfil lateral de energía en $\eta$
 
@@ -64,7 +63,7 @@ La definición de las variables que definen a los cortes se detallan a continuac
 	\item  Perfil lateral de energía en $\eta$
 
 		\begin{equation}
-		F_{side}=\frac{E(\pm 3)-E(\pm 1)}{E(\pm 1)}
+		F_{\text{side}}=\frac{E(\pm 3)-E(\pm 1)}{E(\pm 1)}
 		\end{equation}
 
 		mide la contención lateral de la cascada electromagnética a lo largo de $\eta$. $E(\pm n)$ es la energía en las $\pm n$ celdas alrededor de aquella con la deposición máxima.
@@ -72,30 +71,30 @@ La definición de las variables que definen a los cortes se detallan a continuac
 	\item  RMS del perfil lateral de energía en $\eta$ (3 \textit{strips})
 
 		\begin{equation}
-		w_{s,3}=\sqrt{\frac{\sum E_{i}(i-i_{max})^{2}}{\sum E_{i}}}
+		w_{s,3}=\sqrt{\frac{\sum E_{i}(i-i_{\text{max}})^{2}}{\sum E_{i}}}
 		\end{equation}
 
-		mide el ancho de la lluvia electromagnética a lo largo de $\eta$ en la primera capa del calorímetro electromagnético usando solo la banda con mayor deposición de energía ($E_{i_{max}}$) y sus vecinas inmediatas.
+		mide el ancho de la lluvia electromagnética a lo largo de $\eta$ en la primera capa del calorímetro electromagnético usando solo la banda con mayor deposición de energía ($E_{i_{\text{max}}}$) y sus vecinas inmediatas.
 
 	\item  RMS del perfil lateral de energía en $\eta$ (total)
 
-		$w_{s,tot}$ está definida de la misma forma que $w_{s,3}$, pero utiliza todas las bandas de la primera capa del calorímetro electromagnético en una ventana $\Delta\eta\times\Delta\phi = 0.0625 \times 0.2$, que corresponde aproximadamente a $20\times 2$ bandas en $\eta \times \phi$.
+		$w_{s,\text{tot}}$ está definida de la misma forma que $w_{s,3}$, pero utiliza todas las bandas de la primera capa del calorímetro electromagnético en una ventana $\Delta\eta\times\Delta\phi = 0.0625 \times 0.2$, que corresponde aproximadamente a $20\times 2$ bandas en $\eta \times \phi$.
 
 	\item  Diferencia al segundo máximo
 
 		\begin{equation}
-		\Delta E=[E_{2^{nd} max}^{S1} - E_{min}^{S1}]
+		\Delta E=[E_{2^{nd} \:\text{max}}^{S1} - E_{\text{min}}^{S1}]
 		\end{equation}
 
-		es la diferencia entre la energía de la banda con la segunda energía más grande $E_{2^{nd} max}^{S1}$ , y la mínima energía $E_{min}^{S1}$ entre la anterior y la celda con la máxima deposición. En caso de no haber segundo máximo se fija $\Delta E = 0$.
+		es la diferencia entre la energía de la banda con la segunda energía más grande $E_{2^{nd} \:\text{max}}^{S1}$ , y la mínima energía $E_{\text{min}}^{S1}$ entre la anterior y la celda con la máxima deposición. En caso de no haber segundo máximo se fija $\Delta E = 0$.
 
 	\item  Asimetría de los dos máximos locales en $\eta$
 
 		\begin{equation}
-		\Delta E_{ratio}=\frac{E_{1^{st} max}^{S1} - E_{2^{nd} max}^{S1}}{E_{1^{st} max}^{S1} + E_{2^{nd} max}^{S1}}
+		\Delta E_{ratio}=\frac{E_{1^{st} \:\text{max}}^{S1} - E_{2^{nd} \:\text{max}}^{S1}}{E_{1^{st} \:\text{max}}^{S1} + E_{2^{nd} \:\text{max}}^{S1}}
 		\end{equation}
  
- 		mide la diferencia relativa entre las energías de las dos celdas con máxima deposición. En caso de no haber segundo máximo se fija $E_{ratio} = 1$.
+ 		mide la diferencia relativa entre las energías de las dos celdas con máxima deposición. En caso de no haber segundo máximo se fija $E_{\text{ratio}} = 1$.
 
 
 \end{itemize}
@@ -103,7 +102,6 @@ La definición de las variables que definen a los cortes se detallan a continuac
 \renewcommand{\arraystretch}{1.3}
 \begin{table}	
 \centering
-\begin{threeparttable}
 \caption{Detalle de las diferentes variables usadas para la selección \textit{loose} (L), \textit{medium} (M) y \textit{tight} (T) de fotones y electrones.}
 \begin{tabular}{ r p{8cm} c | c c | c c c }
 
@@ -117,9 +115,9 @@ La definición de las variables que definen a los cortes se detallan a continuac
 
 	Aceptancia & $|\eta| < 2.37$, excluyendo $1.37 < |\eta| < 1.52$  & - & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
 
-	Fuga hadrónica & Cociente entre $E_{T}$ en la primera capa del calorímetro hadrónico y $E_{T}$ del \textit{cluster} electromagnético & $R_{had_{1}}$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+	Fuga hadrónica & Cociente entre $E_{T}$ en la primera capa del calorímetro hadrónico y $E_{T}$ del \textit{cluster} electromagnético & $R_{\text{had}_{1}}$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
 
-		& Cociente entre $E_{T}$ en todo el calorímetro hadrónico y $E_{T}$ del \textit{cluster} electromagnético $(|\eta| \le 0.8$ y $|\eta| \ge 1.37)$ & $R_{had}$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+		& Cociente entre $E_{T}$ en todo el calorímetro hadrónico y $E_{T}$ del \textit{cluster} electromagnético $(|\eta| \le 0.8$ y $|\eta| \ge 1.37)$ & $R_{\text{had}}$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
 
 	ECAL (2$^{da}$ capa) & Cociente entre la suma de las energías de las 3 $\times$ 7 celdas y la suma de 5 $\times$ 7 celdas, ambas en torno al centro del \textit{cluster} & $R_{\eta}$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
 
@@ -129,15 +127,15 @@ La definición de las variables que definen a los cortes se detallan a continuac
 
 	ECAL (1$^{ra}$ capa) & Ancho lateral de la lluvia en 3 \textit{strips} alrededor del máximo & $w_{s,3}$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
 
-		& Ancho lateral total de la lluvia & $w_{s,tot}$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
+		& Ancho lateral total de la lluvia & $w_{s,\text{tot}}$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
 
-		& Fracción de energía fuera de las 3 \textit{strips} centrales pero dentro de las 7 & $F_{side}$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
+		& Fracción de energía fuera de las 3 \textit{strips} centrales pero dentro de las 7 & $F_{\text{side}}$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
 
 		& Diferencia entre la energía de la \textit{strip} con el segundo mayor depósito y la menor energía entre los dos primeros máximos locales & $\Delta E$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
 
-		& Asimetría entre el primer y segundo máximo & $E_{ratio}$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
+		& Asimetría entre el primer y segundo máximo & $E_{\text{ratio}}$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
 
-	ID & Impactos en el Pixel $\ge 1$ y en el SCT $\ge 7$ & - & $\times$ & $\times$ & $\times$ & $\checkmark$ & $\checkmark$ \\
+	ID & Impactos en el Píxel $\ge 1$ y en el SCT $\ge 7$ & - & $\times$ & $\times$ & $\times$ & $\checkmark$ & $\checkmark$ \\
 
 		& Parámetro de impacto $\le 1$ mm & - & $\times$ & $\times$ & $\times$ & $\checkmark$ & $\checkmark$ \\
 
@@ -152,7 +150,6 @@ La definición de las variables que definen a los cortes se detallan a continuac
 	\hline
 
 \end{tabular}
-\end{threeparttable}
 \label{lmttable}
 \end{table}
 \renewcommand{\arraystretch}{1}
@@ -162,26 +159,33 @@ La definición de las variables que definen a los cortes se detallan a continuac
 
 \section{Criterios de aislamiento}
 
+Luego de realizar la identificación, es necesario distinguir entre electrones y fotones directos (aquellos producidos en la colisión) o de los no directos producidos de decaimientos de hadrones ($\pi^{0}$, $\eta$, etc.).
 
+Los fotones provenientes del punto de interacción poseen baja actividad hadrónica en su vecindad, mientras que en los no directos se espera que haya un gran actividad provenientes de los objetos que acompañan al jet. Por ello el criterio de aislamiento puede basarse en medidas calorimétricas o en las trazas reconstruidas en el entorno del objeto.
+
+El aislamiento de trazas se define a partir de considerar un cono de radio $R=\sqrt{\Delta\eta^{2}+\Delta\phi^{2}}$ centrado en el baricentro del \textit{cluster} electromagnético asociado al objeto. A todas las trazas dentro de este cono se le pueden aplicar ciertos cortes, como $p_{T}>1 \egev$, impactos en el SCT, etc. Además, se requiere que aquellas trazas en un cono interno con $R=0.1$, no provengan de un vértice de conversión, a fin de remover los fotones convertidos. El aislamiento de trazas ha mostrado ser altamente eficiente tanto para retener señal como para rechazar falsos candidatos del fondo, aún luego de la selección descripta en la sección anterior. Aun así, el criterio más utilizado es el aislamiento calorimétrico.
+
+El aislamiento calorimétrico, $E_{T}^{\text{iso}}$, se calculada a partir de las celdas en ambos calorímetros (ECAL y HCAL). Nuevamente se define un cono con un cierto radio $R$ centrado en el baricentro del \textit{cluster} del objeto, y la suma de la energías de todas las celdas contenidas en ese cono es $E_{T}^{\text{iso}}$. 
+
+A fin de remover la contribución energética de la lluvia electromagnética desarrollada por el propio objeto al cono de aislamiento, el núcleo central de $N_{\eta}\times N_{\phi} = 5 \times 7$ celdas en el segundo compartimiento del ECAL, es ignorado en la suma, como se esquematiza en la Figura \tosolve{figura aislamiento}. Se considera que dentro de esta región ignorada, se concentra el 95\% de la energía de la lluvia electromagnética, por lo que solo el 5\% de la energía del objeto contribuye a esta región. Por otro lado, todas las celdas contenidas dentro del cono en el HCAL son consideradas para la suma, ya que se espera que el ECAL contenga toda lluvia electromagnética desencadenada por el objeto inicial. El valor típico para $R$ es de $0.4$, y los cortes de aislamiento para fotones son $E_{T}^{\text{iso}}<3 \egev$.
 
 
 
 \section{Energía faltante}
 
-Una variable de suma importancia en la reconstrucción de objetos, es la energía transversa faltante ($E_{T}^{miss}$). Como se mencionó anteriormente, el momento transverso se debe conservar en todo el proceso, y cualquier desequilibrio en el mismo se lo asocia a $E_{T}^{miss}$. Puede indicar la presencia de partículas indetectables como neutrinos o nuevas partículas estables, o que interactúan débilmente con la materia. L
+Una variable de suma importancia en la reconstrucción de objetos, es la energía transversa faltante ($\met$). Como se mencionó anteriormente, el momento transverso se debe conservar en todo el proceso, y cualquier desequilibrio en el mismo se lo asocia a $\met$. Puede indicar la presencia de partículas indetectables como neutrinos o nuevas partículas estables, o que interactúan débilmente con la materia.
 
-El momento transverso faltante ($p_{T}^{miss}$) se define como el valor negativo de la suma del momento transverso de todas las partículas detectadas, y su magnitud es lo que se denomina energía transversa faltante. Esta es calculada con un algoritmo basado en objetos \cite{Khoo:2012749}. El algoritmo utiliza los objetos físicos construidos y calibrados descriptos en las secciones anteriores. Los depósitos de energía en el calorímetro (topo-clusters) son asociados a los objetos de alto $p_{T}$ en el siguiente orden: electrones, fotones, jets y muones. Los depósitos que no están asociados a ningún objeto son incluidos en el término soft. El momento transverso es calculado entonces como:
+El momento transverso faltante ($p_{T}^{\text{miss}}$) se define como el valor negativo de la suma del momento transverso de todas las partículas detectadas, y su magnitud es lo que se denomina energía transversa faltante. Esta es calculada con un algoritmo basado en objetos \cite{Khoo:2012749}. El algoritmo utiliza los objetos físicos construidos y calibrados descriptos en las secciones anteriores. Los depósitos de energía en el calorímetro (topo-clusters) son asociados a los objetos de alto $p_{T}$ en el siguiente orden: electrones, fotones, jets y muones. Los depósitos que no están asociados a ningún objeto son incluidos en el término \textit{soft}. El momento transverso es calculado entonces como:
 
 \begin{equation}
-p_{T}^{miss}=\left(p_{T}^{miss}\right)^{e} + \left(p_{T}^{miss}\right)^{\gamma} + \left(p_{T}^{miss}\right)^{jet} +\left(p_{T}^{miss}\right)^{\mu} + \left(p_{T}^{miss}\right)^{soft}
+p_{T}^{\text{miss}}=\left(p_{T}^{\text{miss}}\right)^{e} + \left(p_{T}^{\text{miss}}\right)^{\gamma} + \left(p_{T}^{\text{miss}}\right)^{\text{jet}} +\left(p_{T}^{\text{miss}}\right)^{\mu} + \left(p_{T}^{\text{miss}}\right)^{\text{soft}}
 \end{equation}
 
 (para discutir nomenclatura)
 
-donde cada término es calculado como el negativo de la suma de los objetos reconstruidos y calibrados, más el término soft. La contribución de los taus, se incluye en el término de jets o en el soft, debido a que los mismos decaen hadrónicamente. Finalmente la energía transversa faltante se define como:
+donde cada término es calculado como el negativo de la suma de los objetos reconstruidos y calibrados, más el término \textit{soft}. La contribución de los taus, se incluye en el término de jets o en el \textit{soft}, debido a que los mismos decaen hadrónicamente. Finalmente la energía transversa faltante se define como:
 
 \begin{equation}
-E_{T}^{miss}=|p_{T}^{miss}|
+\met=|p_{T}^{\text{miss}}|
 \end{equation}
 
-\normalsize

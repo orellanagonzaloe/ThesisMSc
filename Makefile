@@ -15,7 +15,7 @@ ps/$(file).ps: out/$(file).dvi
 
 
 out/$(file).dvi: $(src)  $(figs)
-	cd out;	latex ../$(file); bibtex $(file) ; latex ../$(file); latex ../$(file); cd ..;
+	cd out;	latex ../$(file); bibtex $(file) ; cd ..;
 
 view:	
 #	gv ps/$(file).ps            &

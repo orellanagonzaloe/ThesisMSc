@@ -2,7 +2,7 @@
 \chaptermark{Electrones identificados como fotones}
 
 
-Como ya se mencionó anteriormente, existe un fondo que contribuye a procesos asociados a fotones y jets como estado final, donde un electrón del estado final es identificado como un fotón. Este puede provenir de procesos del SM, como los que producen bosones W y Z + jets, y $t \overline{t}$. El mismo es difícil de estimar a partir de simulaciones, ya que dependen en gran medida de la estructura y material del detector que es muy compleja de modelar en todos sus detalles. El objetivo es entonces estimar este fondo calculando un factor de identificación errónea (\textit{Fake Factors}) en función de las variables $\eta$ y $p_{T}$ de los objetos a partir de los datos adquiridos.
+Como ya se mencionó anteriormente, existe un fondo que contribuye a procesos asociados a fotones y jets como estado final, donde un electrón del estado final es identificado como un fotón. Este puede provenir de procesos del SM, como los que producen bosones $W$ y $Z$ + jets, y $\ttbar$. El mismo es difícil de estimar a partir de simulaciones, ya que dependen en gran medida de la estructura y material del detector que es muy compleja de modelar en todos sus detalles. El objetivo es entonces estimar este fondo calculando un factor de identificación errónea (\textit{Fake Factors}) en función de las variables $\eta$ y $p_{T}$ de los objetos a partir de los datos adquiridos.
 
 \section{Medición del factor de identificación errónea}
 
@@ -11,23 +11,22 @@ El método para la estimación del factor de identificación errónea, hace uso 
 \begin{equation}
 F_{e\rightarrow\gamma}[\eta , p_{T}]=\frac{N^{eg}[\eta , p_{T}]}{N^{ee}[\eta , p_{T}]} \label{eq:ff_ratio}
 \end{equation}
+\tosolve{definicion de Neg Nee?}
 
-Como la muestra de pares de objetos seleccionada no es una muestra pura de $Z\rightarrow ee$, se realiza un ajuste a la distribución de su masa invariante para determinar por separado la contribución de señal y de fondo en cada muestra, como se explicará más adelante.
+Como la muestra de pares de objetos seleccionada no es una muestra pura de $Z\rightarrow ee$, se realiza un ajuste a la distribución de su masa invariante para determinar por separado la contribución de señal y de fondo en cada muestra, como se explicará más adelante. \tosolve{no me gusta este parrafo aca}
 
 Los criterios para seleccionar los objetos de los pares de partículas mencionados se explican a continuación y se basan en criterios de selección que mantengan una alta pureza de la muestra, manteniendo un bajo rechazo de señal.
-Los electrones  son seleccionados con $p_{T} > 25 \egev$, con un criterio de calidad \textit{tight} y punto de trabajo de aislamiento denominado \textit{gradient loose} \cite{ATLAS-CONF-2016-024}. Para los fotones los requisitos son $p_{T} > 25 \egev$, \textit{tight} y aislados \cite{STDM-2010-08}. A ambos se les solicita que tengan un $\eta_{BE}<2.37$, que estén fuera de la región del \textit{crack} entre $1.37$ y $1.52$, que provengan del vértice primario en base a un parámetro de impacto $d_{0}$ con una significancia menor a 5, y que cumplan con la relación $|\Delta z_{0}sin\theta|<5$.
+Los electrones  son seleccionados con $p_{T} > 25 \egev$, con un criterio de calidad \textit{tight} y punto de trabajo de aislamiento denominado \textit{gradient loose} \cite{ATLAS-CONF-2016-024}. Para los fotones los requisitos son $p_{T} > 25 \egev$, \textit{tight} y aislados \cite{STDM-2010-08}. A ambos se les solicita que tengan un $\eta_{BE}<2.37$; que estén fuera de la región del \textit{crack} entre $1.37$ y $1.52$; que provengan del vértice primario en base a un parámetro de impacto $d_{0}$ con una significancia menor a 5, y que cumplan con la relación $|\Delta z_{0}\sin\theta|<5$.
 
-Además, si un electrón y un fotón son reconstruidos con $\sqrt{\Delta\phi^{2}+\Delta\eta^{2}}<0.4$, el fotón es descartado del evento. Esto reduce precisamente la probabilidad de utilizar candidatos donde un electrón es reconstruido como fotón. 
-
-Para reducir la contaminación de fondo de $W (\rightarrow e\nu)$ se aplica finalmente un selección de eventos con $E_{T}^{miss} < 40 GeV$. 
+Además, si un electrón y un fotón son reconstruidos con $\sqrt{\Delta\phi^{2}+\Delta\eta^{2}}<0.4$, el fotón es descartado del evento. Esto reduce precisamente la probabilidad de utilizar candidatos donde un electrón es reconstruido como fotón \tosolve{no usamos OR no?}. Para reducir la contaminación de fondo de $W (\rightarrow e\nu)$ se aplica finalmente un selección de eventos con $\met < 40 \egev$. 
 
 
-A todos los pares se les solicita que una masa invariante entre $75$ y $105 \egev$  estando así en la región de cercanía a la masa del $Z$. Finalmente, en el caso de que existiese más de un par en el evento, se utiliza el que tiene la masa invariante más cercana a la del bosón $Z$ ($91.1876 \pm 0.0021 \egev$\cite{Olive:2016xmw}). Ya que esto minimiza la contaminación de pares aleatorios, descartando solo unos pocos eventos donde pueda haber más de un $Z$ en estado final.
+A todos los pares se les solicita que una masa invariante entre $75$ y $105 \egev$  estando así en la región de cercanía a la masa del $Z$. Finalmente, en el caso de que existiese más de un par en el evento, se utiliza el que tiene la masa invariante más cercana a la del bosón $Z$ ($91.1876 \pm 0.0021 \egev$\cite{Olive:2016xmw}). Esto minimiza la contaminación de pares aleatorios, descartando solo unos pocos eventos donde pueda haber más de un $Z$ en estado final.
 
 
 En base a los objetos seleccionados se crea un arreglo bidimensional en  $\eta$ y $p_{T}$. Para eventos positrón-electrón una entrada se realiza para cada partícula. En los casos de pares electrón-fotón un arreglo es creado por separado y los solo los valores de los fotones son utilizados.
 
-La concepción del método proviene de la siguiente consideración. Sea $\epsilon_{i}$ la eficiencia de reconstruir un electrón, con un valor de $\eta$ y $p_{T}$ correspondientes al bin \textit{i} del histograma. Para una muestra de \textit{N} pares de electrones y positrones reales (dentro del rango de masa), decimos que $f_{ij}$ es la fracción de pares para los cuales el electrón \textit{leading} (\textit{sub-leading}) está dentro del bin \textit{i} (\textit{j}). Considerando solamente electrones-positrones provenientes del decaimiento de un bosón Z, el número de eventos en el bin \textit{i} del histograma $N^{ee}[\eta , p_{T}]$ es entonces:
+La concepción del método proviene de la siguiente consideración. Sea $\epsilon_{i}$ la eficiencia de reconstruir un electrón, con un valor de $\eta$ y $p_{T}$ correspondientes al bin \textit{i} del histograma. Para una muestra de \textit{N} pares de electrones y positrones reales (dentro del rango de masa), decimos que $f_{ij}$ es la fracción de pares para los cuales el electrón \textit{leading} (\textit{sub-leading}) está dentro del bin \textit{i} (\textit{j}). Considerando solamente electrones-positrones provenientes del decaimiento de un bosón $Z$, el número de eventos en el bin \textit{i} del histograma $N^{ee}[\eta , p_{T}]$ es entonces:
 
 \begin{equation}
 N_{i}^{ee} = \sum_{i}\epsilon_{i}\epsilon_{j}f_{ij}N + \sum_{j}\epsilon_{j}\epsilon_{i}f_{ji}N = \epsilon_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
@@ -61,26 +60,35 @@ Para tener en cuenta la relación entre entradas correspondientes a la señal y 
 
 \subsubsection{Clasificación de eventos}
 
-La relación entre señal y fondo en la distribución de masa invariante de los eventos correspondientes a la masa del Z se utiliza en el método para determinar un peso que se obtiene a su vez clasificando a los pares según el tipo ($ee-e\gamma$) y según la región donde se reconstruían los objetos Endcap-Endcap, Barrel-Endcap y Barrrel-Barrel ($EE-BE-BB$), ya que los factores de identificación erróneas dependen de la región del detector donde fueron reconstruidos dados los distinta morfología y tipo detectores utilizados en cada una ellas. Para cada una de las tres regiones se calcula su masa invariante de los pares, se realiza el correspondiente ajuste para determinar la contribución de señal (S) y fondo (B) y finalmente el peso resulta de la relación: $w=\frac{S}{S+B}$. 
+La relación entre señal y fondo en la distribución de masa invariante de los eventos correspondientes a la masa del $Z$ se utiliza en el método para determinar un peso que se obtiene a su vez clasificando a los pares según el tipo ($ee/e\gamma$) y según la región donde se reconstruían los objetos \textit{endcap}-\textit{endcap} ($EE$), \textit{barrel}-\textit{endcap} ($BE$) y \textit{barrel}-\textit{barrel} ($BB$), ya que los factores de identificación erróneas dependen de la región del detector donde fueron reconstruidos dados los distinta morfología y tipo detectores utilizados en cada una ellas. Para cada una de las tres regiones se calcula su masa invariante de los pares, se realiza el correspondiente ajuste para determinar la contribución de señal (S) y fondo (B) y finalmente el peso resulta de la relación: $w=\frac{S}{S+B}$. 
 
-Los datos utilizados para el análisis corresponden a los años 2015 y 2016 del Run 2 del LHC, en base a la denominada derivación EGAM1 que realiza una pre-selección de eventos optimizado para estudios del Z, con una base de electrones y fotones con $p_{T} > 15 \egev$ y masa invariante de los distintos tipos de pares mayor a 60 \egev. %y con ningún requisito de \textit{triggers}.
+Los datos utilizados para el análisis corresponden a los años 2015 y 2016 del Run 2 del LHC, en base a la denominada derivación EGAM1 que realiza una pre-selección de eventos optimizado para estudios del $Z$, con una base de electrones y fotones con $p_{T} > 15 \egev$ y masa invariante de los distintos tipos de pares mayor a 60 \egev. %y con ningún requisito de \textit{triggers}.
 
 Para los ajustes de la masas invariantes se utiliza como modelo de señal una \textit{double-sided Crystall-ball} (DSCB). Para el fondo se utiliza un polinomio de grado 2. Los resultados de los ajustes obtenidos para cada clasificación de los pares se pueden observar en las Figuras \ref{fits_BB}, \ref{fits_BE} y \ref{fits_EE}.
 
 
-En base a los resultados de estos ajustes se determina la contribución de señal y background en cada región, determinando así los correspondientes pesos como se mostrará en la sección \ref{sec:resultados} en la Tabla \label{ta:fftable}.
+En base a los resultados de estos ajustes se determina la contribución de señal y background en cada región, determinando así los correspondientes pesos como se mostrará en la sección \ref{sec:resultados} en la Tabla \label{ta:fftable} \tosolve{te refir a la tabla con pesos? podria ir la tabla con pesos, y no citarla en secciones futuras}.
 
 Los electrones utilizados para estimar la contaminación de fotones de señal \textit{tight}, pueden pasar tanto requerimientos  \textit{medium} o \textit{tight}. En ambos casos se encuentra una buena relación señal y fondo, siendo naturalmente el caso de selección \textit{tight} la de mayor pureza a costa de una menor estadística de la muestra. Ambas selecciones se estudian en el presente trabajo como se discute en las siguientes secciones.
 
 
-\subsubsection{Sistemáticos}
+\subsection{Sistemáticos}
 
-Las principales fuentes de incertezas sistemáticas del método para el calculo de los factores que determina la contaminación de fondo en las distintas regiones, proviene de las definiciones de las funciones y rangos de ajustes de los fits, así como de las ventanas de aceptación de pares.  Para estimar los posibles incertezas se varió el rango nominal de la masa es $[75-105]\egev$ a los rangos de $[70-110]\egev$ y a $[80-100]\egev$. Como caso extremo en la definición y criterios de ajuste, se determinaron los factores imponiendo los pesos w=1 eliminando así la substracción de fondo en su calculo. Los resultados de estos estudios se muestran el la Tabla \label{ta:fftable} donde se observa que la incerteza dominante proviene en base al criterio adoptado es la de tomar w=1 siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
+Las principales fuentes de incertezas sistemáticas del método para el calculo de los factores que determina la contaminación de fondo en las distintas regiones, proviene de las definiciones de las funciones y rangos de ajustes de los fits, así como de las ventanas de aceptación de pares.  Para estimar los posibles incertezas se varió el rango nominal de la masa de $[75-105]\egev$ a los rangos de $[70-110]\egev$ y a $[80-100]\egev$. Como caso extremo en la definición y criterios de ajuste, se determinaron los factores imponiendo los pesos $w=1$ eliminando así la sustracción de fondo en su cálculo. Los resultados de estos estudios se muestran el la Tabla \label{ta:fftable} donde se observa que la incerteza dominante proviene en base al criterio adoptado es la de tomar $w=1$ siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
+
+\tosolve{mi propuesta para este parrafo:}
+
+Las principales fuentes de incertezas sistemáticas del método para el calculo de los factores que determina la contaminación de fondo en las distintas regiones, proviene tanto de los ajustes a la masa invariante como de los criterios de aceptación de los pares.  Para estimar los posibles incertezas se varió el rango nominal de la masa de $[75-105]\egev$ a los rangos de $[70-110]\egev$ y a $[80-100]\egev$. Lo mismo se hizo con el rango del fit que se varió de su rango nominal $[70-110]\egev$, a $[65-115]\egev$ y a $[75-105]\egev$. 
+
+Otro sistemático surgió de la utilización de una función diferente para modelar el fondo, en este caso se usó un polinomio de grado 3. Como caso extremo en la definición y criterios de ajuste, se determinaron los factores imponiendo los pesos $w=1$ eliminando así la sustracción de fondo en su cálculo. 
+
+Los resultados de estos estudios se muestran el la Tabla \tosolve{tabla con syst} donde se observa que la incerteza dominante proviene en base al criterio adoptado es la de tomar $w=1$ siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
+
 
 %Se consideran distintas fuentes de incertezas sistemáticas. Una de ellas proveniente de la variación tanto del rango del fit, como del rango de masa de aceptación de los pares. El rango nominal del fit es $[70-110]\egev$ y se varía a $[65-115]\egev$ y a $[75-105]\egev$. El rango nominal de la masa es $[75-105]\egev$ y se varía a $[70-110]\egev$ y a $[80-100]\egev$. Se tuvo en cuenta también como fuente de sistemático, la variación en los valores de los factores al utilizar otra función para el ajuste del fondo, utilizándose un polinomio de grado 3 y un polinomio de Bernstein de grado 4.
 
 
-Los resultados obtenidos para el factor en bines de $\eta , p_{T}$ se muestran en la Tabla \ref{ta:fftable} incluyendo por separada las incertezas estadísticas y sistemáticas del método (\tosolve{Agregar tabla de sistemáticos solamente}).
+Los resultados obtenidos para el factor en bines de $\eta$ y $p_{T}$ se muestran en la Tabla \ref{ta:fftable} incluyendo por separada las incertezas estadísticas y sistemáticas del método (\tosolve{Agregar tabla de FF +stat + syst }).\tosolve{estos resultados (los FF) podrian ir en la siguiente seccion}
 
 
 
@@ -191,7 +199,7 @@ Los resultados obtenidos para el factor en bines de $\eta , p_{T}$ se muestran e
 \end{table}
 
 
-Observando los resultados expuestos en las distintas tablas, definimos la implementación de una selección \textit{medium} de los electrones ya que los valores de pureza (expresado en los valores de los pesos w) e incertezas sistemáticas son equivalentes a la selección \textit{tight}, pero con la ventaja de una mayor estadística de eventos para estimar el fondo en las distintas regiones de control y validación.
+Observando los resultados expuestos en las distintas tablas, definimos la implementación de una selección \textit{medium} de los electrones ya que los valores de pureza (expresado en los valores de los pesos $w$) e incertezas sistemáticas son equivalentes a la selección \textit{tight}, pero con la ventaja de una mayor estadística de eventos para estimar el fondo en las distintas regiones de control y validación.
 
 
 \tosolve{Acá van los gráficos de Fran de las regiones de control y validación.}
