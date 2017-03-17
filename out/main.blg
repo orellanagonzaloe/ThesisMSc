@@ -28,45 +28,45 @@ Warning--empty title in Calafiura:865624
 Warning--empty title in Brun:1997pa
 Warning--empty title in STDM-2010-08
 Warning--empty title in Olive:2016xmw
-You've used 27 entries,
+You've used 28 entries,
             2330 wiz_defined-function locations,
-            811 strings with 10345 characters,
-and the built_in function-call counts, 7975 in all, are:
-= -- 760
-> -- 256
-< -- 4
-+ -- 99
-- -- 72
-* -- 701
-:= -- 928
-add.period$ -- 47
-call.type$ -- 27
-change.case$ -- 16
+            815 strings with 10473 characters,
+and the built_in function-call counts, 8158 in all, are:
+= -- 780
+> -- 260
+< -- 5
++ -- 101
+- -- 73
+* -- 716
+:= -- 956
+add.period$ -- 49
+call.type$ -- 28
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 451
-empty$ -- 790
-format.name$ -- 72
-if$ -- 2026
+cite$ -- 49
+duplicate$ -- 463
+empty$ -- 811
+format.name$ -- 73
+if$ -- 2070
 int.to.chr$ -- 0
-int.to.str$ -- 27
+int.to.str$ -- 28
 missing$ -- 93
-newline$ -- 111
-num.names$ -- 25
-pop$ -- 142
+newline$ -- 115
+num.names$ -- 26
+pop$ -- 145
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 309
+skip$ -- 310
 stack$ -- 0
 substring$ -- 421
-swap$ -- 200
-text.length$ -- 4
+swap$ -- 202
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 21
-while$ -- 58
-width$ -- 29
-write$ -- 237
+while$ -- 59
+width$ -- 30
+write$ -- 249
 (There were 21 warnings)

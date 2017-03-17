@@ -8,7 +8,7 @@ En el presente capítulo se describe la reconstrucción e identificación de ele
 
 \section{Reconstrucción de electrones y fotones}
 
-La  reconstrucción de fotones y electrones en ATLAS se basa en un algoritmo de clusterización \cite{Lampl:1099735} que busca deposiciones locales de energía en el calorímetro dentro de una ventana rectangular en el espacio ($\eta$, $\phi$) de tamaño fijo (\textit{Sliding Window clusterization}, SW). La posición de la ventana se  justa maximizando la energía transversa de todas las celdas contenidas. El tamaño óptimo de la ventana depende del tipo de partícula (más ancha para los electrones) a reconstruir y de la región del calorímetro (mas ancha en la región endcap). 
+La  reconstrucción de fotones y electrones en ATLAS se basa en un algoritmo de clusterización \cite{Lampl:1099735} que busca deposiciones locales de energía en el calorímetro dentro de una ventana rectangular en el espacio ($\eta$, $\phi$) de tamaño fijo (\textit{Sliding Window clusterization}, SW) \tosolve{"actual?" en la tesis de fran aparece, tendria que ver algo mas actual}. La posición de la ventana se  justa maximizando la energía transversa de todas las celdas contenidas. El tamaño óptimo de la ventana depende del tipo de partícula (más ancha para los electrones) a reconstruir y de la región del calorímetro (mas ancha en la región endcap). 
 
 Aquellos \textit{clusters} electromagnéticos asociados con una traza reconstruida con $p_{T} > 0.5 \egev$, son clasificados como electrones. La definición para fotones es un poco más complicada ya que estos pueden convertir en un par $e^{+}e^{-}$ en el sector anterior al calorímetro. Los fotones convertidos están caracterizados por la presencia de al menos una traza asociada proveniente de un vértice reconstruido en el ID. La probabilidad de conversión varía entre un 40\% y un 80\% dependiendo de $\eta$, aunque solo aquellas que ocurren antes del TRT son eficientemente reconstruidas. 
 
@@ -20,7 +20,7 @@ La identificación de fotones y electrones se lleva a cabo mediante una serie de
 
 Para los electrones se definen tres conjuntos de cortes dependiendo de la rigurosidad de los mismos: \textit{loose}, \textit{medium}, \textit{tight}. Para los fotones solo se utiliza \textit{loose} y \textit{tihgt}. Los cortes de cada conjunto han sido optimizados para asegurar una alta eficiencia de identificación de electrones/fotones aislados y de rechazo de fondo.
 
-La definición de las variables que definen a los cortes se detallan a continuación. La definición de los cortes se muestra en la Tabla \ref{lmttable}.
+La definición de las variables que determinan los distintos cortes se detallan a continuación. La definición de los cortes se muestra en la Tabla \ref{lmttable}.
 
 
 \begin{itemize}
@@ -35,23 +35,23 @@ La definición de las variables que definen a los cortes se detallan a continuac
 
 		En la región de transición barrel-endcap del HCAL, se utiliza el depósito de energía en todo el calorímetro hadrónico para minimizar los efectos de la degradación de resolución ($R_{\text{had}}$). En el resto del detector, se mide sólo la energía hadrónica depositada en la primera capa del HCAL ($R_{\text{had}_{(1)}}$).
 
-	\item  Perfil lateral de energía en $\eta$
+	\item  \textbf{Perfil lateral de energía en $\eta$ (2$^{\text{da}}$ capa del ECAL)}
 
 		\begin{equation}
 		R_{\eta}=\frac{E_{3\times 7}^{S2}}{E_{7\times 7}^{S2}}
 		\end{equation}
 
- 		donde $E_{i\times j}^{S2}$ es la suma de las celdas en la segunda capa del calorímetro electromagnético contenidas en una ventana $i\times j$.
+ 		donde $E_{i\times j}^{S2}$ es la suma de las celdas en la segunda capa del calorímetro electromagnético contenidas en una ventana $i\times j$ (en $\Delta \eta \times \Delta \phi$).
 
-	\item  Perfil lateral de energía en $\phi$
+	\item  \textbf{Perfil lateral de energía en $\phi$ (2$^{\text{da}}$ capa del ECAL)}
 
 		\begin{equation}
 		R_{\phi}=\frac{E_{3\times 3}^{S2}}{E_{3\times 7}^{S2}}
 		\end{equation}
 
- 		donde $E_{i\times j}^{S2}$ es la suma de las celdas en la segunda capa del calorímetro electromagnético contenidas en una ventana $i\times j$.
+ 		donde $E_{i\times j}^{S2}$ es la suma de las celdas en la segunda capa del calorímetro electromagnético contenidas en una ventana $i\times j$ (en $\Delta \eta \times \Delta \phi$).
 
-	\item  RMS del perfil lateral de energía en $\eta$
+	\item  \textbf{RMS del perfil lateral de energía en $\eta$ (2$^{\text{da}}$ capa del ECAL)}
 
 
 		\begin{equation}
@@ -60,7 +60,7 @@ La definición de las variables que definen a los cortes se detallan a continuac
 
 		mide el ancho lateral de las lluvias electromagnéticas, donde $E_{i}$ es la energía de la i-ésima celda del calorímetro electromagnético contenida en una ventana de $3\times 5$ celdas en $\eta \times \phi$.
 
-	\item  Perfil lateral de energía en $\eta$
+	\item  \textbf{Perfil lateral de energía en $\eta$ (1$^{\text{ra}}$ capa del ECAL)}
 
 		\begin{equation}
 		F_{\text{side}}=\frac{E(\pm 3)-E(\pm 1)}{E(\pm 1)}
@@ -68,19 +68,19 @@ La definición de las variables que definen a los cortes se detallan a continuac
 
 		mide la contención lateral de la cascada electromagnética a lo largo de $\eta$. $E(\pm n)$ es la energía en las $\pm n$ celdas alrededor de aquella con la deposición máxima.
 
-	\item  RMS del perfil lateral de energía en $\eta$ (3 \textit{strips})
+	\item  \textbf{RMS del perfil lateral de energía en $\eta$ (3 \textit{strips}, 1$^{\text{ra}}$ capa del ECAL)}
 
 		\begin{equation}
 		w_{s,3}=\sqrt{\frac{\sum E_{i}(i-i_{\text{max}})^{2}}{\sum E_{i}}}
 		\end{equation}
 
-		mide el ancho de la lluvia electromagnética a lo largo de $\eta$ en la primera capa del calorímetro electromagnético usando solo la banda con mayor deposición de energía ($E_{i_{\text{max}}}$) y sus vecinas inmediatas.
+		mide el ancho de la lluvia electromagnética a lo largo de $\eta$ en la primera capa del calorímetro electromagnético usando solo la banda con mayor deposición de energía ($i_{\text{max}}$) y sus vecinas inmediatas.
 
-	\item  RMS del perfil lateral de energía en $\eta$ (total)
+	\item  \textbf{RMS del perfil lateral de energía en $\eta$ (total, 1$^{\text{ra}}$ capa del ECAL)}
 
-		$w_{s,\text{tot}}$ está definida de la misma forma que $w_{s,3}$, pero utiliza todas las bandas de la primera capa del calorímetro electromagnético en una ventana $\Delta\eta\times\Delta\phi = 0.0625 \times 0.2$, que corresponde aproximadamente a $20\times 2$ bandas en $\eta \times \phi$.
+		$w_{s,\text{tot}}$ está definida de la misma forma que $w_{s,3}$, pero utiliza todas las bandas de la primera capa del calorímetro electromagnético en una ventana $\Delta\eta\times\Delta\phi = 0.0625 \times 0.2$ \tosolve{ver si es 0.2 o 2}, que corresponde aproximadamente a $20\times 2$ bandas en $\eta \times \phi$.
 
-	\item  Diferencia al segundo máximo
+	\item  \textbf{Diferencia al segundo máximo}
 
 		\begin{equation}
 		\Delta E=[E_{2^{nd} \:\text{max}}^{S1} - E_{\text{min}}^{S1}]
@@ -88,7 +88,7 @@ La definición de las variables que definen a los cortes se detallan a continuac
 
 		es la diferencia entre la energía de la banda con la segunda energía más grande $E_{2^{nd} \:\text{max}}^{S1}$ , y la mínima energía $E_{\text{min}}^{S1}$ entre la anterior y la celda con la máxima deposición. En caso de no haber segundo máximo se fija $\Delta E = 0$.
 
-	\item  Asimetría de los dos máximos locales en $\eta$
+	\item  \textbf{Asimetría de los dos máximos locales en $\eta$}
 
 		\begin{equation}
 		\Delta E_{ratio}=\frac{E_{1^{st} \:\text{max}}^{S1} - E_{2^{nd} \:\text{max}}^{S1}}{E_{1^{st} \:\text{max}}^{S1} + E_{2^{nd} \:\text{max}}^{S1}}
@@ -102,7 +102,7 @@ La definición de las variables que definen a los cortes se detallan a continuac
 \renewcommand{\arraystretch}{1.3}
 \begin{table}	
 \centering
-\caption{Detalle de las diferentes variables usadas para la selección \textit{loose} (L), \textit{medium} (M) y \textit{tight} (T) de fotones y electrones.}
+\caption{Detalle de las diferentes variables usadas para la selección \textit{loose} (L), \textit{medium} (M) y \textit{tight} (T) de fotones y electrones. El $\checkmark$ indica cuándo la selección requiere de esa variable. \tosolve{citar martin}}
 \begin{tabular}{ r p{8cm} c | c c | c c c }
 
 	\hline
@@ -154,35 +154,40 @@ La definición de las variables que definen a los cortes se detallan a continuac
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-
+Por último un algoritmo adicional es aplicado para resolver ambigüedades residuales en para candidatos de fotones que son también reconstruidos como electrones. Diferentes estrategias son utilizadas dependiendo del estado de conversión de los fotones según es explica en la Referencia \cite{ambiguity}.
 
 
 \section{Criterios de aislamiento}
 
-Luego de realizar la identificación, es necesario distinguir entre electrones y fotones directos (aquellos producidos en la colisión) o de los no directos producidos de decaimientos de hadrones ($\pi^{0}$, $\eta$, etc.).
+Luego de realizar la identificación, es necesario distinguir entre electrones y fotones directos (aquellos producidos en la colisión) o de los no directos producidos de decaimientos de hadrones ($\pi^{0}$, $\eta$, etc.) dentro de jets.
 
-Los fotones provenientes del punto de interacción poseen baja actividad hadrónica en su vecindad, mientras que en los no directos se espera que haya un gran actividad provenientes de los objetos que acompañan al jet. Por ello el criterio de aislamiento puede basarse en medidas calorimétricas o en las trazas reconstruidas en el entorno del objeto.
+Los fotones provenientes del punto de interacción o los electrones provenientes de $Z\rightarrow ee$, poseen baja actividad hadrónica en su vecindad, mientras que en los no directos se espera que haya un gran actividad provenientes de los objetos que acompañan al jet. Por ello el criterio de aislamiento puede basarse en medidas calorimétricas o en las trazas reconstruidas en el entorno del objeto.
 
 El aislamiento de trazas se define a partir de considerar un cono de radio $R=\sqrt{\Delta\eta^{2}+\Delta\phi^{2}}$ centrado en el baricentro del \textit{cluster} electromagnético asociado al objeto. A todas las trazas dentro de este cono se le pueden aplicar ciertos cortes, como $p_{T}>1 \egev$, impactos en el SCT, etc. Además, se requiere que aquellas trazas en un cono interno con $R=0.1$, no provengan de un vértice de conversión, a fin de remover los fotones convertidos. El aislamiento de trazas ha mostrado ser altamente eficiente tanto para retener señal como para rechazar falsos candidatos del fondo, aún luego de la selección descripta en la sección anterior. Aun así, el criterio más utilizado es el aislamiento calorimétrico.
 
 El aislamiento calorimétrico, $E_{T}^{\text{iso}}$, se calculada a partir de las celdas en ambos calorímetros (ECAL y HCAL). Nuevamente se define un cono con un cierto radio $R$ centrado en el baricentro del \textit{cluster} del objeto, y la suma de la energías de todas las celdas contenidas en ese cono es $E_{T}^{\text{iso}}$. 
 
-A fin de remover la contribución energética de la lluvia electromagnética desarrollada por el propio objeto al cono de aislamiento, el núcleo central de $N_{\eta}\times N_{\phi} = 5 \times 7$ celdas en el segundo compartimiento del ECAL, es ignorado en la suma, como se esquematiza en la Figura \tosolve{figura aislamiento}. Se considera que dentro de esta región ignorada, se concentra el 95\% de la energía de la lluvia electromagnética, por lo que solo el 5\% de la energía del objeto contribuye a esta región. Por otro lado, todas las celdas contenidas dentro del cono en el HCAL son consideradas para la suma, ya que se espera que el ECAL contenga toda lluvia electromagnética desencadenada por el objeto inicial. El valor típico para $R$ es de $0.4$, y los cortes de aislamiento para fotones son $E_{T}^{\text{iso}}<3 \egev$.
+A fin de remover la contribución energética de la lluvia electromagnética desarrollada por el propio objeto al cono de aislamiento, el núcleo central de $N_{\eta}\times N_{\phi} = 5 \times 7$ celdas en el segundo compartimiento del ECAL, es ignorado en la suma, como se esquematiza en la Figura \ref{isolation}. Se considera que dentro de esta región ignorada, se concentra el 95\% de la energía de la lluvia electromagnética, por lo que solo el 5\% de la energía del objeto contribuye a esta región. Por otro lado, todas las celdas contenidas dentro del cono en el HCAL son consideradas para la suma, ya que se espera que el ECAL contenga toda lluvia electromagnética desencadenada por el objeto inicial. 
 
+Para fotones, el valor típico de $R$ es $0.4$, y los cortes de aislamiento son $E_{T}^{\text{iso}}<2.45 \egev$. En cambio en los electrones pasan por un criterio denominando a este criterio \textit{Gradient Loose}, en el cual el valor de $R$ depende del $p_{T}$ de los mismos. En este caso para el aislamiento calorimétrico $R=0.2$ y para el aislamiento de trazas $R=10\egev/p_{T}$
 
+\begin{figure}
+\centering
+\includegraphics[width=0.50\textwidth]{isolation_low.eps}
+\caption{Esquema ilustrando el cálculo de la energía de aislamiento del fotón. La \textit{grid} representa la granularidad de las celdas del calorímetro electromagnético. El cono de color gris de radio $R$ rodea al candidato. La energía del candidato a fotón o electrón está mayormente contenida en el rectángulo central de $5 \times 7$ en $\Delta\eta \times \Delta\phi$.}
+\label{isolation}
+\end{figure}
 
 \section{Energía faltante}
 
-Una variable de suma importancia en la reconstrucción de objetos, es la energía transversa faltante ($\met$). Como se mencionó anteriormente, el momento transverso se debe conservar en todo el proceso, y cualquier desequilibrio en el mismo se lo asocia a $\met$. Puede indicar la presencia de partículas indetectables como neutrinos o nuevas partículas estables, o que interactúan débilmente con la materia.
+Una variable de suma importancia en la búsqueda de partículas supersimétricas, es la energía transversa faltante ($\met$). Como se mencionó anteriormente, el momento transverso se debe conservar en todo el proceso, y cualquier desequilibrio en el mismo se lo asocia a $\met$. Puede indicar la presencia de partículas indetectables como neutrinos o nuevas partículas estables, o que interactúan débilmente con la materia.
 
 El momento transverso faltante ($p_{T}^{\text{miss}}$) se define como el valor negativo de la suma del momento transverso de todas las partículas detectadas, y su magnitud es lo que se denomina energía transversa faltante. Esta es calculada con un algoritmo basado en objetos \cite{Khoo:2012749}. El algoritmo utiliza los objetos físicos construidos y calibrados descriptos en las secciones anteriores. Los depósitos de energía en el calorímetro (topo-clusters) son asociados a los objetos de alto $p_{T}$ en el siguiente orden: electrones, fotones, jets y muones. Los depósitos que no están asociados a ningún objeto son incluidos en el término \textit{soft}. El momento transverso es calculado entonces como:
 
 \begin{equation}
 p_{T}^{\text{miss}}=\left(p_{T}^{\text{miss}}\right)^{e} + \left(p_{T}^{\text{miss}}\right)^{\gamma} + \left(p_{T}^{\text{miss}}\right)^{\text{jet}} +\left(p_{T}^{\text{miss}}\right)^{\mu} + \left(p_{T}^{\text{miss}}\right)^{\text{soft}}
 \end{equation}
-
-(para discutir nomenclatura)
-
+%
 donde cada término es calculado como el negativo de la suma de los objetos reconstruidos y calibrados, más el término \textit{soft}. La contribución de los taus, se incluye en el término de jets o en el \textit{soft}, debido a que los mismos decaen hadrónicamente. Finalmente la energía transversa faltante se define como:
 
 \begin{equation}
