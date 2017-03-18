@@ -27,7 +27,7 @@ A todos los pares se les solicita una masa invariante entre $75$ y $105 \egev$  
 
 En base a los objetos seleccionados se crea un arreglo bidimensional en  $\eta$ y $p_{T}$. Para eventos positrón-electrón una entrada se realiza para cada partícula. En los casos de pares electrón-fotón un arreglo es creado por separado y los solo los valores de los fotones son utilizados.
 
-La concepción del método proviene de la siguiente consideración. Sea $\epsilon_{i}$ la eficiencia de reconstruir un electrón, con un valor de $\eta$ y $p_{T}$ correspondientes al bin \textit{i} del histograma. Para una muestra de \textit{N} pares de electrones y positrones reales (dentro del rango de masa), decimos que $f_{ij}$ es la fracción de pares para los cuales el electrón \textit{leading} (\textit{sub-leading}) está dentro del bin \textit{i} (\textit{j}). Considerando solamente electrones-positrones provenientes del decaimiento de un bosón $Z$, el número de eventos en el bin \textit{i} del arreglo $N^{ee}[\eta , p_{T}]$ es entonces:
+La concepción del método proviene de la siguiente consideración. Sea $\epsilon_{i}$ la eficiencia de reconstruir un electrón, con un valor de $\eta$ y $p_{T}$ correspondientes al bin \textit{i} del arreglo. Para una muestra de \textit{N} pares de electrones y positrones reales (dentro del rango de masa), decimos que $f_{ij}$ es la fracción de pares para los cuales el electrón \textit{leading} (\textit{sub-leading}) está dentro del bin \textit{i} (\textit{j}). Considerando solamente electrones-positrones provenientes del decaimiento de un bosón $Z$, el número de eventos en el bin \textit{i} del arreglo $N^{ee}[\eta , p_{T}]$ es entonces:
 
 \begin{equation}
 N_{i}^{ee} = \sum_{i}\epsilon_{i}\epsilon_{j}f_{ij}N + \sum_{j}\epsilon_{j}\epsilon_{i}f_{ji}N = \epsilon_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
@@ -51,43 +51,47 @@ Por ende, el factor, no es la proporción de fotones mal reconstruidos, sino que
 N_{e\rightarrow\gamma}(\eta , p_{T} , ... ) = F_{e\rightarrow\gamma}(\eta , p_{T})\cdot N_{e}(\eta , p_{T} , ...)
 \end{equation}
 	
-Donde $N_{e}(\eta , p_{T} , ...)$ es el número de electrones en un determinado estado final correspondiente a las distintas regiones del estudio de partículas supersimétricas mencionado en el capítulo anterior. Estos eventos se seleccionan entonces requiriendo electrón en lugar de un fotón en el estado final. 
+Donde $N_{e}(\eta , p_{T} , ...)$ es el número de electrones en un determinado estado final correspondiente a las distintas regiones del estudio de partículas supersimétricas mencionado en el capítulo anterior. Estos eventos se seleccionan entonces requiriendo un electrón en lugar de un fotón en el estado final. 
 
-La implementación del cálculo en ROOT y C++ se  base en histogramas bidimensionales. Para cada evento que contiene un par electrón-positrón, en un histograma con bines de $\eta$ y $p_{T}$ ($N^{ee}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$ de cada uno de los electrones. En el caso de que el evento tenga un par electrón-fotón, en otro histograma ($N^{e\gamma}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$, solamente del fotón. El correspondiente factor se obtiene entonces como en la ecuación \ref{eq:ff_ratio}.
+La implementación del método se realizó en ROOT y C++ en base a histogramas bidimensionales. Para cada evento que contiene un par electrón-positrón, en un histograma con bines de $\eta$ y $p_{T}$ ($N^{ee}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$ de cada uno de los electrones. En el caso de que el evento tenga un par electrón-fotón, en otro histograma ($N^{e\gamma}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$, solamente del fotón. El correspondiente factor se obtiene entonces como en la ecuación \ref{eq:ff_ratio}.
 
-Dado que los pares de objetos utilizados para el cálculo, tienen un probabilidad de no provenir del decaimiento del bosón $Z$, sino de otros procesos no resonantes de fondo, la relación entre señal y fondo tiene en cuenta en el calculo del factor buscado.
-Para tener en cuenta la relación entre entradas correspondientes a la señal y las correspondientes al fondo, cada entrada en los histogramas es pesada con un peso representativo de esta relación.
+Un fondo no resonante en los eventos de $Z$ se espera de combinatoria aleatoria de objetos o de otros procesos electrodébiles, donde los electrones son correctamente reconstruidos o con alguno de los objetos reconstruido erróneamente. Para tener en cuenta la relación entre entradas correspondientes a la señal y las correspondientes al fondo, cada entrada en los histogramas es pesada con un peso representativo de esta relación.
+
+% Dado que los pares de objetos utilizados para el cálculo, tienen un probabilidad de no provenir del decaimiento del bosón $Z$, sino de otros procesos no resonantes de fondo, la relación entre señal y fondo tiene en cuenta en el cálculo del factor buscado.
+% Para tener en cuenta la relación entre entradas correspondientes a la señal y las correspondientes al fondo, cada entrada en los histogramas es pesada con un peso representativo de esta relación.
 
 
-\subsubsection{Clasificación de eventos}
+\section{Clasificación de eventos}
 
-La relación entre señal y fondo en la distribución de masa invariante de los eventos correspondientes a la masa del $Z$ se utiliza en el método para determinar un peso que se obtiene a su vez clasificando a los pares según el tipo ($ee/e\gamma$) y según la región donde se reconstruían los objetos \textit{endcap}-\textit{endcap} ($EE$), \textit{barrel}-\textit{endcap} ($BE$) y \textit{barrel}-\textit{barrel} ($BB$), ya que los factores de identificación erróneas dependen de la región del detector donde fueron reconstruidos dados los distinta morfología y tipo detectores utilizados en cada una ellas. Para cada una de las tres regiones se calcula su masa invariante de los pares, se realiza el correspondiente ajuste para determinar la contribución de señal (S) y fondo (B) y finalmente el peso resulta de la relación: $w=\frac{S}{S+B}$. 
+La relación entre señal y fondo de los eventos correspondientes a la masa del $Z$ se utiliza en el método para determinar un peso que se obtiene a su vez clasificando a los pares según el tipo ($ee/e\gamma$) y según la región donde se reconstruyeron los objetos \textit{endcap}-\textit{endcap} ($EE$), \textit{barrel}-\textit{endcap} ($BE$) y \textit{barrel}-\textit{barrel} ($BB$). Esto último se debe a que los factores de identificación erróneas dependen de la región del detector donde fueron reconstruidos dados los distinta morfología y tipo detectores utilizados en cada una ellas. Para cada una de las tres regiones se calcula la masa invariante de los pares, se realiza el correspondiente ajuste para determinar la contribución de señal (S) y fondo (B) y finalmente el peso resulta de la relación: $w=\frac{S}{S+B}$. 
 
-Los datos utilizados para el análisis corresponden a los años 2015 y 2016 del Run 2 del LHC, en base a la denominada derivación EGAM1 que realiza una pre-selección de eventos optimizado para estudios del $Z$, con una base de electrones y fotones con $p_{T} > 7 \egev$ y masa invariante de los distintos tipos de pares mayor a 50 \egev, además de otras selecciones. %y con ningún requisito de \textit{triggers}.
+Los datos utilizados para el análisis corresponden a los colectados durante los años 2015 y 2016 del Run 2 del LHC, en base a la denominada derivación EGAM1 y con ningún requisito de \textit{triggers}.
 
 Los electrones utilizados para estimar la contaminación de fotones de señal \textit{tight}, pueden pasar tanto requerimientos  \textit{medium} o \textit{tight}. En ambos casos se encuentra una buena relación señal y fondo, siendo naturalmente el caso de selección \textit{tight} la de mayor pureza a costa de una menor estadística de la muestra. Ambas selecciones se estudian en el presente trabajo como se discute en las siguientes secciones.
 
-Para los ajustes de la masas invariantes se utiliza como modelo de señal una \textit{double-sided Crystall-ball} (DSCB). La misma consiste en una distribucion Gaussiana cuyas ramas son reemplazadas por exponenciales. Para el fondo se utiliza un polinomio de grado 2. Los resultados de los ajustes obtenidos para cada clasificación de los pares se pueden observar en las Figuras \ref{fits_BB}, \ref{fits_BE} y \ref{fits_EE}. En base a los resultados de estos ajustes se determina la contribución de señal y background en cada región, determinando así los correspondientes pesos como se muestra en la Tabla \ref{ta:weights}.
-
-\tosolve{en todos los resultados deberian ir medium y tight?}
+Para los ajustes de la masas invariantes se utiliza como modelo de señal una \textit{double-sided Crystall-ball} (DSCB). La misma consiste en una distribución Gaussiana cuyas ramas son reemplazadas por exponenciales. De esta forma se tiene en cuenta efectos de resolución en la reconstrucción de los objetos y colas exponenciales que incluyen los efectos de emisión de fotones de bremsstrahlung por parte de los electrones (y sus respectivas técnicas de recuperación \tosolve{citar Electron bremsstrahlung recovery in ATLAS }). Para el fondo se utiliza un polinomio de grado 2. Los resultados de los ajustes obtenidos para cada clasificación de los pares se pueden observar en las Figuras \ref{fits_invmass_medium} y \ref{fits_invmass_tight}. En base a los resultados de estos ajustes se determina la contribución de señal y background en cada región, determinando así los correspondientes pesos como se muestra en la Tabla \ref{ta:weights}.
 
 \begin{table}
 \centering
-\caption{Relación entre señal y fondo obtenida para los distintos pares ($ee/e\gamma$) en cada región (EE, BE, BB).}
-\begin{tabular}{ c c c }
+\caption{Relación entre señal y fondo obtenida para los distintos pares ($ee/e\gamma$) en cada región (EE, BE, BB), para electrones \textit{medium} y \textit{tight}. \tosolve{calcular incertezas}}
+\begin{tabular}{ c c c | c c }
 
 	\hline
 	\hline
 
-	 & $ee$ & $e\gamma$ \\
+	 & \multicolumn{2}{c |}{\textit{medium e}} & \multicolumn{2}{c}{\textit{tight e}} \\
+
+	\cline{2-5}
+
+	Región & $ee$ & $e\gamma$ & $ee$ & $e\gamma$ \\
 
 	\hline
 
-	EE & 0.99 & 0.99 \\
+	EE & 0.915016 & 0.809736  & 0.928158 & 0.817475 \\
 
-	BE & 0.99 & 0.99 \\
+	BE & 0.936681 & 0.80021  & 0.933618 & 0.811782 \\
 
-	BB & 0.99 & 0.99 \\
+	BB & 0.917456 & 0.721533  & 0.915487 & 0.734068 \\
 
 	\hline
 	\hline
@@ -97,65 +101,63 @@ Para los ajustes de la masas invariantes se utiliza como modelo de señal una \t
 
 
 
-\subsection{Sistemáticos}
+\section{Incertezas sistemáticas}
 
-% Las principales fuentes de incertezas sistemáticas del método para el calculo de los factores que determina la contaminación de fondo en las distintas regiones, proviene de las definiciones de las funciones y rangos de ajustes de los fits, así como de las ventanas de aceptación de pares.  Para estimar los posibles incertezas se varió el rango nominal de la masa de $[75-105]\egev$ a los rangos de $[70-110]\egev$ y a $[80-100]\egev$. Como caso extremo en la definición y criterios de ajuste, se determinaron los factores imponiendo los pesos $w=1$ eliminando así la sustracción de fondo en su cálculo. Los resultados de estos estudios se muestran el la Tabla \label{ta:fftable} donde se observa que la incerteza dominante proviene en base al criterio adoptado es la de tomar $w=1$ siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
+% Las principales fuentes de incertezas sistemáticas del método para el cálculo de los factores que determina la contaminación de fondo en las distintas regiones, proviene de las definiciones de las funciones y rangos de ajustes de los fits, así como de las ventanas de aceptación de pares.  Para estimar los posibles incertezas se varió el rango nominal de la masa de $[75-105]\egev$ a los rangos de $[70-110]\egev$ y a $[80-100]\egev$. Como caso extremo en la definición y criterios de ajuste, se determinaron los factores imponiendo los pesos $w=1$ eliminando así la sustracción de fondo en su cálculo. Los resultados de estos estudios se muestran en la Tabla \label{ta:fftable} donde se observa que la incerteza dominante proviene en base al criterio adoptado es la de tomar $w=1$ siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
 
-Las principales fuentes de incertezas sistemáticas del método para el calculo de los factores que determina la contaminación de fondo en las distintas regiones, proviene tanto de los ajustes a la masa invariante como de los criterios de aceptación de los pares.  
+Las principales fuentes de incertezas sistemáticas del método para el cálculo de los factores que determina la contaminación de fondo en las distintas regiones, proviene tanto de los ajustes a la masa invariante como de los criterios de aceptación de los pares.  
 
 Para estimar los posibles incertezas se varió el rango nominal de la masa de $[75-105]\egev$ a los rangos de $[70-110]\egev$ y a $[80-100]\egev$. Como caso extremo en la definición y criterios de ajuste, se determinaron los factores imponiendo los pesos $w=1$ eliminando así la sustracción de fondo en su cálculo. 
 
-Los resultados de estos estudios se muestran el la Tabla \ref{ta:syst} donde se observa que la incerteza dominante proviene en base al criterio adoptado es la de tomar $w=1$ siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
+Los resultados de estos estudios se muestran en la Tabla \ref{ta:fftable} donde se observa que la incerteza dominante proviene en base al criterio adoptado es la de tomar $w=1$ siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
 
-\tosolve{¿esta bien que los sistematicos aparezcan antes que los mismo factores?}
+% \begin{table}
+% \centering
+% \begin{threeparttable}
+% \caption{Incertezas sistemáticas de los factores en bines de $\eta$ y $p_{T}$. Se puede observar que el sistemático $w=1$ es el que predomina.}
+% \begin{tabular}{ l l c c c }
 
-\begin{table}
-\centering
-\begin{threeparttable}
-\caption{Incertezas sistemáticas de los factores en bines de $\eta$ y $p_{T}$. Se puede observar que el sistemático $w=1$ es el que predomina.}
-\begin{tabular}{ l l c c c }
+% 	\hline
+% 	\hline
 
-	\hline
-	\hline
+% 	$|\eta|$ & $p_{T}$[GeV] & $w=1$ & Rango & Total \\
+% 	\hline
 
-	$|\eta|$ & $p_{T}$[GeV] & $w=1$ & Rango & Total \\
-	\hline
+% 	0 - 0.6 	& 75 - 90 	& 0.0155 & 0.0004 & 0.004 \\
 
-	0 - 0.6 	& 75 - 90 	& 0.0155 & 0.0004 & 0.004 \\
+% 	0 - 0.6 	& 90 - 145 	& 0.0141 & 0.0004 & 0.004 \\
 
-	0 - 0.6 	& 90 - 145 	& 0.0141 & 0.0004 & 0.004 \\
+% 	0 - 0.6 	& 145 - 300 & 0.0116 & 0.0008 & 0.002 \\
 
-	0 - 0.6 	& 145 - 300 & 0.0116 & 0.0008 & 0.002 \\
+% 	\hline
 
-	\hline
+% 	0.6 - 1.37 	& 75 - 90 	& 0.0173 & 0.0004 & 0.004 \\
 
-	0.6 - 1.37 	& 75 - 90 	& 0.0173 & 0.0004 & 0.004 \\
+% 	0.6 - 1.37 	& 90 - 145 	& 0.0161 & 0.0004 & 0.004 \\
 
-	0.6 - 1.37 	& 90 - 145 	& 0.0161 & 0.0004 & 0.004 \\
+% 	0.6 - 1.37 	& 145 - 300 & 0.0121 & 0.0008 & 0.003 \\
 
-	0.6 - 1.37 	& 145 - 300 & 0.0121 & 0.0008 & 0.003 \\
+% 	\hline
 
-	\hline
+% 	1.52 - 1.82 & 75 - 90 	& 0.036  & 0.001 & 0.00 \\
 
-	1.52 - 1.82 & 75 - 90 	& 0.036  & 0.001 & 0.00 \\
+% 	1.52 - 1.82 & 90 - 145 	& 0.033  & 0.001 & 0.004 \\
 
-	1.52 - 1.82 & 90 - 145 	& 0.033  & 0.001 & 0.004 \\
+% 	1.52 - 1.82 & 145 - 300 & 0.022  & 0.002 & 0.003 \\
 
-	1.52 - 1.82 & 145 - 300 & 0.022  & 0.002 & 0.003 \\
+% 	\hline
 
-	\hline
+% 	1.82 - 2.37 & 75 - 90 	& 0.046		& 0.001 & 0.007 \\
 
-	1.82 - 2.37 & 75 - 90 	& 0.046		& 0.001 & 0.007 \\
+% 	1.82 - 2.37 & 90 - 145	& 0.039		& 0.001 & 0.006 \\
 
-	1.82 - 2.37 & 90 - 145	& 0.039		& 0.001 & 0.006 \\
+% 	1.82 - 2.37 & 145 - 300 & 0.041		& 0.003 & 0.006 \\
 
-	1.82 - 2.37 & 145 - 300 & 0.041		& 0.003 & 0.006 \\
-
-	\hline
-\end{tabular}
-\label{ta:syst}
-\end{threeparttable}
-\end{table}
+% 	\hline
+% \end{tabular}
+% \label{ta:syst}
+% \end{threeparttable}
+% \end{table}
 
 % Lo mismo se hizo con el rango del fit que se varió de su rango nominal $[70-110]\egev$, a $[65-115]\egev$ y a $[75-105]\egev$. 
 
@@ -169,50 +171,78 @@ Los resultados de estos estudios se muestran el la Tabla \ref{ta:syst} donde se 
 
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_ee_BB} 
+		\caption{Región BB}
 	\end{subfigure}
 	~
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_eg_BB}
+		\caption{Región BB}
 	\end{subfigure}
-
-	
-	\caption{Fits de la masa invariante de los pares $ee$ (izquierda) y $e\gamma$ (derecha), reconstruidos en al región $BB$. La curva roja corresponde a la DSCB, la verde al polinomio de grado 2 y la azul a la combinación resultante de ambas.}
-\label{fits_BB}
-\end{figure}
-
-\begin{figure}
-
+	~
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_ee_BE} 
+		\caption{Región BE}
 	\end{subfigure}
 	~
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_eg_BE}
+		\caption{Región BE}
 	\end{subfigure}
-
-	
-	\caption{Fits de la masa invariante de los pares $ee$ (izquierda) y $e\gamma$ (derecha), reconstruidos en al región $BE$. La curva roja corresponde a la DSCB, la verde al polinomio de grado 2 y la azul a la combinación resultante de ambas.}
-\label{fits_BE}
-\end{figure}
-
-
-\begin{figure}
-
+	~
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_ee_EE} 
+		\caption{Región EE}
 	\end{subfigure}
 	~
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_eg_EE}
+		\caption{Región EE}
 	\end{subfigure}
 
-	
-	\caption{Fits de la masa invariante de los pares $ee$ (izquierda) y $e\gamma$ (derecha), reconstruidos en al región $EE$. La curva roja corresponde a la DSCB, la verde al polinomio de grado 2 y la azul a la combinación resultante de ambas.}
-\label{fits_EE}
+	\caption{Fits de la masa invariante de los pares $ee$ (izquierda) y $e\gamma$ (derecha), para cada región de reconstrucción y para electrones \textit{medium}. La curva roja corresponde a la DSCB, la verde al polinomio de grado 2 y la azul a la combinación resultante de ambas.}
+\label{fits_invmass_medium}
+\end{figure}
+
+\begin{figure}
+
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_ee_BB} 
+		\caption{Región BB}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_eg_BB}
+		\caption{Región BB}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_ee_BE} 
+		\caption{Región BE}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_eg_BE}
+		\caption{Región BE}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_ee_EE} 
+		\caption{Región EE}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.40]{d15_16_egam1_m_fit_h_m_eg_EE}
+		\caption{Región EE}
+	\end{subfigure}
+
+	\caption{Fits de la masa invariante de los pares $ee$ (izquierda) y $e\gamma$ (derecha), para cada región de reconstrucción y para electrones \textit{tight}. La curva roja corresponde a la DSCB, la verde al polinomio de grado 2 y la azul a la combinación resultante de ambas.}
+\label{fits_invmass_tight}
 \end{figure}
 
 
-\subsection{Resultados y estimación del fondo en regiones de control y validación} \label{sec:resultados}
+
+
+\section{Resultados y estimación del fondo en regiones de control y validación} \label{sec:resultados}
 
 
 Los resultados obtenidos para el factor en bines de $\eta$ y $p_{T}$ se muestran en la Tabla \ref{ta:fftable} incluyendo por separada las incertezas estadísticas y sistemáticas del método.
@@ -220,55 +250,174 @@ Los resultados obtenidos para el factor en bines de $\eta$ y $p_{T}$ se muestran
 
 \begin{table}	
 \centering
-\begin{threeparttable}
 \caption{Tabla con los factores de identificación errónea en bines de $\eta$ y $p_{T}$, con sus valores de incerteza estadística y sistemática.}
-\begin{tabular}{ l l c c c }
+\begin{threeparttable}
+\begin{tabular}{ l l c c c c c }
 
 	\hline
 	\hline
 
-	$|\eta|$ & $p_{T}$[GeV] & Fake factor & Estadísticos & Sistemáticos \\
+	\multirow{2}{*}{$|\eta|$} & \multirow{2}{*}{$p_{T}$[GeV]} & \multirow{2}{*}{Fake factor} & \multirow{2}{*}{Estadístico} & \multicolumn{3}{c}{Sistemáticos} \\
+	
+	\cline{5-7}
+
+	 & & & & $w=1$ & Rango & Total \\
 
 	\hline
 
-	0 - 0.6 & 75 - 90 & 0.0168 & 0.0003 & -		 \\
+	0 - 0.6 & 75 - 90 & 0.0168 & 0.0003 & -			& 0.0003  &  0.0004  \\
 
-	0 - 0.6 & 90 - 145 & 0.0158 & 0.0004 & - 	 \\
+	0 - 0.6 & 90 - 145 & 0.0158 & 0.0004 & - 		& 0.0002  &  0.0003  \\
 
-	0 - 0.6 & 145 - 300 & 0.0142 & 0.0007 & -  	 \\
-
-	\hline
-
-	0.6 - 1.37 & 75 - 90 & 0.0186 & 0.0003 & -	 \\
-
-	0.6 - 1.37 & 90 - 145 & 0.0183 & 0.0004 & -	 \\
-
-	0.6 - 1.37 & 145 - 300 & 0.0141 & 0.0007 & -   \\
+	0 - 0.6 & 145 - 300 & 0.0142 & 0.0007 & -  		& 0.0002  &  0.0003  \\
 
 	\hline
 
-	1.52 - 1.82 & 75 - 90 & 0.0354  & 0.0009 &  \\
+	0.6 - 1.37 & 75 - 90 & 0.0186 & 0.0003 & -		& 0.0002  &  0.0004  \\
 
-	1.52 - 1.82 & 90 - 145 & 0.033  & 0.001 & \\
+	0.6 - 1.37 & 90 - 145 & 0.0183 & 0.0004 & -		& 0.0002  &  0.0004  \\
 
-	1.52 - 1.82 & 145 - 300 & 0.026  & 0.002 & \\
+	0.6 - 1.37 & 145 - 300 & 0.0141 & 0.0007 & -  	& 0.0002  &  0.0003  \\
 
 	\hline
 
-	1.82 - 2.37 & 75 - 90 & 0.045  & 0.001 &  \\
+	1.52 - 1.82 & 75 - 90 & 0.0354  & 0.0009 & -		& 0.0003  &  0.001 \\
 
-	1.82 - 2.37 & 90 - 145 & 0.040  & 0.001 &  \\
+	1.52 - 1.82 & 90 - 145 & 0.033  & 0.001 & -		& 0.001  &  0.001 \\
 
-	1.82 - 2.37 & 145 - 300 & 0.038  & 0.002 & \\
+	1.52 - 1.82 & 145 - 300 & 0.026  & 0.002 & -  	& 0  &  0.0005  \\
+
+	\hline
+
+	1.82 - 2.37 & 75 - 90 & 0.045  & 0.001 & -		& 0.0001  &  0.001 \\
+
+	1.82 - 2.37 & 90 - 145 & 0.040  & 0.001 & -		& 0.001  &  0.002  \\
+
+	1.82 - 2.37 & 145 - 300 & 0.038  & 0.002 & -  	& 0  &  0.002  \\
 
 	\hline
 	\hline
 
 \end{tabular}
-\label{ta:fftable}
 \end{threeparttable}
+\label{ta:fftable}
 \end{table}
+
+% \begin{table}	
+% \centering
+% \begin{threeparttable}
+% \caption{Tabla con los factores de identificación errónea en bines de $\eta$ y $p_{T}$, con sus valores de incerteza estadística y sistemática.}
+% \begin{tabular}{ l l c c c }
+
+% 	\hline
+% 	\hline
+
+% 	$|\eta|$ & $p_{T}$[GeV] & Fake factor & Estadísticos & Sistemáticos \\
+
+% 	\hline
+
+% 	0 - 0.6 & 75 - 90 & 0.0168 & 0.0003 & -		 \\
+
+% 	0 - 0.6 & 90 - 145 & 0.0158 & 0.0004 & - 	 \\
+
+% 	0 - 0.6 & 145 - 300 & 0.0142 & 0.0007 & -  	 \\
+
+% 	\hline
+
+% 	0.6 - 1.37 & 75 - 90 & 0.0186 & 0.0003 & -	 \\
+
+% 	0.6 - 1.37 & 90 - 145 & 0.0183 & 0.0004 & -	 \\
+
+% 	0.6 - 1.37 & 145 - 300 & 0.0141 & 0.0007 & -   \\
+
+% 	\hline
+
+% 	1.52 - 1.82 & 75 - 90 & 0.0354  & 0.0009 &  \\
+
+% 	1.52 - 1.82 & 90 - 145 & 0.033  & 0.001 & \\
+
+% 	1.52 - 1.82 & 145 - 300 & 0.026  & 0.002 & \\
+
+% 	\hline
+
+% 	1.82 - 2.37 & 75 - 90 & 0.045  & 0.001 &  \\
+
+% 	1.82 - 2.37 & 90 - 145 & 0.040  & 0.001 &  \\
+
+% 	1.82 - 2.37 & 145 - 300 & 0.038  & 0.002 & \\
+
+% 	\hline
+% 	\hline
+
+% \end{tabular}
+% \label{ta:fftable}
+% \end{threeparttable}
+% \end{table}
 
 Observando los resultados expuestos en las distintas tablas, definimos la implementación de una selección \textit{medium} de los electrones ya que los valores de pureza (expresado en los valores de los pesos $w$) e incertezas sistemáticas son equivalentes a la selección \textit{tight}, pero con la ventaja de una mayor estadística de eventos para estimar el fondo en las distintas regiones de control y validación.
 
-A partir de estos resultados para el fondo, se pueden estimar la contribución del mismo para las regiones de control y validación. Las mismas se pueden observar en las Figuras \tosolve{Acá van los gráficos de Fran de las regiones de control y validación.}
+A partir de estos resultados para el fondo, se pueden estimar la contribución del mismo para la región de validación. Los criterios para determinar la VR se pueden observar en la Tabla \ref{ta:vr_crit}. La contribución de cada fondo al número de eventos en esta región se puede observar en la Tabla \ref{ta:vr_events}, en donde se puede observar que para esta región el fondo proveniente de electrones mal reconstruidos como fotones es el que predomina. Las distribuciones para $\Delta \phi$ y $\met$ se observan en las Figuras \ref{VRE_dphi} y \ref{VRE_met_et}.
+
+
+\tosolve{CRs?, consultar bien esto}
+
+\begin{table}
+\centering
+\caption{Criterios de selección para la región de validación donde predomina el fondo de electrones mal reconstruidos como fotones casi en un $ 60\%$}
+  \begin{tabular}{l|r}
+  \hline
+  \hline
+  & VRE \\
+  \hline
+  $N_{\mathrm{fotones}}$                  &       $\ge1$  \\
+  $\pt^{\text{leading}\: \gamma} >$         &    $145\egev$  \\
+  $N_{\mathrm{leptones}}$                  &           -   \\
+  $N_{\mathrm{jets}}$                     &       $\ge1$  \\
+  $N_{b-\mathrm{jets}}$                   &       $\ge1$  \\
+  $\Delta\phi(\text{jet}, \met)$          &       $>0.4$  \\
+  $\Delta\phi(\gamma, \met)$                &       $<0.4$  \\
+  ${\met}$                                &   $>200\egev$  \\
+  $m_{\text{eff}}$                               &  $[500, 2000]\egev$  \\
+  \hline
+  \hline
+\end{tabular}
+\label{ta:vr_crit}
+\end{table}
+
+\begin{table}
+\centering
+\caption{Contribución de cada fondo a la región de validación}
+\begin{tabular}{lr}
+\hline
+ & $e\to\gamma$ falsos VR \\
+\hline
+Eventos observados & 94 \\
+\hline
+Eventos esperados por el SM & $92.18 \pm 12.58$ \\
+\hline
+$\gamma$ + jets & $1.46 \pm 0.16$ \\
+$W\gamma$ & $13.73 \pm 1.26$ \\
+$Z\gamma$ & $0.87 \pm 0.05$ \\
+$\ttbar\gamma$ & $4.91 \pm 0.70$ \\
+$e\rightarrow\gamma$ falsos & $58.43 \pm 12.49$ \\
+$j\rightarrow\gamma$ falsos & $12.73 \pm 2.14$ \\
+$\gamma\gamma / W\gamma\gamma / Z\gamma\gamma$ & $0.05 \pm 0.00$ \\
+\hline
+\end{tabular}
+\label{ta:vr_events}
+\end{table}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.50\textwidth]{can_VRE_dphi_gammet_afterFit.eps}
+\caption{Distribución de $\Delta \phi$ para una región de validación. Comunicación privada del Dr. Francisco Alonso. \tosolve{citar fran}}
+\label{VRE_dphi}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.50\textwidth]{can_VRE_met_et_afterFit.eps}
+\caption{Distribución de $\met$ para una región de validación. Comunicación privada del Dr. Francisco Alonso. \tosolve{citar fran}}
+\label{VRE_met_et}
+\end{figure}
