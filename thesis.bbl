@@ -111,6 +111,10 @@ L.~R. Evans and P.~Bryant, J. Instrum. {\bfseries 3} (2008) S08001. 164 p,
   {\bfseries 72} (2012) 1849}, \href{http://arxiv.org/abs/1110.1530}{{\ttfamily
   arXiv:1110.1530 [hep-ex]}}.
 
+\bibitem{grid_web}
+CERN, {\em The Worldwide LHC Computing Grid},
+\newblock \url{https://home.cern/about/computing/worldwide-lhc-computing-grid}.
+
 \bibitem{ATLASComputing}
 {ATLAS Collaboration} Collaboration,, {\em {ATLAS Computing: technical design
   report}}.
@@ -140,10 +144,16 @@ W.~Lampl, S.~Laplace, D.~Lelas, P.~Loch, H.~Ma, S.~Menke, S.~Rajagopalan,
   ATL-COM-LARG-2008-003, CERN, Geneva, Apr, 2008.
 \newblock \url{https://cds.cern.ch/record/1099735}.
 
+\bibitem{Monticelli:2227992}
+{ATLAS Collaboration} Collaboration, F.~Monticelli, {\em {The Upgrade of the
+  ATLAS Electron and Photon Triggers for LHC Run 2 and their Performance}},
+  Tech. Rep. ATL-DAQ-PROC-2016-016, CERN, Geneva, Oct, 2016.
+\newblock \url{https://cds.cern.ch/record/2227992}.
+
 \bibitem{ATLAS:2016iqc}
-{ATLAS} Collaboration,
-T.~A. collaboration.
-%%CITATION = ATLAS-CONF-2016-024;%%.
+{ATLAS} Collaboration, T.~A. collaboration, {\em {Electron efficiency
+  measurements with the ATLAS detector using the 2015 LHC proton-proton
+  collision data. ATLAS-CONF-2016-024}}, 2016.
 
 \bibitem{Tripiana:1433788}
 M.~Tripiana and M.~T. Dova, {\em {Medida de la sección eficaz de producción
@@ -176,13 +186,9 @@ F.~Alonso and M.~T. Dova, {\em {Búsqueda de Supersimetría en eventos con un
 \newblock Presented 28 Mar 2016.
 
 \bibitem{ATLAS:2016fks}
-T.~A. collaboration, {\em {Search for Supersymmetry in events with photons,
-  jets and missing transverse energy with the ATLAS detector in 13 TeV pp
-  collisions}}.
-\newblock PhD thesis,
-2016.
-\newblock
-%%CITATION = ATLAS-CONF-2016-066;%%.
+{ATLAS} Collaboration, T.~A. collaboration, {\em {Search for Supersymmetry in
+  events with photons, jets and missing transverse energy with the ATLAS
+  detector in 13 TeV pp collisions. ATLAS-CONF-2016-066}}, 2016.
 
 \bibitem{Collaboration:2198651}
 A.~Collaboration, {\em {Search for Supersymmetry in events with photons, jets
@@ -213,6 +219,15 @@ A.~Collaboration, {\em {Search for Supersymmetry in events with photons, jets
 %%CITATION = NUPHZ,172,208;%%.
 
 \bibitem{drfran}
-{\em Comunicación privada del Dr. Francisco Alonso.},.
+Comunicación privada del Dr. Francisco Alonso.
+
+\bibitem{Schumm:1994343}
+B.~Schumm, J.~Mitrevski, J.~Nielsen, S.~J. Fowler, R.~Reece, M.-T. Dova,
+  F.~Alonso, M.~Tripiana, A.~Kuhl, B.~Abbott, F.~A. Arduh, S.~Norberg,
+  H.~Wahlberg, B.~Auerbach, O.~Jinnouchi, A.~Litke, K.~P. Mistry,
+  H.~Przysiezniak, S.~Schier,  and H.~Williams, {\em {Search for photonic
+  signatures of gauge-mediated supersymmetry in 8 TeV pp collisions with the
+  ATLAS detector}}, Tech. Rep. ATL-COM-PHYS-2015-139, CERN, Geneva, Feb, 2015.
+\newblock \url{https://cds.cern.ch/record/1994343}.
 
 \end{thebibliography}\endgroup

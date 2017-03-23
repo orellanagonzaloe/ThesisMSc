@@ -97,8 +97,6 @@ donde \textit{E} es su energía total.
 \label{ID}
 \end{figure}
 
-\tosolve{tamaño de pixel s resolucion}
-
 El detector interno (Figura \ref{ID}) es el más próximo al haz y combina detectores de muy alta resolución con detectores continuos de trazas. Está contenido dentro del solenoide que provee un campo magnético de $2$ T. Los distintos detectores que lo componen se describen a continuación. Se puede ver un corte transversal de los mismos en la Figura \ref{ID_2}.
 
 \begin{figure}
@@ -195,7 +193,7 @@ Para cada ítem del trigger se puede asignar además un factor de escala o presc
 
 \section{Modelo computacional y distribución de datos}
 
-La arquitectura computacional de ATLAS está diseñada para permitir a todos los miembros de la colaboración un acceso ágil, directo y distribuido a la gran cantidad de datos colectados por el detector ($\sim$ PB/año). La arquitectura se basa en la tecnología GRID \tosolve{cita}, compartiendo el poder de procesamiento y la capacidad de almacenamiento disponibles en distintos centros de cómputo asociados alrededor del mundo.
+La arquitectura computacional de ATLAS está diseñada para permitir a todos los miembros de la colaboración un acceso ágil, directo y distribuido a la gran cantidad de datos colectados por el detector ($\sim$ PB/año). La arquitectura se basa en la tecnología GRID \cite{grid_web}, compartiendo el poder de procesamiento y la capacidad de almacenamiento disponibles en distintos centros de cómputo asociados alrededor del mundo.
 
 El software de ATLAS se desarrolla dentro un entorno C++ común llamado ATHENA \cite{ATLASComputing, Lenzi:1214931, Calafiura:865624}, en el que se realiza todo el procesamiento de datos. Los eventos aceptados por el trigger deben ser procesados para reducir su tamaño y ser utilizados para los análisis \textit{offline}. A la salida del HLT, los eventos son almacenados como \textit{Raw Data Objects} (RDOs). Luego de aplicar los algoritmos de reconstrucción y calibración, las colecciones de los distintos objetos físicos obtenidas son almacenadas en formato ESD (\textit{Event Summary Data}) y AOD (\textit{Analysis Object Data}), una versión reducida del primero ($\sim$100 kB/evento). A partir de las ESDs/AODs, se ha definido un formato de datos significativamente más pequeño (10-15 kB/evento) conocido como xAOD, sobre el que se realiza el análisis final. Las xAOD son archivos (<<ntuples>>), accesibles vía el entorno de análisis de datos ROOT \cite{Brun:1997pa}, que contienen un conjunto de variables para diferentes objetos físicos, según las necesidades de cada grupo de análisis dentro de ATLAS. 
 

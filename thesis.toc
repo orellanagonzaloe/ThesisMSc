@@ -14,8 +14,8 @@
 \contentsline {chapter}{\numberline {2}El LHC y el detector ATLAS}{17}{chapter.2}
 \contentsline {section}{\numberline {2.1}El detector ATLAS}{19}{section.2.1}
 \contentsline {section}{\numberline {2.2}Sistema de coordenadas}{21}{section.2.2}
-\contentsline {section}{\numberline {2.3}Los subdetectores de ATLAS}{22}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}El detector interno}{22}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.3}Los subdetectores de ATLAS}{23}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}El detector interno}{23}{subsection.2.3.1}
 \contentsline {subsubsection}{Insertable B-Layer}{23}{section*.18}
 \contentsline {subsubsection}{Detector de p\IeC {\'\i }xeles}{24}{section*.19}
 \contentsline {subsubsection}{Detector Semiconductor de Trazas (SCT)}{24}{section*.20}
@@ -39,6 +39,6 @@
 \contentsline {section}{\numberline {5.1}Determinaci\IeC {\'o}n del factor de identificaci\IeC {\'o}n err\IeC {\'o}nea}{47}{section.5.1}
 \contentsline {section}{\numberline {5.2}Clasificaci\IeC {\'o}n de eventos}{50}{section.5.2}
 \contentsline {section}{\numberline {5.3}Incertezas sistem\IeC {\'a}ticas}{51}{section.5.3}
-\contentsline {section}{\numberline {5.4}Resultados y estimaci\IeC {\'o}n del fondo en regiones de control y validaci\IeC {\'o}n}{54}{section.5.4}
+\contentsline {section}{\numberline {5.4}Resultados y estimaci\IeC {\'o}n del fondo en regiones de control y validaci\IeC {\'o}n}{51}{section.5.4}
 \contentsline {chapter}{\numberline {6}Conclusiones}{59}{chapter.6}
 \contentsline {chapter}{Bibliografia}{64}{chapter*.44}

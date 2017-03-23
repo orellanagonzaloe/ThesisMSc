@@ -9,6 +9,12 @@ Database file #4: bibtex/bib/PubNotes.bib.bib
 Database file #5: bibtex/bib/Extra.bib.bib
 Warning--entry type for "mases_web" isn't style-file defined
 --line 397 of file bibtex/bib/Extra.bib.bib
+Repeated entry---line 510 of file bibtex/bib/Extra.bib.bib
+ : @techreport{Collaboration:2198651
+ :                                  ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "grid_web" isn't style-file defined
+--line 525 of file bibtex/bib/Extra.bib.bib
 Warning--empty title in Glashow:1961tr
 Warning--empty title in PhysRevLett.19.1264
 Warning--empty title in PhysRevLett.13.508
@@ -29,50 +35,48 @@ Warning--empty title in PERF-2011-02
 Warning--empty author and editor in ATLASComputing
 Warning--empty title in Calafiura:865624
 Warning--empty title in Brun:1997pa
-Warning--empty title in ATLAS:2016iqc
-Warning--empty school in ATLAS:2016fks
 Warning--empty title in STDM-2010-08
 Warning--empty title in Olive:2016xmw
 Warning--empty title in Kartvelishvili:2007zz
-You've used 36 entries,
+You've used 39 entries,
             2330 wiz_defined-function locations,
-            865 strings with 11919 characters,
-and the built_in function-call counts, 9834 in all, are:
-= -- 969
-> -- 297
-< -- 5
-+ -- 118
-- -- 82
-* -- 821
-:= -- 1158
-add.period$ -- 68
-call.type$ -- 36
-change.case$ -- 23
+            881 strings with 13002 characters,
+and the built_in function-call counts, 10602 in all, are:
+= -- 1018
+> -- 367
+< -- 7
++ -- 143
+- -- 104
+* -- 902
+:= -- 1280
+add.period$ -- 70
+call.type$ -- 39
+change.case$ -- 31
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 561
-empty$ -- 999
-format.name$ -- 82
-if$ -- 2511
+cite$ -- 62
+duplicate$ -- 585
+empty$ -- 1077
+format.name$ -- 104
+if$ -- 2685
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 105
-newline$ -- 156
-num.names$ -- 33
-pop$ -- 186
+int.to.str$ -- 39
+missing$ -- 103
+newline$ -- 162
+num.names$ -- 36
+pop$ -- 204
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 370
+skip$ -- 385
 stack$ -- 0
 substring$ -- 463
-swap$ -- 231
-text.length$ -- 5
+swap$ -- 236
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 25
-while$ -- 69
-width$ -- 38
-write$ -- 325
-(There were 26 warnings)
+warning$ -- 23
+while$ -- 72
+width$ -- 41
+write$ -- 356
+(There was 1 error message)

@@ -2,13 +2,11 @@
 % \addcontentsline{toc}{chapter}{Reconstrucción e identificación de objetos físicos}
 \chaptermark{Reconstrucción e identificación de objetos físicos}
 
-\tosolve{H: citar ICHEP? donde?}
-
 En el presente capítulo se describe la reconstrucción e identificación de electrones y fotones ya que son los objetos físicos principales utilizados en los estudios de esta Tesis. La reconstrucción de fotones y electrones en ATLAS se basa en las deposiciones locales de energía halladas en el ECAL, y la distinción entre unos y otros se   realiza mediante la información de las trazas reconstruidas en el ID. A su vez se aplican una serie de criterios de identificación y aislamiento, que permiten discriminarlos de falsos candidatos, o de procesos secundarios que los producen.
 
 \section{Reconstrucción de electrones y fotones}
 
-La  reconstrucción de fotones y electrones en ATLAS se basa en un algoritmo de clusterización \cite{Lampl:1099735} que busca deposiciones locales de energía en el calorímetro dentro de una ventana rectangular en el espacio ($\eta$, $\phi$) de tamaño fijo (\textit{Sliding Window clusterization}, SW). La posición de la ventana se ajusta maximizando la energía transversa de todas las celdas contenidas. El tamaño óptimo de la ventana depende del tipo de partícula (más ancha para los electrones) a reconstruir y de la región del calorímetro (mas ancha en la región endcap). 
+La  reconstrucción de fotones y electrones en ATLAS se basa en un algoritmo de clusterización \cite{Lampl:1099735} que busca deposiciones locales de energía en el calorímetro dentro de una ventana rectangular en el espacio ($\eta$, $\phi$) de tamaño fijo (\textit{Sliding Window clusterization}, SW) \cite{Monticelli:2227992}. La posición de la ventana se ajusta maximizando la energía transversa de todas las celdas contenidas. El tamaño óptimo de la ventana depende del tipo de partícula (más ancha para los electrones) a reconstruir y de la región del calorímetro (mas ancha en la región endcap). 
 
 Aquellos \textit{clusters} electromagnéticos asociados con una traza reconstruida con $p_{T} > 0.5 \egev$, son clasificados como electrones. La definición para fotones es un poco más complicada ya que estos pueden convertir en un par $e^{+}e^{-}$ en el sector anterior al calorímetro. Los fotones convertidos están caracterizados por la presencia de al menos una traza asociada proveniente de un vértice reconstruido en el ID. La probabilidad de conversión varía entre un 40\% y un 80\% dependiendo de $\eta$, aunque solo aquellas que ocurren antes del TRT son eficientemente reconstruidas. 
 
@@ -162,7 +160,7 @@ Por último un algoritmo adicional es aplicado para resolver ambigüedades resid
 
 \section{Criterios de aislamiento}
 
-Luego de realizar la identificación, es necesario distinguir entre electrones y fotones directos (aquellos producidos en la colisión) o de los no directos producidos de decaimientos de hadrones ($\pi^{0}$, $\eta$, etc.) dentro de jets \tosolve{H: o mal reconstruidos?}.
+Luego de realizar la identificación, es necesario distinguir entre electrones y fotones directos (aquellos producidos en la colisión), mal reconstruidos o de los no directos producidos de decaimientos de hadrones ($\pi^{0}$, $\eta$, etc.) dentro de jets.
 
 Los fotones o electrones provenientes del punto de interacción, o los electrones provenientes de $Z\rightarrow ee$, poseen baja actividad hadrónica en su vecindad, mientras que en los no directos se espera que haya un gran actividad provenientes de los objetos que acompañan al jet. Para realizar esta identificación se utiliza un criterio de aislamiento que se basa en medidas calorimétricas o en las trazas reconstruidas en el entorno del objeto.
 
@@ -172,7 +170,7 @@ El aislamiento calorimétrico, $E_{T}^{\text{iso}}$, se calculada a partir de la
 
 A fin de remover la contribución energética de la lluvia electromagnética desarrollada por el propio objeto al cono de aislamiento, el núcleo central de $N_{\eta}\times N_{\phi} = 5 \times 7$ celdas en el segundo compartimiento del ECAL, es ignorado en la suma, como se esquematiza en la Figura \ref{isolation}. Se considera que dentro de esta región ignorada, se concentra el 95\% de la energía de la lluvia electromagnética, por lo que solo el 5\% de la energía del objeto contribuye a esta región. Por otro lado, todas las celdas contenidas dentro del cono en el HCAL son consideradas para la suma, ya que se espera que el ECAL contenga toda lluvia electromagnética desencadenada por el objeto inicial. 
 
-Para fotones, el valor típico de $R$ es $0.4$, y los cortes de aislamiento son \tosolve{No entiendo lo que dice} $E_{T}^{\text{iso}}<2.45 \egev + 0.022 \times p_{T}$. En cambio en los electrones pasan por un criterio denominando \textit{Gradient Loose}, en el cual el valor de $R$ depende del $p_{T}$ de los mismos. En este caso para el aislamiento calorimétrico $R=0.2$ y para el aislamiento de trazas $R=10\egev/p_{T}$
+Para fotones, el valor típico de $R$ es $0.4$, y el corte de aislamiento es $E_{T}^{\text{iso}}<2.45 \egev + 0.022 \times p_{T}$. En cambio en los electrones pasan por un criterio denominando \textit{Gradient Loose}, en el cual el valor de $R$ depende del $p_{T}$ de los mismos. En este caso para el aislamiento calorimétrico $R=0.2$ y para el aislamiento de trazas $R=10\egev/p_{T}$
 
 \begin{figure}
 \centering
