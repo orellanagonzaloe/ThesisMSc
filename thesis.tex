@@ -1,0 +1,136 @@
+\documentclass[a4paper,12pt,twoside,spanish]{book}
+
+\usepackage[spanish, es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\linespread{1.25}
+\usepackage{time}
+\usepackage{rotating}
+\usepackage{epsfig}
+\usepackage{pifont}
+\usepackage{verbatim}
+\usepackage{pstricks}
+\usepackage{multirow}
+\usepackage{units}    
+\usepackage{threeparttable}
+\usepackage{mathrsfs}    
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{array}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{graphics}
+\usepackage{gensymb}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{changepage}
+
+\usepackage{herab}
+
+\input{mystyle.tex} 
+
+\usepackage[bottom=3cm,left=3cm,right=3cm,top=3cm]{geometry}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\usepackage{tikz} 
+\usetikzlibrary{shapes,arrows,positioning,automata,backgrounds,calc,er,patterns}
+\usepackage{tikz-feynman}
+\tikzfeynmanset{compat=1.0.0}
+
+% \renewcommand{\baselinestretch}{1.4}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\input{commands.tex} 
+                      
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+
+\pagenumbering{gobble}
+
+\input{sections/title.tex} 
+
+\thispagestyle{empty} 
+\cleardoublepage
+
+\pagenumbering{roman}    
+
+\tableofcontents  
+   
+\cleardoublepage 
+
+\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\pagestyle{fancy}
+
+\input{sections/theory.tex}
+
+\input{sections/lhc.tex}
+
+\input{sections/reconstruction.tex}
+
+\input{sections/strategy.tex}
+
+\input{sections/background.tex}
+
+\input{sections/conclusion.tex}
+
+\tosolve{revisar cierta biblioagrfia mal compilada}
+
+% \vfill
+
+%%
+%%   Bibliography
+%%   ============
+
+% \bibliographystyle{unsrt}
+\bibliographystyle{bibtex/bst/atlasBibStyleWoTitle}
+\bibliography{bibtex/bib/reference.bib,bibtex/bib/ATLAS.bib,bibtex/bib/ConfNotes.bib,bibtex/bib/PubNotes.bib,bibtex/bib/Extra.bib}
+%\addbibresource{reference.bib}
+%\addbibresource{bibtex/bib/ATLAS.bib}
+%\addbibresource{bibtex/bib/ConfNotes.bib}
+%\addbibresource{bibtex/bib/PubNotes.bib}
+
+\addcontentsline{toc}{chapter}{Bibliografia}  
+
+%%
+%%   Appendix
+%%   ============
+
+% \begin{appendix}
+% \input{/user/wahlberg/Thesis/conventions}
+% \end{appendix}
+
+% \input{/user/wahlberg/Thesis/summary.tex}
+% \input{/user/wahlberg/Thesis/samenvatting.tex}
+% \input{/user/wahlberg/Thesis/ack.tex}
+
+%\thispagestyle{empty}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
