@@ -97,6 +97,8 @@ donde \textit{E} es su energía total.
 \label{ID}
 \end{figure}
 
+\tosolve{tamaño de pixel s resolucion}
+
 El detector interno (Figura \ref{ID}) es el más próximo al haz y combina detectores de muy alta resolución con detectores continuos de trazas. Está contenido dentro del solenoide que provee un campo magnético de $2$ T. Los distintos detectores que lo componen se describen a continuación. Se puede ver un corte transversal de los mismos en la Figura \ref{ID_2}.
 
 \begin{figure}
@@ -109,7 +111,7 @@ El detector interno (Figura \ref{ID}) es el más próximo al haz y combina detec
 
 \subsubsection{Insertable B-Layer}
 
-Luego del Run 1 la luminosidad del LHC aumentó notablemente, lo que podía significar un daño por radiación en los detectores internos. En vez de reemplazar las partes del detector de píxeles que podían ser dañadas, se decidió colocar una capa insertable entre el detector de píxeles y la tubería donde circulan los protones. El objetivo del mismo es mejorar la eficiencia en la identificación de trazas, vértices, y en la identifiación de bottom quarks, que decaen típicamente fuera del radio del IBL.
+Luego del Run 1 la luminosidad del LHC aumentó notablemente, lo que podía significar un daño por radiación en los detectores internos. En vez de reemplazar las partes del detector de píxeles que podían ser dañadas, se decidió colocar una capa insertable entre el detector de píxeles y la tubería donde circulan los protones. El objetivo del mismo es mejorar la eficiencia en la identificación de trazas, vértices, y en la identificación de bottom quarks, que decaen típicamente fuera del radio del IBL.
 
 El IBL está compuesto por $8$ millones de chips de rápida lectura y con sensores de silicio, que detectan el paso de partículas cargadas mediante la deposición de carga inducida. El tamaño de los píxeles es de $50\times250\:\mu$m$^{2}$, con una resolución de $8\:\mu$m ($R-\phi$) y $40\:\mu$m ($z$). La distancia entre el IBL y la tubería es de $0.2$ mm, y entre el tubo y el detector de píxeles es de $1.9$ mm. 
 
@@ -133,7 +135,6 @@ El sistema de calorímetros de ATLAS está diseñado para medir la energía y la
 \centering
 \includegraphics[width=0.70\textwidth]{Cal-eps-converted-to.pdf}
 \caption{Sistema de calorímetros del detector ATLAS.}
-% \vspace{0.2cm}\footnotesize\textbf \sl{...}\vspace{0.2cm}
 \label{Cal}
 \end{figure}
 
@@ -168,7 +169,6 @@ El MS se compone de diferentes tipos de cámaras de detección de muones (ver Fi
 \centering
 \includegraphics[width=0.60\textwidth]{muon-eps-converted-to.pdf}
 \caption{Espectrómetro de muones del detector ATLAS.}
-% \vspace{0.2cm}\footnotesize\textbf \sl{...}\vspace{0.2cm}
 \label{muon}
 \end{figure}
 
@@ -180,14 +180,16 @@ El diseño del LHC permite tener una frecuencia de cruces de haces de 40 MHz y a
 
 El sistema de trigger de ATLAS consiste en una selección de eventos basada en dos niveles: Level 1 (L1) y el \textit{High Level Trigger} (HLT). Cada nivel permite analizar los eventos con mayor detalle, aumentando así la precisión de los criterios de selección y la complejidad de los algoritmos utilizados.
 
+
+
 El primer nivel de trigger se encarga de la selección inicial, reduciendo la frecuencia de eventos que pasan al siguiente nivel a $\sim100$ kHz. Debido al tamaño limitado de las memorias temporales donde se guardan los datos de cada subdetector y al considerable tiempo de vuelo de las partículas hasta el espectrómetro de muones, la decisión debe tomarse en una escala de tiempo muy limitada ($2.5 \:\mu$s). El L1 está basado en hardware y selecciona objetos de alto $p_{T}$ construidos a partir de la información de varios subdetectores. Ciertas celdas del ECAL y el HCAL se utilizan entonces para enviar señales al L1 con información de los objetos. La posición de cada objeto encontrado define una <<región de interés>> (RoI) en un evento potencialmente interesante, que se extiende como un
 cono desde el punto de interacción a lo largo del detector. Lo mismo en el detector de muones, que tiene diferentes cámaras que permiten obtener una estimación rápida del $p_{T}$ de los muones. El diseño del L1 le permite tener una aceptancia en el rango de $|\eta|<2.5$ para electrones, fotones, muones y taus; hasta $|\eta|<3.2$ para jets y $|\eta|<4.9$ para el cálculo de la energía transversa perdida.
 
-\tosolve{cambiar a HLT}
 
-El segundo nivel del trigger (L2) se centra únicamente en las RoIs donde el L1 encontró actividad, combinando información de todos los subdetectores dentro de cada una ($\sim2$ \% de la cobertura total del detector). El L2 consiste de una serie de algoritmos de reconstrucción y selección especializados, diseñados para reducir la frecuencia de eventos hasta aproximadamente 1 kHz. Estos algoritmos están implementados en \textit{clusters} de procesamiento dedicados que analizan cada evento dentro de un tiempo de latencia medio de $\sim40$ ms. El menor flujo de información en este nivel del trigger permite calcular las variables calorimétricas con mayor precisión y hacer uso de la información de las trazas reconstruidas, haciendo posible la distinción entre fotones y electrones, y el rechazo de fondo proveniente en su mayoría de jets.
+Si el evento es aceptado por el L1 todos los datos y las ROIs pasan al \textit{High Level Trigger}. El HLT realiza la decisión final utilizando algoritmos más complejos, teniendo acceso a toda la información del evento en los distintos subdetectores de ATLAS, con la máxima granularidad e incluyendo detalles sobre la calibración de energía de los calorímetros, la alineación de los subdetectores y el mapa de campo magnético. De esta forma se reduce la frecuencia de eventos hasta  $\sim 1.5$ kHz en un tiempo de $0.2$ s. El tiempo de latencia disponible para tomar la decisión final sobre el evento permite la reconstrucción completa del mismo, y el refinamiento de las variables y criterios de selección al nivel de aquellos implementados en el análisis \textit{offline}. Los eventos aceptados por el HLT son finalmente grabados a disco y distribuidos, accesibles \textit{offline} para todos los análisis subsecuentes.
 
-La última etapa de la selección del trigger se lleva a cabo en el \textit{Event Filter}, que reduce la frecuencia de eventos a $\sim 1.5$ kHz. En este nivel se tiene acceso a toda la información del evento en los distintos subdetectores de ATLAS, con la máxima granularidad e incluyendo detalles sobre la calibración de energía de los calorímetros, la alineación de los subdetectores y el mapa de campo magnético. El tiempo de latencia relativamente largo disponible para tomar la decisión final sobre el evento ($\sim4$ s) permite la reconstrucción completa del mismo, y el refinamiento de las variables y criterios de selección al nivel de aquellos implementados en el análisis \textit{offline}. Los eventos aceptados por el EF son finalmente grabados a disco y distribuidos, accesibles \textit{offline} para todos los análisis subsecuentes.
+% El segundo nivel del trigger (L2) se centra únicamente en las RoIs donde el L1 encontró actividad, combinando información de todos los subdetectores dentro de cada una ($\sim2$ \% de la cobertura total del detector). El L2 consiste de una serie de algoritmos de reconstrucción y selección especializados, diseñados para reducir la frecuencia de eventos hasta aproximadamente 1 kHz. Estos algoritmos están implementados en \textit{clusters} de procesamiento dedicados que analizan cada evento dentro de un tiempo de latencia medio de $\sim40$ ms. El menor flujo de información en este nivel del trigger permite calcular las variables calorimétricas con mayor precisión y hacer uso de la información de las trazas reconstruidas, haciendo posible la distinción entre fotones y electrones, y el rechazo de fondo proveniente en su mayoría de jets.
+% La última etapa de la selección del trigger se lleva a cabo en el \textit{Event Filter}, que reduce la frecuencia de eventos a $\sim 1.5$ kHz. En este nivel se tiene acceso a toda la información del evento en los distintos subdetectores de ATLAS, con la máxima granularidad e incluyendo detalles sobre la calibración de energía de los calorímetros, la alineación de los subdetectores y el mapa de campo magnético. El tiempo de latencia relativamente largo disponible para tomar la decisión final sobre el evento ($\sim4$ s) permite la reconstrucción completa del mismo, y el refinamiento de las variables y criterios de selección al nivel de aquellos implementados en el análisis \textit{offline}. Los eventos aceptados por el EF son finalmente grabados a disco y distribuidos, accesibles \textit{offline} para todos los análisis subsecuentes.
 
 Para cada ítem del trigger se puede asignar además un factor de escala o prescale (PS), que define la frecuencia con la que un dado ítem es evaluado por el trigger (es decir solo en uno de cada PS eventos). Se habla de una cadena de \textit{trigger unprescaled} si su factor de escala es PS = 1 en cada nivel, es decir, es evaluada en todos los eventos. La asignación de estos factores se hace incluso dinámicamente durante una toma de datos, para tener en cuenta el descenso de la luminosidad instantánea con el tiempo y mantener la tasa de procesamiento aproximadamente constante.
 

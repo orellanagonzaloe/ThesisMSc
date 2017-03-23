@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: bibtex/bst/atlasBibStyleWoTitle.bst
+Database file #1: bibtex/bib/reference.bib.bib
+Database file #2: bibtex/bib/ATLAS.bib.bib
+Database file #3: bibtex/bib/ConfNotes.bib.bib
+Database file #4: bibtex/bib/PubNotes.bib.bib
+Database file #5: bibtex/bib/Extra.bib.bib
+Warning--entry type for "mases_web" isn't style-file defined
+--line 397 of file bibtex/bib/Extra.bib.bib
+Warning--empty title in Glashow:1961tr
+Warning--empty title in PhysRevLett.19.1264
+Warning--empty title in PhysRevLett.13.508
+Warning--empty title in Aad:2012tfa
+Warning--empty title in Chatrchyan:2012xdj
+Warning--empty title in Aad:2015zhl
+Warning--empty title in Drewes:2013gca
+Warning--empty title in PhysRevD.14.1667
+Warning--empty title in Martin:1997ns
+Warning--empty title in Dimopoulos:1995ju
+Warning--empty title in PhysRevLett.23.1415
+Warning--empty title in PhysRev.185.1975
+Warning--empty title in ELLIS1978281
+Warning--empty title in Evans:1129806
+Warning--empty author and editor in LEPbook
+Warning--empty title in PERF-2007-01
+Warning--empty title in PERF-2011-02
+Warning--empty author and editor in ATLASComputing
+Warning--empty title in Calafiura:865624
+Warning--empty title in Brun:1997pa
+Warning--empty title in ATLAS:2016iqc
+Warning--empty school in ATLAS:2016fks
+Warning--empty title in STDM-2010-08
+Warning--empty title in Olive:2016xmw
+Warning--empty title in Kartvelishvili:2007zz
+You've used 36 entries,
+            2330 wiz_defined-function locations,
+            865 strings with 11919 characters,
+and the built_in function-call counts, 9834 in all, are:
+= -- 969
+> -- 297
+< -- 5
++ -- 118
+- -- 82
+* -- 821
+:= -- 1158
+add.period$ -- 68
+call.type$ -- 36
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 61
+duplicate$ -- 561
+empty$ -- 999
+format.name$ -- 82
+if$ -- 2511
+int.to.chr$ -- 0
+int.to.str$ -- 36
+missing$ -- 105
+newline$ -- 156
+num.names$ -- 33
+pop$ -- 186
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 370
+stack$ -- 0
+substring$ -- 463
+swap$ -- 231
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 25
+while$ -- 69
+width$ -- 38
+write$ -- 325
+(There were 26 warnings)
