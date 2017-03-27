@@ -2,7 +2,7 @@
 \chaptermark{Electrones identificados como fotones}
 
 
-Como ya se mencionó anteriormente, existe un fondo que contribuye a procesos asociados a fotones, jets y energía perdida como estado final, donde un electrón del estado final es identificado como un fotón. Este puede provenir de procesos del SM, como los que producen bosones $W$ y $Z$ + jets, y $\ttbar$. El mismo es difícil de estimar a partir de simulaciones, ya que dependen en gran medida de la estructura y material del detector que es muy compleja de modelar en todos sus detalles. El objetivo es entonces estimar este fondo calculando un factor de identificación errónea (\textit{Fake Factors}) en función de las variables $\eta$ y $p_{T}$ de los objetos a partir de los datos adquiridos.
+Como ya se mencionó anteriormente, existe un fondo que contribuye a procesos asociados a fotones, jets y energía perdida como estado final, donde un electrón del estado final es identificado como un fotón. Este puede provenir de procesos del SM, como los que producen bosones $W$ y $Z$ + jets, y $\ttbar$. El mismo es difícil de estimar a partir de simulaciones, ya que depende en gran medida de la estructura y material del detector que es muy compleja de modelar en todos sus detalles. El objetivo es entonces estimar este fondo calculando un factor de identificación errónea (\textit{Fake Factor}) en función de las variables $\eta$ y $p_{T}$ de los objetos, a partir de los datos adquiridos por el detector ATLAS durante la toma de datos de 2015 y 2016.
 
 \section{Determinación del factor de identificación errónea}
 
@@ -11,8 +11,9 @@ El método para la estimación del factor de identificación errónea, hace uso 
 \begin{equation}
 F_{e\rightarrow\gamma}[\eta , p_{T}]=\frac{N^{e\gamma}[\eta , p_{T}]}{N^{ee}[\eta , p_{T}]} \label{eq:ff_ratio}
 \end{equation}
-%
-donde $N^{e\gamma}$ y $N^{ee}$ son la cantidad de pares $e\gamma$ y $ee$ respectivamente, con un cierto $\eta$ y $p_{T}$.
+
+\noindent
+donde $N^{e\gamma}$ y $N^{ee}$ son la cantidad de pares $e\gamma$ y $ee$ respectivamente, con un cierto $\eta$ y $p_{T}$ de uno de sus objetos convenientemente seleccionados.
 
 Los criterios para seleccionar los objetos de los pares de partículas mencionados se explican a continuación y se basan en criterios de selección que mantengan una alta pureza de la muestra, manteniendo un bajo rechazo de señal.
 Los electrones  son seleccionados con $p_{T} > 25 \egev$, con un criterio de calidad tanto \textit{tight} como \textit{medium}, y punto de trabajo de aislamiento \textit{gradient loose} \cite{ATLAS-CONF-2016-024}. Para los fotones los requisitos son $p_{T} > 25 \egev$, \textit{tight} y aislados \cite{STDM-2010-08}. A ambos se les solicita que tengan un $\eta_{BE}<2.37$; que estén fuera de la región del \textit{crack} entre $1.37$ y $1.52$; que provengan del vértice primario en base a un parámetro de impacto $d_{0}$ con una significancia menor a 5, y que cumplan con la relación $|\Delta z_{0}\sin\theta|<0.5$ mm.
@@ -23,15 +24,15 @@ Además, si un electrón y un fotón son reconstruidos con $\sqrt{\Delta\phi^{2}
 A todos los pares se les solicita una masa invariante entre $75$ y $105 \egev$  estando así en la región de cercanía a la masa del $Z$ ($91.1876 \pm 0.0021 \egev$\cite{Olive:2016xmw}). En el caso de que existiese más de un par en el evento, se utiliza el que tiene la masa invariante más cercana a la del bosón $Z$ . Esto minimiza la contaminación de pares aleatorios, descartando solo unos pocos eventos donde pueda haber más de un $Z$ en estado final.
 
 
-En base a los objetos seleccionados se crea un arreglo bidimensional en  $\eta$ y $p_{T}$. Para eventos positrón-electrón una entrada se realiza para cada partícula. En los casos de pares electrón-fotón un arreglo es creado por separado y solo los valores de los fotones son utilizados.
+El primer paso del método consiste en crear un arreglo bidimensional en $\eta$ y $p_{T}$ de los objetos seleccionados. Para eventos positrón-electrón una entrada se realiza para cada partícula en dicho arreglo. En los casos de pares electrón-fotón un arreglo es creado por separado y solo los valores de los fotones son utilizados. 
 
-La concepción del método proviene de la siguiente consideración. Sea $\epsilon_{i}$ la eficiencia de reconstruir un electrón, con un valor de $\eta$ y $p_{T}$ correspondientes al bin \textit{i} del arreglo, para una muestra de \textit{N} pares de electrones y positrones reales (dentro del rango de masa), decimos que $f_{ij}$ es la fracción de pares para los cuales el electrón \textit{leading} (\textit{sub-leading}) está dentro del bin \textit{i} (\textit{j}). Considerando solamente electrones-positrones provenientes del decaimiento de un bosón $Z$, el número de eventos en el bin \textit{i} del arreglo $N^{ee}[\eta , p_{T}]$ es entonces:
+La concepción del método proviene de la siguiente consideración. Sea $\epsilon_{i}$ la eficiencia de reconstruir un electrón, con un valor de $\eta$ y $p_{T}$ correspondientes al bin \textit{i} del arreglo, para una muestra de \textit{N} pares de electrones y positrones reales (dentro del rango de masa), se determina a $f_{ij}$ como la fracción de pares para los cuales el electrón \textit{leading} (\textit{sub-leading}) está dentro del bin \textit{i} (\textit{j}). Considerando solamente electrones-positrones provenientes del decaimiento de un bosón $Z$, el número de eventos en el bin \textit{i} del arreglo $N^{ee}[\eta , p_{T}]$ es entonces:
 
 \begin{equation}
 N_{i}^{ee} = \sum_{i}\epsilon_{i}\epsilon_{j}f_{ij}N + \sum_{j}\epsilon_{j}\epsilon_{i}f_{ji}N = \epsilon_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
 \end{equation}
 
-De forma análoga, ahora considerando que $p_{i}$ es la proporción de fotones reconstruidos como electrones en el bin \textit{i}, la cantidad de eventos en el bin \textit{i} del arreglo $N^{e\gamma}[\eta , p_{T}]$ es:
+De forma análoga, ahora considerando que $p_{i}$ es la proporción de electrones reconstruidos como fotones en el bin \textit{i}, la cantidad de eventos en el bin \textit{i} del arreglo $N^{e\gamma}[\eta , p_{T}]$ es:
 
 \begin{equation}
 N_{i}^{e\gamma} = \sum_{i}p_{i}\epsilon_{j}f_{ij}N + \sum_{j}p_{j}\epsilon_{i}f_{ji}N = p_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
@@ -49,11 +50,19 @@ Por ende, el factor, no es la proporción de fotones mal reconstruidos, sino que
 N_{e\rightarrow\gamma}(\eta , p_{T} , ... ) = F_{e\rightarrow\gamma}(\eta , p_{T})\cdot N_{e}(\eta , p_{T} , ...)
 \end{equation}
 	
-Donde $N_{e}(\eta , p_{T} , ...)$ es el número de electrones en un determinado estado final correspondiente a las distintas regiones del estudio de partículas supersimétricas mencionado en el capítulo anterior. Estos eventos se seleccionan entonces requiriendo un electrón en lugar de un fotón en el estado final, manteniendo fijo el resto de los cortes utilizados para definir la señal. 
+\noindent
+donde $N_{e}(\eta , p_{T} , ...)$ es el número de electrones en un determinado estado final correspondiente a las distintas regiones correspondientes a la búsqueda de partículas supersimétricas mencionadas en el capítulo anterior. Estos eventos se seleccionan entonces requiriendo un electrón en lugar de un fotón en el estado final, manteniendo fijo el resto de los cortes utilizados para definir la región de estudio. 
 
-La implementación del método se realizó en ROOT y C++ en base a histogramas bidimensionales. Para cada evento que contiene un par electrón-positrón, en un histograma con bines de $\eta$ y $p_{T}$ ($N^{ee}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$ de cada uno de los electrones. En el caso de que el evento tenga un par electrón-fotón, en otro histograma ($N^{e\gamma}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$, solamente del fotón. El correspondiente factor se obtiene entonces como en la ecuación \ref{eq:ff_ratio}.
+La implementación del método se realizó en ROOT \cite{Brun:1997pa} y C++ en base a histogramas bidimensionales. Para cada evento que contiene un par electrón-positrón, en un histograma con bines de $\eta$ y $p_{T}$ ($N^{ee}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$ de cada uno de los electrones. En el caso de que el evento tenga un par electrón-fotón, en otro histograma ($N^{e\gamma}[\eta , p_{T}]$), se suma una entrada en el bin correspondiente al $\eta$ y $p_{T}$ del fotón. Un esquema de este procedimiento se observa en la Figura \ref{grid}. El correspondiente factor se obtiene entonces como en la ecuación \ref{eq:ff_ratio}.
 
-Un fondo no resonante en los eventos de $Z$ se espera de combinatoria aleatoria de objetos o de otros procesos electrodébiles, donde los electrones son correctamente reconstruidos o con alguno de los objetos reconstruido erróneamente. Para tener en cuenta la relación entre entradas correspondientes a la señal y las correspondientes al fondo, cada entrada en los histogramas es pesada con un peso representativo de esta relación entre señal y fondo.
+\begin{figure}
+\centering
+\includegraphics[width=0.45\textwidth]{grid.pdf}
+\caption{Procedimiento de llenado de los histogramas $N^{ee}$ y $N^{e\gamma}$ para los pares $ee$ y $e\gamma$.}
+\label{grid}
+\end{figure}
+
+La muestra de eventos $ee$ y $e\gamma$ colectada no es una muestra pura de $Z$, ya que puede incluir un fondo no resonante en los eventos generados por una combinación aleatoria de objetos o también de eventos de otros procesos electrodébiles, donde los electrones son correctamente reconstruidos o con alguno de los objetos reconstruido erróneamente. Para tener en cuenta la relación entre entradas correspondientes a la señal y las correspondientes al fondo, cada entrada en los histogramas es pesada con un peso representativo de esta relación entre señal y fondo.
 
 % Dado que los pares de objetos utilizados para el cálculo, tienen un probabilidad de no provenir del decaimiento del bosón $Z$, sino de otros procesos no resonantes de fondo, la relación entre señal y fondo tiene en cuenta en el cálculo del factor buscado.
 % Para tener en cuenta la relación entre entradas correspondientes a la señal y las correspondientes al fondo, cada entrada en los histogramas es pesada con un peso representativo de esta relación.
@@ -61,22 +70,22 @@ Un fondo no resonante en los eventos de $Z$ se espera de combinatoria aleatoria 
 
 \section{Clasificación de eventos}
 
-La relación entre señal y fondo de los eventos correspondientes a la masa del $Z$ se obtiene clasificando a los pares según el tipo ($ee/e\gamma$) y según la región donde se reconstruyeron los objetos \textit{endcap}-\textit{endcap} ($EE$), \textit{barrel}-\textit{endcap} ($BE$) y \textit{barrel}-\textit{barrel} ($BB$). Esto último se debe a que los factores de identificación erróneas dependen de la región del detector donde fueron reconstruidos dados los distinta morfología y tipo detectores utilizados en cada una ellas. Para cada una de las tres regiones se calcula entonces la masa invariante de los pares, se realiza el correspondiente ajuste para determinar la contribución de señal (S) y fondo (B) y finalmente el peso resulta de la relación:
+La relación entre señal y fondo de los eventos correspondientes a la masa del $Z$ se obtiene clasificando a los pares según el tipo ($ee/e\gamma$) y según la región donde se reconstruyeron los objetos \textit{endcap}-\textit{endcap} ($EE$), \textit{barrel}-\textit{endcap} ($BE$) y \textit{barrel}-\textit{barrel} ($BB$). Esto último se debe a que los factores de identificación erróneas dependen de la región del detector donde fueron reconstruidos dados los distinta morfología y tipo de detectores utilizados en cada una ellas. Para cada una de las tres regiones se calcula entonces la masa invariante de los pares, se realiza el correspondiente ajuste para determinar la contribución de señal (S) y fondo (B) y finalmente el peso resulta de la relación:
 
 \begin{equation}
 w=\frac{S}{S+B}
 \label{eq:peso}
 \end{equation}
 
-Los datos utilizados para el análisis corresponden a los colectados durante los años 2015 y 2016 del Run 2 del LHC, en base a la denominada derivación EGAM1 y con ningún requisito adicional o particular de \textit{triggers}.
+Los datos utilizados para el presente análisis corresponden a los colectados durante los años 2015 y 2016 del Run 2 del LHC, en base a la denominada derivación EGAM1 (ver Sección \ref{sec:comp_model}) y sin ningún requisito adicional o particular de \textit{triggers}.
 
-Los electrones utilizados para estimar la contaminación de fotones de señal \textit{tight}, pueden pasar tanto requerimientos  \textit{medium} o \textit{tight}. En ambos casos se encuentra una buena relación señal y fondo, siendo naturalmente el caso de selección \textit{tight} la de mayor pureza a costa de una menor estadística de la muestra. Ambas selecciones se estudian en el presente trabajo como se discute en las siguientes secciones.
+Los electrones utilizados para estimar la contaminación de fotones de señal \textit{tight}, pueden pasar tanto requerimientos  \textit{medium} como \textit{tight}. En ambos casos se encuentra una buena relación señal y fondo, siendo naturalmente el caso de selección \textit{tight} la de mayor pureza a costa de una menor estadística de la muestra. Ambas selecciones se estudian en el presente trabajo como se discute en las siguientes secciones.
 
-Para los ajustes de la masas invariantes se utiliza como modelo de señal una \textit{double-sided Crystall-ball} (DSCB). La misma consiste en una distribución Gaussiana cuyas ramas son reemplazadas por exponenciales. De esta forma se tiene en cuenta efectos de resolución en la reconstrucción de los objetos y colas exponenciales que incluyen los efectos de emisión de fotones de bremsstrahlung por parte de los electrones (y sus respectivas técnicas de recuperación \cite{Kartvelishvili:2007zz}. Para el fondo se utiliza un polinomio de grado 2. Los resultados de los ajustes obtenidos para cada clasificación de los pares se pueden observar en las Figuras \ref{fits_invmass_medium} y \ref{fits_invmass_tight}. En base a los resultados de estos ajustes se determina la contribución de señal y background en cada región, determinando así los correspondientes pesos como se muestra en la Tabla \ref{ta:weights}.
+Para los ajustes de la masas invariantes se utiliza como modelo de señal una \textit{double-sided Crystal-ball} (DSCB) \cite{Das:2016stf}. La misma consiste en una distribución Gaussiana cuyas ramas son reemplazadas por exponenciales. De esta forma se tiene en cuenta efectos gaussianos de resolución en la reconstrucción de los objetos y colas exponenciales que incluyen los efectos de emisión de fotones de bremsstrahlung por parte de los electrones (y sus respectivas técnicas de recuperación \cite{Kartvelishvili:2007zz}). Para el fondo se utiliza como función genérica un polinomio de grado 2. Los resultados de los ajustes obtenidos para cada clasificación de los pares se pueden observar en las Figuras \ref{fits_invmass_medium} y \ref{fits_invmass_tight}. En base a los resultados de estos ajustes se determina la contribución de señal y background en cada región, determinando así los correspondientes pesos (Ecuación \ref{eq:peso}) como se muestra en la Tabla \ref{ta:weights}.
 
-\begin{table}
+\begin{table}[h]
 \centering
-\caption{Relación entre señal y fondo (Ecuación \ref{eq:peso}) obtenida para los distintos pares ($ee/e\gamma$) en cada región (EE, BE, BB), para electrones \textit{medium} y \textit{tight}.}
+\caption{Relación entre señal y fondo (Ecuación \ref{eq:peso}) obtenida para los distintos pares ($ee/e\gamma$) en cada región (EE, BE, BB), para electrones \textit{medium} y \textit{tight}. Las incertezas mostradas son estadísticas.}
 \begin{tabular}{ c c c | c c }
 
 	\hline
@@ -112,7 +121,7 @@ Las principales fuentes de incertezas sistemáticas del método para el cálculo
 
 Para estimar los posibles incertezas se varió el rango nominal de la masa de $[75-105]\egev$ a los rangos de $[70-110]\egev$ y a $[80-100]\egev$. Como caso extremo en la definición y criterios de ajuste, se determinaron los factores imponiendo los pesos $w=1$ eliminando así la sustracción de fondo en su cálculo. 
 
-Los resultados de estos estudios para electrones \textit{medium} y \textit{tight} se muestran en las Tablas \ref{ta:fftable_medium} y \ref{ta:fftable_tight}, donde se observa que la incerteza dominante proviene en base al criterio adoptado es la de tomar $w=1$ siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
+Los resultados de estos estudios para electrones \textit{medium} y \textit{tight} se muestran en las Tablas \ref{ta:fftable_medium} y \ref{ta:fftable_tight}, donde se observa que la incerteza dominante proviene de tomar $w=1$ siendo esta del orden del $20 \%$ dominando sobre todo otra contribución.
 
 % \begin{table}
 % \centering
@@ -245,10 +254,10 @@ Los resultados de estos estudios para electrones \textit{medium} y \textit{tight
 
 
 
-\section{Resultados y estimación del fondo en regiones de control y validación} \label{sec:resultados}
+\section{Resultados y estimación del fondo en regiones validación} \label{sec:resultados}
 
 
-Los resultados obtenidos para el factor en bines de $\eta$ y $p_{T}$ para electrones \textit{medium} y \textit{tight} se muestran en la Tablas \ref{ta:fftable_medium} y \ref{ta:fftable_tight}, incluyendo por separada las incertezas estadísticas y sistemáticas del método. Se puede apreciar que el valor del factor aumenta al aumentar $\eta$, esto se explica debido a que a mayor $\eta$ los objetos atraviesan una mayor cantidad de material y además en la región \textit{endcap} la eficacia del detector en la reconstrucción de los objetos es menor.
+Los resultados obtenidos para el factor en bines de $\eta$ y $p_{T}$ para electrones \textit{medium} y \textit{tight} se muestran en la Tablas \ref{ta:fftable_medium} y \ref{ta:fftable_tight}, incluyendo por separada las incertezas estadísticas y sistemáticas del método. Se puede apreciar que este factor crece con $|\eta|$, dado que está relacionado con el incremento en el material del detector atravesado por los electrones y el incremento en la tasa de reconstrucción de fotones convertidos con una sola traza \cite{Alonso:2147473}.
 
 
 \begin{table}	
@@ -413,10 +422,10 @@ Los resultados obtenidos para el factor en bines de $\eta$ y $p_{T}$ para electr
 % \end{threeparttable}
 % \end{table}
 
-Observando los resultados expuestos en las distintas tablas, definimos la implementación de una selección \textit{medium} de los electrones ya que los valores de pureza (expresado en los valores de los pesos $w$) e incertezas sistemáticas son equivalentes a la selección \textit{tight}, pero con la ventaja de una mayor estadística de eventos para estimar el fondo en las distintas regiones de control y validación.
+Observando los resultados expuestos en las distintas tablas, definimos la implementación de una selección \textit{medium} de los electrones ya que los valores de pureza (expresado en los valores de los pesos $w$) e incertezas sistemáticas son equivalentes a la selección \textit{tight}, pero con la ventaja de una probable mayor estadística de eventos para estimar el fondo en las distintas regiones de control y validación.
 
 
-Con el objetivo de validar los resultados obtenidos, se realizo una búsqueda de una nueva región de validación donde el fondo predominante sea el de eventos con electrones erróneamente reconstruidos. Los criterios para determinar la VR se pueden observar en la Tabla \ref{ta:vr_crit}. Estos seleccionan de forma predominante eventos $W(e\nu)$ + jets, donde un $W$ con alta energía cinética, que decae en un neutrino (asociado con una alta $\met$) y electrón de alto $p_{T}$ (identificado como fotón), son colineales entre sí ($\Delta\phi<0.4$). La contribución de cada fondo al número de eventos en esta región se puede observar en la Tabla \ref{ta:vr_events}, en donde se puede observar que para esta región el fondo proveniente de electrones mal reconstruidos como fotones es el que predomina ($\sim63\%$). Las distribuciones para $\Delta \phi$ y $\met$ se observan en las Figuras \ref{VRE_dphi} y \ref{VRE_met_et}, donde se observa un excelente acuerdo entre las los resultados esperados y los datos obtenidos.
+Con el objetivo de validar los resultados obtenidos, se realizo una búsqueda de una nueva región de validación donde el fondo predominante sea el de eventos con electrones erróneamente reconstruidos. Los criterios para determinar la VR se pueden observar en la Tabla \ref{ta:vr_crit}. Estos criterios seleccionan de forma predominante eventos $W(e\nu)$ + jets, donde un $W$ con alta energía cinética, decae en un neutrino (asociado con una alta $\met$) y electrón de alto $p_{T}$ (identificado como fotón), son colineales entre sí ($\Delta\phi<0.4$). La contribución de cada fondo al número de eventos en esta región se puede observar en la Tabla \ref{ta:vr_events}, en donde se puede observar que para esta región el fondo proveniente de electrones mal reconstruidos como fotones es el que predomina ($\sim63\%$) y se observa comparativamente un excelente acuerdo entre los datos esperados y obtenidos. Las distribuciones para $\Delta \phi$ y $\met$ se observan en las Figuras \ref{VRE_dphi} y \ref{VRE_met_et}, donde se observa un excelente acuerdo entre las los resultados esperados y los datos obtenidos.
 
 Los resultados mostrados permiten entonces validar el método y sus predicciones, y poder ser así utilizados para predecir la cantidad de eventos esperados en las distintas regiones de señal.
 
@@ -445,7 +454,7 @@ Los resultados mostrados permiten entonces validar el método y sus predicciones
 
 \begin{table}
 \centering
-\caption{Contribución de cada fondo a la región de validación. La incertezas mostradas son solo sistemáticas \cite{drfran}.}
+\caption{Contribución de cada fondo a la región de validación. Las incertezas mostradas son solo sistemáticas \cite{drfran}.}
 \begin{tabular}{lr}
 \hline
  & $e\to\gamma$ falsos VR \\
@@ -470,13 +479,17 @@ $\gamma\gamma / W\gamma\gamma / Z\gamma\gamma$ & $0.05 \pm 0.00$ \\
 \begin{figure}
 \centering
 \includegraphics[width=0.50\textwidth]{can_VRE_dphi_gammet_afterFit.pdf}
-\caption{Distribución de $\Delta \phi$ para una región de validación. La variable mostrada se deja libre en el gráfico, mientras el resto de la variables se mantienen con los cortes propuestos en la VRE \cite{drfran}.}
+\caption{Distribución de $\Delta \phi$ para una región de validación. La variable mostrada se deja libre en el gráfico, mientras el resto de la variables se mantienen con los cortes propuestos en la VRE. Las incertezas mostradas son solo estadísticas \cite{drfran}.}
 \label{VRE_dphi}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.50\textwidth]{can_VRE_met_et_afterFit.pdf}
-\caption{Distribución de $\met$ para una región de validación. La variable mostrada se deja libre en el gráfico, mientras el resto de la variables se mantienen con los cortes propuestos en la VRE \cite{drfran}.}
+\caption{Distribución de $\met$ para una región de validación. La variable mostrada se deja libre en el gráfico, mientras el resto de la variables se mantienen con los cortes propuestos en la VRE. Las incertezas mostradas son solo estadísticas \cite{drfran}.}
 \label{VRE_met_et}
 \end{figure}
+
+
+
+\clearpage

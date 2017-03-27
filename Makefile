@@ -1,6 +1,6 @@
 file=thesis
 
-src= $(file).tex commands.tex sections/title.tex sections/background.tex sections/strategy.tex sections/theory.tex sections/lhc.tex sections/reconstruction.tex sections/conclusion.tex
+src= $(file).tex commands.tex sections/title.tex sections/background.tex sections/strategy.tex sections/theory.tex sections/lhc.tex sections/reconstruction.tex sections/abstract.tex sections/acknowledgements.tex sections/conclusion.tex
 figs=
 
 

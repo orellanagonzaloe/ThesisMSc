@@ -1,10 +1,10 @@
-\chapter{Estrategia general del análisis de datos para la búsqueda de nueva física}
+\chapter{Estrategia general de análisis de datos para búsqueda de nueva física}
 % \addcontentsline{toc}{chapter}{Estrategia general del análisis}
-\chaptermark{Estrategia general del análisis de datos para la búsqueda de nueva física}
+\chaptermark{Estrategia general de análisis de datos para búsqueda de nueva física}
 
 
 
-El análisis para el cual está orientada esta Tesis consiste en la búsqueda de Supersimetría en eventos con un fotón aislado muy energético, jets y gran cantidad de energía faltante en estado final \cite{Alonso:2147473}\cite{ATLAS:2016fks}\cite{Collaboration:2198651}. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada.
+El análisis para el cual está orientada esta Tesis consiste en la búsqueda de Supersimetría en eventos con un fotón aislado muy energético, jets y gran cantidad de energía faltante en estado final \cite{Alonso:2147473,ATLAS:2016fks,Collaboration:2198651}. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada.
 
 
 \section{Identificación de eventos de fondo}
@@ -51,9 +51,9 @@ Y por último, también puede haber procesos que a pesar de no generar energía 
 
 \section{Regiones de señal, control y validación}
 
-Al estudiar fenómenos de nueva física es necesario definir una región en el espacio de observables, donde el modelo de señal predice un exceso significativo de eventos sobre el nivel de fondo. Esta región se llama región de señal (SR). El análisis consiste básicamente en estimar las contribuciones de los procesos del SM que contaminan esta región. Para esto existen dos técnicas principales: utilizar directamente simulaciones Monte Carlo, o utilizar métodos basados en los propios datos observados. En algunos casos se emplea un tercer método para estimar los fondos, que consiste en utilizar la estimación proveniente de las simulaciones MC, pero corregida a partir de los datos. Para esto se definen regiones de control (CR) en las cuales el fondo dominante pueda ser comparado y normalizado con los datos observados en esa misma región. 
+Al estudiar fenómenos de nueva física es necesario definir una región en el espacio de observables, donde el modelo de señal predice un exceso significativo de eventos sobre el nivel de fondo. Esta región se llama región de señal (SR). El análisis de búsqueda consiste básicamente en estimar entonces las contribuciones de los procesos del SM que contaminan esta región. Para esto existen dos técnicas principales: utilizar directamente simulaciones Monte Carlo, o utilizar métodos basados en los propios datos observados. En algunos casos se emplea un tercer método para estimar los fondos, que consiste en utilizar la estimación proveniente de las simulaciones MC, pero corregida a partir de los datos. Para esto se definen regiones de control (CR) en las cuales el fondo dominante pueda ser comparado y normalizado con los datos observados en esa misma región. 
 
-Otra componente importante del análisis es la validación de los métodos utilizados para predecir los fondos. Con este objetivo se definen regiones de validación (VR) que se encuentren entre las CR y las SR en términos de los principales observables cinemáticos en los criterios de selección. El diseño de las VR comprende un compromiso entre minimizar la contaminación de la señal, y a su vez ser efectivas en la validación de la extrapolación entre CR y SR. Es importante que las CR, VR y SR sean estadísticamente independientes para poder combinar la pdf que modela cada región en una pdf conjunta. En la Figura \ref{regions} se puede ver como ejemplo, un esquema de las regiones descriptas anteriormente.
+Otra componente importante del análisis es la validación de los métodos utilizados para predecir los fondos. Con este objetivo se definen regiones de validación (VR) que se encuentren entre las CR y las SR en términos de los principales observables cinemáticos en los criterios de selección. El diseño de las VRs comprende un compromiso entre minimizar la contaminación de la señal, y a su vez ser efectivas en la validación de la extrapolación entre CR y SR. Es importante que las CR, VRs y SRs sean estadísticamente independientes para poder combinar la PDF que modela cada región en una PDF conjunta. En la Figura \ref{regions} se puede ver como ejemplo, un esquema de las regiones descriptas anteriormente.
 
 Durante todo el análisis se utiliza una estrategia denominada <<blinding>>. La misma consiste en realizar el análisis predictivo del eventos del SM sin mirar la cantidad de eventos de datos en la SR. De esta forma se evita un sesgo en la elección de las SR y por ende en la cantidad de eventos finales.
 
@@ -66,14 +66,15 @@ Durante todo el análisis se utiliza una estrategia denominada <<blinding>>. La 
 
 \section{Selección de eventos}
 
-El análisis para el cual está orientada esta tesis \cite{Collaboration:2198651}, se basa en la utilización de dos regiones de señal, que son comparadas con las predicciones del SM. La primera de las regiones (SR$_{\text{L}}$), está optimizada para gluinos muy masivos y neutralinos con baja masa o intermedia. Se caracteriza por una alta multiplicidad de jets y actividad hadrónica, y baja energía faltante. La segunda región (SR$_{\text{H}}$) está orientada a escenarios donde la masa del gluino y el neutralino son más cercanas. Esto produce una baja multiplicidad de jets y actividad hadrónica, una producción de fotones de alto $p_{T}$ y una alta energía transversa faltante.
+El análisis para el cual está orientada esta Tesis \cite{Collaboration:2198651} se basa en la utilización de dos regiones de señal que son comparadas con las predicciones del SM. La primera de las regiones (SR$_{\text{L}}$), está optimizada para gluinos muy masivos y neutralinos con baja masa o intermedia. Se caracteriza por una alta multiplicidad de jets y actividad hadrónica, y baja energía faltante. La segunda región (SR$_{\text{H}}$) está orientada a escenarios donde la masa del gluino y el neutralino son más cercanas. Esto produce una baja multiplicidad de jets y actividad hadrónica, una producción de fotones de alto $p_{T}$ y una alta energía transversa faltante.
 
-Teniendo en cuenta partículas supersimétricas muy masivas, es de esperar una elevada energía transversa total ($H_{T}$). Definiendo a $H_{T}$ como:
+Para definir los observables a ser utilizados en la construcción las distintas regiones es importante tener en cuenta que en partículas supersimétricas muy masivas, es de esperar una elevada energía transversa total ($H_{T}$), definiendo a $H_{T}$ como:
 
 \begin{equation}
 H_{T}=|p_{T}^{\gamma}|+\sum_{\text{jets}}|p_{T}^{\text{jet}}|
 \end{equation} 
-% comentario intencional para eliminar sangría
+
+\noindent
 que es definitiva la suma escalar del momento transverso de todos los jets más la del fotón \textit{leading}. Para la selección de eventos de señal se utiliza una variable, $m_{\text{eff}}$, que es la suma escalar de $H_{T}$ y $\met$, que tiene en cuenta ambas características del estado final. En ambas regiones se solicita que no se produzcan leptones y que se produzca al menos un fotón. Además, en la SR$_{\text{L}}$ más de 4 jets son requeridos, mientras que en la SR$_{\text{H}}$ más de dos.
 
 En los eventos caracterizados por una elevada $\met$, el vector de energía transversa faltante tiende a estar alineado con el fotón o con alguno de los dos \textit{leading} jets. Para suprimir este fondo se utiliza una selección basada en la separación angular de estos objetos, $\Delta\phi$(jet, $\met$) y $\Delta\phi$($\gamma$, $\met$), para eventos con $\gamma/W$ + jets.
@@ -83,7 +84,8 @@ Finalmente se define una variable, $R_{T}^{4}$, definida como:
 \begin{equation}
 R_{T}^{4}=\frac{\sum_{i}^{4}p_{T}^{i}}{\sum_{j}p_{T}^{j}}
 \end{equation}
-% comentario intencional para eliminar sangría
+
+\noindent
 donde el numerador es una suma sobre los 4 jets con $p_{T}$ más alto, y el denominador es una suma sobre todos los jets \cite{Collaboration:2198651}. Las señales de SUSY consideradas en este análisis se caracterizan por tener varios jets con alto $p_{T}$, produciendo valores de $R_{T}^{4}$ menores a 1. Contrariamente, los fondos del SM no comparten esta característica, por lo que los valores de $R_{T}^{4}$ son cercanos a 1.
 
 Los criterios de selección para ambas regiones de señal se resumen en la Tabla \ref{srs}.
@@ -128,7 +130,7 @@ Una vez definidas las regiones de señal se definen tres regiones de control, de
 
 \begin{table}
 \centering
-\caption{Criterios de selección para las CRs basadas a las SRs. Los valores son los mismos para SR$_{\text{L}}$ y SR$_{\text{H}}$\cite{ATLAS:2016fks}.}
+\caption{Criterios de selección para las CRs basadas en las SRs. Los valores de CRW y CRT son los mismos para ambas regiones de señal.}
 \makebox[0.5\textwidth][c]{
 \begin{tabular}{ l | r r r | r r r }
 
@@ -169,7 +171,7 @@ Una vez definidas las regiones de señal se definen tres regiones de control, de
 \end{table}
 
 
-Junto con estas regiones se utilizan regiones de validación (VR), para verificar la estimación del fondo. Estas fueron diseñadas para ser similares a las SRs, pero con alguno de los criterios modificado o invertido, y de esta forma evitar que se contaminen con señal. La región de validación denominada VRL está diseñada para enriquecer los fondos provenientes de $W\gamma$ $\ttbar\gamma$, mientras que las VRM y VRD son utilizadas para validar la extrapolación del fondo de $\gamma$ + jets de la CR a la SR. Así por ejemplo, la VRM1 (asociada a SR$_{\text{H}}$) está definida con $m_{\text{eff}}>1000\egev$ y $125\egev<\met<175\egev$, mientras que la VRM2 (asociada a SR$_{\text{L}}$) se define con $m_{\text{eff}}>1500\egev$ y $75\egev<\met<175\egev$. Por otro lado laVRL1, está definida con los mismos requisitos que la SR pero requiriendo al menos un leptón, $\met<200\egev$ y $m_{\text{eff}}>1000\egev$.
+Junto con estas regiones se utilizan las ya mencionadas regiones de validación, para verificar la estimación del fondo. Estas fueron diseñadas para ser similares a las SRs, pero con alguno de los criterios modificado o invertido, y de esta forma evitar que se contaminen con señal. La región de validación denominada VRL está diseñada para enriquecer los fondos provenientes de $W\gamma$ y $\ttbar\gamma$, mientras que las VRM y VRD son utilizadas para validar la extrapolación del fondo de $\gamma$ + jets de la CR a la SR. Así por ejemplo, la VRM1 (asociada a SR$_{\text{H}}$) está definida con $m_{\text{eff}}>1000\egev$ y $125\egev<\met<175\egev$, mientras que la VRM2 (asociada a SR$_{\text{L}}$) se define con $m_{\text{eff}}>1500\egev$ y $75\egev<\met<175\egev$. Por otro lado, y como otro ejemplo, la VRL1 está definida con los mismos requisitos que la SR pero requiriendo al menos un leptón, $\met<200\egev$ y $m_{\text{eff}}>1000\egev$ \cite{ATLAS:2016fks}.
 
 
 
@@ -177,7 +179,7 @@ Junto con estas regiones se utilizan regiones de validación (VR), para verifica
 % Por ejemplo, una VR asociada a SR$_{H}$ se define con $m_{\text{eff}}>1000 \egev$ y con $125 \egev < E_{T}^{\text{miss}} < 175 \egev$. \tosolve{citar las de ICHEP}
 
 
-La Figura \ref{SRL_SRH} muestra un resumen de los resultados obtenidos en todas las regiones de control, validación y señal. Se encuentra un buen acuerdo entre los datos y los fondos del SM predichos en las VRs, y no se observa un exceso significativo en las SRs. Los números de eventos obtenidos de las distintas contribuciones de fondos para ambas regiones de señal se observan en la Tabla \ref{ta:SRL_SRH}. 
+La Figura \ref{SRL_SRH} muestra un resumen de los resultados obtenidos en todas las regiones de control, validación y señal, como fueron obtenidas en el análisis de la Referencia \cite{ATLAS:2016fks}. Se encuentra un buen acuerdo entre los datos y los fondos del SM predichos en las VRs, y no se observa un exceso significativo en las SRs. Los números de eventos obtenidos de las distintas contribuciones de fondos para ambas regiones de señal se observan en la Tabla \ref{ta:SRL_SRH}. 
 
 \begin{figure}
 
@@ -189,7 +191,7 @@ La Figura \ref{SRL_SRH} muestra un resumen de los resultados obtenidos en todas 
 		\includegraphics[scale=0.40]{SRH.pdf}
 	\end{subfigure}
 
-	\caption{Número de eventos medidos y esperados para las distintas regiones de validación, control y señal, optimizadas para la búsqueda de neutralinos poco masivos (SR$_{\text{L}}$, izquierda) y netrualino muy masivos (SR$_{\text{H}}$, derecha). El gráfico incluye incertezas estadísticas y sistemáticas \cite{ATLAS:2016fks}.}
+	\caption{Número de eventos medidos y esperados para las distintas regiones de validación, control y señal, optimizadas para la búsqueda de neutralinos poco masivos (SR$_{\text{L}}$, izquierda) y neutralinos muy masivos (SR$_{\text{H}}$, derecha). El gráfico incluye incertezas estadísticas y sistemáticas \cite{ATLAS:2016fks}.}
 \label{SRL_SRH}
 \end{figure}
 
@@ -233,3 +235,7 @@ La Figura \ref{SRL_SRH} muestra un resumen de los resultados obtenidos en todas 
 \end{tabular}
 \label{ta:SRL_SRH}
 \end{table}
+
+
+
+\clearpage

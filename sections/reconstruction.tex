@@ -14,9 +14,9 @@ Si no hay ninguna traza asociada a un dado \textit{cluster}, este es clasificado
 
 \section{Identificación de electrones y fotones}
 
-La identificación de fotones se lleva a cabo mediante una serie de cortes rectangulares en un conjunto de variables que describen la forma y la estructura de las lluvias electromagnéticas según se propagan en el detector. Estas variables incluyen información de los calorímetros y, para el caso de fotones convertidos, del detector de trazas. Se definen dos conjuntos de cortes dependiendo de la rigurosidad de los mismos: \textit{loose} y \textit{tihgt}. Los cortes de cada conjunto han sido optimizados para asegurar una alta eficiencia de identificación de electrones/fotones aislados y de rechazo de fondo. 
+La identificación de fotones se lleva a cabo mediante una serie de cortes rectangulares en un conjunto de variables que describen la forma y la estructura de las lluvias electromagnéticas según se propagan en el detector. Estas variables incluyen información de los calorímetros y, para el caso de fotones convertidos, del detector de trazas. Se definen dos conjuntos de cortes dependiendo de la rigurosidad de los mismos: \textit{loose} y \textit{tight}. Los cortes de cada conjunto han sido optimizados para asegurar una alta eficiencia de identificación de electrones/fotones aislados y de rechazo de fondo. 
 
-Para la identificación de electrones se utiliza un algoritmo de identificación basado en el método de \textit{likelihood} (LH). El mismo consiste en una técnica de análisis multivariable que evalúa simultáneamente distintas propiedades de los candidatos a la hora de realizar la selección. El LH utiliza las funciones de densidad de probabilidad (PDFs) de la señal y del fondo de las distintas variables que describen a la lluvia electromagnética. Basada en esas PDFs, se calcula una probabilidad total del objeto de ser señal o fondo. Adicionalmente se utilizan variables discriminantes que se basan en la cantidad de impactos en el detector de trazas. Se utilizan tres cortes de discriminación: \textit{loose}, \textit{medium} y \textit{tihgt}. Los mismos se definen de tal forma de que los objetos seleccionado por uno sean un subconjunto de los otros. Es decir, los seleccionados por \textit{medium} son seleccionados también por \textit{loose}, y los seleccionados por \textit{tihgt} son seleccionados también por \textit{medium}.
+Para la identificación de electrones se utiliza un algoritmo de identificación basado en el método de \textit{likelihood} (LH). El mismo consiste en una técnica de análisis multivariable que evalúa simultáneamente distintas propiedades de los candidatos a la hora de realizar la selección. El LH utiliza las funciones de densidad de probabilidad (PDFs) de la señal y del fondo de las distintas variables que describen a la lluvia electromagnética. Basada en esas PDFs, se calcula una probabilidad total del objeto de ser señal o fondo. Adicionalmente se utilizan variables discriminantes que se basan en la cantidad de impactos en el detector de trazas. Se utilizan tres cortes de discriminación: \textit{loose}, \textit{medium} y \textit{tight}. Los mismos se definen de tal forma de que los objetos seleccionado por uno sean un subconjunto de los otros. Es decir, los seleccionados por \textit{medium} son seleccionados también por \textit{loose}, y los seleccionados por \textit{tight} son seleccionados también por \textit{medium}.
 
 
 La definición de algunas variables que determinan los distintos cortes se detallan a continuación. La definición de los cortes se muestra en la Tabla \ref{lmttable}.
@@ -101,7 +101,7 @@ La definición de algunas variables que determinan los distintos cortes se detal
 \renewcommand{\arraystretch}{1.0}
 \begin{table}	
 \centering
-\caption{Detalle de las diferentes variables usadas para la selección \textit{loose} (L) y \textit{tight} (T) de fotones y electrones. El $\checkmark$ indica cuándo la selección requiere de esa variable. \cite{ATLAS:2016iqc} \cite{Tripiana:1433788}}
+\caption{Detalle de las diferentes variables usadas para la selección \textit{loose} (L) y \textit{tight} (T) de fotones y electrones. El $\checkmark$ indica cuándo la selección requiere de esa variable\cite{ATLAS:2016iqc} \cite{Tripiana:1433788}.}
  \makebox[0.5\textwidth][c]{
  \begin{tabular}{ r p{8cm} c | c c | c }
 
@@ -155,22 +155,25 @@ La definición de algunas variables que determinan los distintos cortes se detal
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Por último un algoritmo adicional es aplicado para resolver ambigüedades residuales en para candidatos de fotones que son también reconstruidos como electrones. Diferentes estrategias son utilizadas dependiendo del estado de conversión de los fotones según es explica en la Referencia \cite{ambiguity}.
+Por último un algoritmo adicional es aplicado para resolver ambigüedades residuales en candidatos a fotones que son también reconstruidos como electrones. Diferentes estrategias son utilizadas dependiendo del estado de conversión de los fotones según es explica en la Referencia \cite{ambiguity}.
 
 
 \section{Criterios de aislamiento}
 
 Luego de realizar la identificación, es necesario distinguir entre electrones y fotones directos (aquellos producidos en la colisión), mal reconstruidos o de los no directos producidos de decaimientos de hadrones ($\pi^{0}$, $\eta$, etc.) dentro de jets.
 
-Los fotones o electrones provenientes del punto de interacción, o los electrones provenientes de $Z\rightarrow ee$, poseen baja actividad hadrónica en su vecindad, mientras que en los no directos se espera que haya un gran actividad provenientes de los objetos que acompañan al jet. Para realizar esta identificación se utiliza un criterio de aislamiento que se basa en medidas calorimétricas o en las trazas reconstruidas en el entorno del objeto.
+Los fotones o electrones provenientes por ejemplo, del punto de interacción, o los electrones provenientes de $Z\rightarrow ee$, poseen baja actividad hadrónica en su vecindad. En cambio en los no directos, se espera que haya un gran actividad provenientes de los objetos que acompañan al jet dentro del que fueron producidos o erróneamente identificados. Para realizar esta distinción se utiliza un criterio de aislamiento que se basa en medidas calorimétricas o en las trazas reconstruidas en el entorno del objeto.
 
 El aislamiento de trazas se define a partir de considerar un cono de radio $R=\sqrt{\Delta\eta^{2}+\Delta\phi^{2}}$ centrado en el baricentro del \textit{cluster} electromagnético asociado al objeto. A todas las trazas dentro de este cono se le pueden aplicar ciertos cortes, como $p_{T}>1 \egev$, impactos en el SCT, etc. Además, se requiere que aquellas trazas en un cono interno con $R=0.1$, no provengan de un vértice de conversión, a fin de remover los fotones convertidos. El aislamiento de trazas ha mostrado ser altamente eficiente tanto para retener señal como para rechazar falsos candidatos del fondo, aún luego de la selección descripta en la sección anterior. Aun así, el criterio más utilizado es el aislamiento calorimétrico.
 
-El aislamiento calorimétrico, $E_{T}^{\text{iso}}$, se calculada a partir de las celdas en ambos calorímetros (ECAL y HCAL). Nuevamente se define un cono con un cierto radio $R$ centrado en el baricentro del \textit{cluster} del objeto, y la suma de la energías de todas las celdas contenidas en ese cono se denomina $E_{T}^{\text{iso}}$. 
+El aislamiento calorimétrico, $E_{T}^{\text{iso}}$, es calculado a partir de las celdas en ambos calorímetros (ECAL y HCAL). Nuevamente se define un cono con un cierto radio $R$ centrado en el baricentro del \textit{cluster} del objeto, y la suma de la energías de todas las celdas contenidas en ese cono se denomina $E_{T}^{\text{iso}}$. 
 
 A fin de remover la contribución energética de la lluvia electromagnética desarrollada por el propio objeto al cono de aislamiento, el núcleo central de $N_{\eta}\times N_{\phi} = 5 \times 7$ celdas en el segundo compartimiento del ECAL, es ignorado en la suma, como se esquematiza en la Figura \ref{isolation}. Se considera que dentro de esta región ignorada, se concentra el 95\% de la energía de la lluvia electromagnética, por lo que solo el 5\% de la energía del objeto contribuye a esta región. Por otro lado, todas las celdas contenidas dentro del cono en el HCAL son consideradas para la suma, ya que se espera que el ECAL contenga toda lluvia electromagnética desencadenada por el objeto inicial. 
 
-Para fotones, el valor típico de $R$ es $0.4$, y el corte de aislamiento es $E_{T}^{\text{iso}}<2.45 \egev + 0.022 \times p_{T}$. En cambio en los electrones pasan por un criterio denominando \textit{Gradient Loose}, en el cual el valor de $R$ depende del $p_{T}$ de los mismos. En este caso para el aislamiento calorimétrico $R=0.2$ y para el aislamiento de trazas $R=10\egev/p_{T}$
+Para fotones, el valor típico de $R$ es $0.4$, y el corte de aislamiento es $E_{T}^{\text{iso}}<2.45 \egev + 0.022 \times p_{T}$ (donde el $p_{T}$ corresponde al momento transverso del objeto reconstruido e identificado). En cambio los electrones pasan por un criterio que tiene dependencia en $\eta$ y $p_{T}$ denominado \textit{Gradient Loose}, con requerimientos tanto en las variables calorimétricas como en las asociadas a la traza \cite{ATL-PHYS-PUB-2015-037}.
+
+
+% En cambio en los electrones pasan por un criterio denominando \textit{Gradient Loose}, en el cual el valor de $R$ depende del $p_{T}$ de los mismos. En este caso para el aislamiento calorimétrico $R=0.2$ y para el aislamiento de trazas $R=10\egev/p_{T}$
 
 \begin{figure}
 \centering
@@ -188,10 +191,14 @@ El momento transverso faltante ($p_{T}^{\text{miss}}$) se define como el valor n
 \begin{equation}
 p_{T}^{\text{miss}}=\left(p_{T}^{\text{miss}}\right)^{e} + \left(p_{T}^{\text{miss}}\right)^{\gamma} + \left(p_{T}^{\text{miss}}\right)^{\text{jet}} +\left(p_{T}^{\text{miss}}\right)^{\mu} + \left(p_{T}^{\text{miss}}\right)^{\text{soft}}
 \end{equation}
-%
+
+\noindent
 donde cada término es calculado como el negativo de la suma de los objetos reconstruidos y calibrados, más el término \textit{soft}. La contribución de los taus, se incluye en el término de jets o en el \textit{soft}, debido a que los mismos decaen hadrónicamente. Finalmente la energía transversa faltante se define como:
 
 \begin{equation}
 \met=|p_{T}^{\text{miss}}|
 \end{equation}
 
+
+
+\clearpage
