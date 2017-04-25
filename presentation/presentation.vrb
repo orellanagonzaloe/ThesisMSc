@@ -1,0 +1,25 @@
+\frametitle{Conclusiones}
+
+\normalsize
+
+\begin{itemize}
+
+\item Se implementó un método para poder estimar procesos donde un electrón del estado final es reconstruido como un fotón, con datos colectados por el detector ATLAS durante el Run 2 del LCH en los años 2015 y 2016.
+
+\item Verificados en una nueva región de validación
+
+\item Compatibles con predicciones en base a datos del 2015 y técnicas anteriores
+
+\item Estudios de criterios de identificación de los electrones tanto \textit{medium} como \textit{tight}, se optó por utilizar \textit{medium}
+
+\end{itemize}
+
+
+\vspace{1cm}
+
+
+\begin{beamercolorbox}[leftskip=\titlelf]{title}
+\centering\usebeamerfont{title}\large ¡Los resultados están siendo implementados actualmente por la colaboración ATLAS!
+\end{beamercolorbox}
+
+

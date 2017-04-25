@@ -1,0 +1,46 @@
+\select@language {spanish}
+\contentsline {chapter}{Introducci\IeC {\'o}n}{1}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Modelo Est\IeC {\'a}ndar y Supersimetr\IeC {\'\i }a}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Modelo Est\IeC {\'a}ndar}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}F\IeC {\'\i }sica m\IeC {\'a}s all\IeC {\'a} del Modelo Est\IeC {\'a}ndar}{6}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Divergencias cuadr\IeC {\'a}ticas}{7}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Extensi\IeC {\'o}n Supersim\IeC {\'e}trica del Modelo Est\IeC {\'a}ndar}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Modelo Est\IeC {\'a}ndar Supersim\IeC {\'e}trico M\IeC {\'\i }nimo}{9}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}El espectro de masas}{12}{subsection.1.2.2}
+\contentsline {subsubsection}{El sector de Higgs}{13}{section*.8}
+\contentsline {subsubsection}{Neutralinos y charginos}{13}{section*.9}
+\contentsline {subsubsection}{Gluino}{13}{section*.10}
+\contentsline {subsubsection}{Squarks y sleptones}{14}{section*.11}
+\contentsline {section}{\numberline {1.3}Colisi\IeC {\'o}n \textit {pp}}{14}{section.1.3}
+\contentsline {chapter}{\numberline {2}El LHC y el detector ATLAS}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}El detector ATLAS}{21}{section.2.1}
+\contentsline {section}{\numberline {2.2}Sistema de coordenadas}{22}{section.2.2}
+\contentsline {section}{\numberline {2.3}Los subdetectores de ATLAS}{24}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}El detector interno}{24}{subsection.2.3.1}
+\contentsline {subsubsection}{Insertable B-Layer}{24}{section*.19}
+\contentsline {subsubsection}{Detector de p\IeC {\'\i }xeles}{25}{section*.20}
+\contentsline {subsubsection}{Detector Semiconductor de Trazas (SCT)}{26}{section*.21}
+\contentsline {subsubsection}{Detector de Radiaci\IeC {\'o}n de Transici\IeC {\'o}n (TRT)}{26}{section*.22}
+\contentsline {subsection}{\numberline {2.3.2}Calor\IeC {\'\i }metros}{26}{subsection.2.3.2}
+\contentsline {subsubsection}{Calor\IeC {\'\i }metro electromagn\IeC {\'e}tico (ECAL)}{27}{section*.24}
+\contentsline {subsubsection}{Calor\IeC {\'\i }metro hadr\IeC {\'o}nico (HCAL)}{27}{section*.25}
+\contentsline {subsection}{\numberline {2.3.3}Espectr\IeC {\'o}metro de muones}{28}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Sistema de \textit {trigger}}{28}{section.2.4}
+\contentsline {section}{\numberline {2.5}Modelo computacional y distribuci\IeC {\'o}n de datos}{30}{section.2.5}
+\contentsline {chapter}{\numberline {3}Reconstrucci\IeC {\'o}n e identificaci\IeC {\'o}n de objetos f\IeC {\'\i }sicos}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}Reconstrucci\IeC {\'o}n de electrones y fotones}{33}{section.3.1}
+\contentsline {section}{\numberline {3.2}Identificaci\IeC {\'o}n de electrones y fotones}{34}{section.3.2}
+\contentsline {section}{\numberline {3.3}Criterios de aislamiento}{38}{section.3.3}
+\contentsline {section}{\numberline {3.4}Energ\IeC {\'\i }a faltante}{39}{section.3.4}
+\contentsline {chapter}{\numberline {4}Estrategia general de an\IeC {\'a}lisis de datos para b\IeC {\'u}squeda de nueva f\IeC {\'\i }sica}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Identificaci\IeC {\'o}n de eventos de fondo}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Regiones de se\IeC {\~n}al, control y validaci\IeC {\'o}n}{42}{section.4.2}
+\contentsline {section}{\numberline {4.3}Selecci\IeC {\'o}n de eventos}{43}{section.4.3}
+\contentsline {chapter}{\numberline {5}Electrones identificados como fotones}{49}{chapter.5}
+\contentsline {section}{\numberline {5.1}Determinaci\IeC {\'o}n del factor de identificaci\IeC {\'o}n err\IeC {\'o}nea}{49}{section.5.1}
+\contentsline {section}{\numberline {5.2}Clasificaci\IeC {\'o}n de eventos}{52}{section.5.2}
+\contentsline {section}{\numberline {5.3}Incertezas sistem\IeC {\'a}ticas}{54}{section.5.3}
+\contentsline {section}{\numberline {5.4}Resultados y estimaci\IeC {\'o}n del fondo en regiones validaci\IeC {\'o}n}{54}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusiones}{61}{chapter.6}
+\contentsline {chapter}{Agradecimientos}{63}{chapter*.45}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{69}{chapter*.46}

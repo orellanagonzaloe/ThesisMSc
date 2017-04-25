@@ -1,0 +1,11 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Marco Te\IeC {\'o}rico}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Modelo Est\IeC {\'a}ndar}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{SUSY}{6}{0}{1}
+\beamer@sectionintoc {2}{Experimento}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{LHC}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{ATLAS}{10}{0}{2}
+\beamer@sectionintoc {3}{Estrategia general del an\IeC {\'a}lisis}{19}{0}{3}
+\beamer@sectionintoc {4}{Fondo de electrones mal reconstruidos}{23}{0}{4}
+\beamer@sectionintoc {5}{Conclusiones}{31}{0}{5}

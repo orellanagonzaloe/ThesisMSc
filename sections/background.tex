@@ -16,7 +16,7 @@ F_{e\rightarrow\gamma}[\eta , p_{T}]=\frac{N^{e\gamma}[\eta , p_{T}]}{N^{ee}[\et
 donde $N^{e\gamma}$ y $N^{ee}$ son la cantidad de pares $e\gamma$ y $ee$ respectivamente, con un cierto $\eta$ y $p_{T}$ de uno de sus objetos convenientemente seleccionados.
 
 Los criterios para seleccionar los objetos de los pares de partículas mencionados se explican a continuación y se basan en criterios de selección que mantengan una alta pureza de la muestra, manteniendo un bajo rechazo de señal.
-Los electrones  son seleccionados con $p_{T} > 25 \egev$, con un criterio de calidad tanto \textit{tight} como \textit{medium}, y punto de trabajo de aislamiento \textit{gradient loose} \cite{ATLAS-CONF-2016-024}. Para los fotones los requisitos son $p_{T} > 25 \egev$, \textit{tight} y aislados \cite{STDM-2010-08}. A ambos se les solicita que tengan un $\eta_{BE}<2.37$; que estén fuera de la región del \textit{crack} entre $1.37$ y $1.52$; que provengan del vértice primario en base a un parámetro de impacto $d_{0}$ con una significancia menor a 5, y que cumplan con la relación $|\Delta z_{0}\sin\theta|<0.5$ mm.
+Los electrones  son seleccionados con $p_{T} > 25 \egev$, con un criterio de calidad tanto \textit{tight} como \textit{medium}, y punto de trabajo de aislamiento \textit{gradient loose} \cite{ATLAS-CONF-2016-024}. Para los fotones los requisitos son $p_{T} > 25 \egev$, \textit{tight} y aislados \cite{STDM-2010-08}. A ambos se les solicita que tengan un $\eta_{BE}(2)<2.37$; que estén fuera de la región del \textit{crack} entre $1.37$ y $1.52$; que provengan del vértice primario en base a un parámetro de impacto $d_{0}$ con una significancia menor a 5, y que cumplan con la relación $|\Delta z_{0}\sin\theta|<0.5$ mm.
 
 Además, si un electrón y un fotón son reconstruidos con $\sqrt{\Delta\phi^{2}+\Delta\eta^{2}}<0.4$, el fotón es descartado del evento. Esto reduce precisamente la probabilidad de utilizar candidatos donde un electrón es reconstruido como fotón. Para reducir la contaminación de fondo de $W (\rightarrow e\nu)$ se aplica finalmente un selección de eventos con $\met < 40 \egev$. 
 
@@ -29,13 +29,13 @@ El primer paso del método consiste en crear un arreglo bidimensional en $\eta$ 
 La concepción del método proviene de la siguiente consideración. Sea $\epsilon_{i}$ la eficiencia de reconstruir un electrón, con un valor de $\eta$ y $p_{T}$ correspondientes al bin \textit{i} del arreglo, para una muestra de \textit{N} pares de electrones y positrones reales (dentro del rango de masa), se determina a $f_{ij}$ como la fracción de pares para los cuales el electrón \textit{leading} (\textit{sub-leading}) está dentro del bin \textit{i} (\textit{j}). Considerando solamente electrones-positrones provenientes del decaimiento de un bosón $Z$, el número de eventos en el bin \textit{i} del arreglo $N^{ee}[\eta , p_{T}]$ es entonces:
 
 \begin{equation}
-N_{i}^{ee} = \sum_{i}\epsilon_{i}\epsilon_{j}f_{ij}N + \sum_{j}\epsilon_{j}\epsilon_{i}f_{ji}N = \epsilon_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
+N_{i}^{ee} = \sum_{j}\epsilon_{i}\epsilon_{j}f_{ij}N + \sum_{j}\epsilon_{j}\epsilon_{i}f_{ji}N = \epsilon_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
 \end{equation}
 
 De forma análoga, ahora considerando que $p_{i}$ es la proporción de electrones reconstruidos como fotones en el bin \textit{i}, la cantidad de eventos en el bin \textit{i} del arreglo $N^{e\gamma}[\eta , p_{T}]$ es:
 
 \begin{equation}
-N_{i}^{e\gamma} = \sum_{i}p_{i}\epsilon_{j}f_{ij}N + \sum_{j}p_{j}\epsilon_{i}f_{ji}N = p_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
+N_{i}^{e\gamma} = \sum_{j}p_{i}\epsilon_{j}f_{ij}N + \sum_{j}p_{j}\epsilon_{i}f_{ji}N = p_{i}N\sum_{j}\epsilon_{j}(f_{ij}+f_{ji})
 \end{equation}
 
 El factor que determina la proporción de electrones reconstruidos como fotones se define finalmente como:
@@ -425,7 +425,7 @@ Los resultados obtenidos para el factor en bines de $\eta$ y $p_{T}$ para electr
 Observando los resultados expuestos en las distintas tablas, definimos la implementación de una selección \textit{medium} de los electrones ya que los valores de pureza (expresado en los valores de los pesos $w$) e incertezas sistemáticas son equivalentes a la selección \textit{tight}, pero con la ventaja de una probable mayor estadística de eventos para estimar el fondo en las distintas regiones de control y validación.
 
 
-Con el objetivo de validar los resultados obtenidos, se realizo una búsqueda de una nueva región de validación donde el fondo predominante sea el de eventos con electrones erróneamente reconstruidos. Los criterios para determinar la VR se pueden observar en la Tabla \ref{ta:vr_crit}. Estos criterios seleccionan de forma predominante eventos $W(e\nu)$ + jets, donde un $W$ con alta energía cinética, decae en un neutrino (asociado con una alta $\met$) y electrón de alto $p_{T}$ (identificado como fotón), son colineales entre sí ($\Delta\phi<0.4$). La contribución de cada fondo al número de eventos en esta región se puede observar en la Tabla \ref{ta:vr_events}, en donde se puede observar que para esta región el fondo proveniente de electrones mal reconstruidos como fotones es el que predomina ($\sim63\%$) y se observa comparativamente un excelente acuerdo entre los datos esperados y obtenidos. Las distribuciones para $\Delta \phi$ y $\met$ se observan en las Figuras \ref{VRE_dphi} y \ref{VRE_met_et}, donde se observa un excelente acuerdo entre las los resultados esperados y los datos obtenidos.
+Con el objetivo de validar los resultados obtenidos, se realizo una búsqueda de una nueva región de validación donde el fondo predominante sea el de eventos con electrones erróneamente reconstruidos. Los criterios para determinar la VR se pueden observar en la Tabla \ref{ta:vr_crit}. Estos criterios seleccionan de forma predominante eventos $W(e\nu)$ + jets, donde un $W$ con alta energía cinética, decae en un neutrino (asociado con una alta $\met$) y electrón de alto $p_{T}$ (identificado como fotón), son colineales entre sí ($\Delta\phi<0.4$). La contribución de cada fondo al número de eventos en esta región se puede observar en la Tabla \ref{ta:vr_events}, en donde se puede observar que para esta región el fondo proveniente de electrones mal reconstruidos como fotones es el que predomina ($\sim63\%$) y se observa comparativamente un excelente acuerdo entre los datos esperados y obtenidos. Las distribuciones para $\Delta \phi$ y $\met$ se observan en la Figura \ref{VRE_dphi_met}, donde se observa un excelente acuerdo entre las los resultados esperados y los datos obtenidos.
 
 Los resultados mostrados permiten entonces validar el método y sus predicciones, y poder ser así utilizados para predecir la cantidad de eventos esperados en las distintas regiones de señal.
 
@@ -478,17 +478,17 @@ $\gamma\gamma / W\gamma\gamma / Z\gamma\gamma$ & $0.05 \pm 0.00$ \\
 
 \begin{figure}
 \centering
-\includegraphics[width=0.50\textwidth]{can_VRE_dphi_gammet_afterFit.pdf}
-\caption{Distribución de $\Delta \phi$ para una región de validación. La variable mostrada se deja libre en el gráfico, mientras el resto de la variables se mantienen con los cortes propuestos en la VRE. Las incertezas mostradas son solo estadísticas \cite{drfran}.}
-\label{VRE_dphi}
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[scale=0.35]{can_VRE_dphi_gammet_afterFit.pdf}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[scale=0.35]{can_VRE_met_et_afterFit.pdf}
+	\end{subfigure}
+\caption{Distribución de $\Delta \phi$ (izquierda) y  $\met$ (derecha) para una región de validación. La variable mostrada se deja libre en el gráfico, mientras el resto de la variables se mantienen con los cortes propuestos en la VRE. Las incertezas mostradas son solo estadísticas \cite{drfran}.}
+\label{VRE_dphi_met}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.50\textwidth]{can_VRE_met_et_afterFit.pdf}
-\caption{Distribución de $\met$ para una región de validación. La variable mostrada se deja libre en el gráfico, mientras el resto de la variables se mantienen con los cortes propuestos en la VRE. Las incertezas mostradas son solo estadísticas \cite{drfran}.}
-\label{VRE_met_et}
-\end{figure}
 
 
 
