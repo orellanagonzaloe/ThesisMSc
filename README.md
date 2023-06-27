@@ -2,13 +2,13 @@
 
 ## Estudios de fondos de electrones reconstruidos como fotones en búsquedas de Supersimetría con el detector ATLAS
 
-El Gran Colisionador de Hadrones (LHC) perteneciente al CERN, es el acelerador de hadrones más grande del mundo, diseñado para colisionar protones a una energía de centro de masa de $\sqrt{s}=14\etev$. El mismo consta de una serie de detectores cuyos diseños están orientados a distintos objetivos. Uno de ellos es ATLAS que tiene como uno de sus propósitos generales la búsqueda de nueva física.
+El Gran Colisionador de Hadrones (LHC) perteneciente al CERN, es el acelerador de hadrones más grande del mundo, diseñado para colisionar protones a una energía de centro de masa de $\sqrt{s}=14$ TeV. El mismo consta de una serie de detectores cuyos diseños están orientados a distintos objetivos. Uno de ellos es ATLAS que tiene como uno de sus propósitos generales la búsqueda de nueva física.
 
 Supersimetría (SUSY) es una extensión del Modelo Estándar (SM) que postula la existencia de nuevas partículas relacionadas con las ya conocidas del SM, asociando a los fermiones (bosones) del mismo con nuevos bosones (fermiones). De esta forma se resuelven una serie de cuestiones que dejaban al SM incompleto, como por ejemplo los problemas de jerarquía y naturalidad, la ausencia de candidatos a materia oscura y la exclusión de la fuerza gravitatoria en la teoría. SUSY es una simetría rota y existen varios mecanismos propuesto de ruptura. Uno de ellos es el “Generalised Model of Gauge-Mediated Supersymmetry Breaking” (GGMSB) cuya ruptura está en la escala del TeV, pudiendo ser así detectable por el LHC.
 
 La estrategia general de búsqueda de SUSY consiste en encontrar en alguna región de señal, un exceso en el número de eventos con respecto al número predicho por el SM. Para ello es necesario tener un buen conocimiento de los procesos del SM que aportan eventos a esa región de señal. Estos procesos se denominan “fondos” y uno de ellos es el proveniente de la reconstrucción errónea de electrones como fotones en el detector ATLAS.
 
-La técnica para la estimación de ese fondo consiste básicamente en el conteo de eventos asociados al decaimiento del bosón Z(ee), donde uno de esos electrones puede ser erróneamente reconstruido como un fotón. De esta forma se calcula un factor de identificación errónea (“Fake Factor”) asociado a la proporción de electrones reconstruidos.
+La técnica para la estimación de ese fondo consiste básicamente en el conteo de eventos asociados al decaimiento del bosón $Z\rightarrow ee$, donde uno de esos electrones puede ser erróneamente reconstruido como un fotón. De esta forma se calcula un factor de identificación errónea (“Fake Factor”) asociado a la proporción de electrones reconstruidos.
 
 Los resultados obtenidos en esta Tesis (compatibles con predicciones en base a datos y técnicas anteriores) fueron validados en nuevas regiones diseñadas específicamente para corroborar las contribuciones de este fondo. Los factores obtenidos en este trabajo son utilizados actualmente por la colaboración ATLAS para la estimación del fondo antes mencionado en búsquedas de SUSY con fotones en estado final.
 
